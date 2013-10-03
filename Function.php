@@ -5,7 +5,7 @@
  * @package Disable All Updates
  * @author Websiteguy
 
- * @version 0.6
+ * @version 0.7
 */
 
 /*
