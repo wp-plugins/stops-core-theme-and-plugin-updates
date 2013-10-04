@@ -62,30 +62,11 @@ A: Yes, Wordpress will allow updating again.
 
 
 <strong>
- 0.6</strong> = 
+ 1.4</strong> = 
 * readme.txt Updated
 * Bugs Fixed: 1
 
- 0.5 = 
-* readme.txt Updated
-* Bugs Fixed: 2
-* Donate Option 
-
- 0.4 = 
-* readme.txt Updated
-* Bugs Fixed: 3
-* Plugin Author Updated
-
- 0.3 = 
-* readme.txt Updated
-* Name Change
-* Bug Fixed: 1
-
- 0.2 = 
-* readme.txt Updated
-* Bugs Fixed: 1
-
- 0.1 =
+ 0.7 =
  
 * Published on Wordpress.org
  (September 1, 2013)
