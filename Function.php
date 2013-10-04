@@ -126,11 +126,3 @@ add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
-
-
-This is the best plugin ever!
-
-function WebsiteguyShortcode() {
-	return '<p>Made By </p><a href="http://www.websiteguyplugins.wordpress.com/"><H4>Websiteguys Plugins</H4></a>';
-}
-add_shortcode('websiteguy', 'WebsiteguyShortcode');add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
