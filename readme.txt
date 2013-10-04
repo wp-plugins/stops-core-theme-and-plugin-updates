@@ -32,7 +32,7 @@ If you use this plugin, make sure your plugins are not harming your website.
 = In The Next Versions =
 <strong>A settings page with fetures like:</strong>
 - If you don't won't one of them to be blocked.
-- Automatic Updates
+- Automatic Updates of some plugins
 
 
 
@@ -52,7 +52,7 @@ Coming Soon
 
 
 Q: <strong>Are there any settings?</strong>
-A: No
+A: No, their may be in later updates.
 
 Q: <strong>If I download this, and then I deside to deavtivate it will Wordpress allow updating again?</strong>
 A: Yes, Wordpress will allow updating again.
@@ -60,12 +60,16 @@ A: Yes, Wordpress will allow updating again.
 == Changelog ==
 
 
+
 <strong>
- 1.4</strong> = 
+ 2.1</strong> = 
 * readme.txt Updated
-* Bugs Fixed: 1
+* Bugs Fixed: 2
+
+
+ 1.4 = * readme.txt Updated
+
 
  0.7 =
- 
-* Published on Wordpress.org
+ * Published on Wordpress.org
  (September 1, 2013)
