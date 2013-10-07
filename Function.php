@@ -5,7 +5,7 @@
  * @package Disable All Updates
  * @author Websiteguy
 
- * @version 2.8
+ * @version 0.4
 */
 
 /*
@@ -13,7 +13,7 @@
 Plugin Name: Disable All Updates
 
 Plugin URI: http://websiteguyplugins.wordpress.com/
-Version: 2.8
+Version: 0.4
 Description: A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
 
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
