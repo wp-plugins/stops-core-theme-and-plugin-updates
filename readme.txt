@@ -1,7 +1,7 @@
 === Disable All Updates ===
 
 
-Contributors: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
+Contributors: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>, Websiteguy
 Donate link: https://www.websiteguyplugins.wordpress.com
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
@@ -29,7 +29,7 @@ This way you can pick your favourite version of the plugin (theme, or wordpress 
 It is very important to keep your WordPress plugins up to date. 
 If you use this plugin, make sure your plugins are not harming your website.
 
-= In The Next Versions =
+== Next Versions ==
 <strong>A settings page with fetures like:</strong>
 - If you don't won't one of them to be blocked.
 - Automatic Updates of some plugins
@@ -61,17 +61,16 @@ A: Yes, Wordpress will allow updating again.
 
 
 <strong>
- 2.8</strong> = 
+ 0.4</strong> = 
 * readme.txt Updated
 * Bugs Fixed: 1
 
-<strong>
- 2.1</strong> = 
+ 0.3 = 
 * readme.txt Updated
 * Bugs Fixed: 2
 
- 1.4 = * readme.txt Updated
+ 0.2 = * readme.txt Updated
 
- 0.7 =
+ 0.1 =
  * Published on Wordpress.org
  (September 1, 2013)
