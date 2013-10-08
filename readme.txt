@@ -1,7 +1,7 @@
 === Disable All Updates ===
 
 
-Contributors: Websiteguy (<a href="https://www.websiteguyplugins.wordpress.com">Websiteguy Plugins</a>), Chris Collins 
+Contributors: Kidsguide , Chris Collins 
 Donate link: https://www.websiteguyplugins.wordpress.com
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
@@ -20,6 +20,9 @@ A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even
 
 This plugin simple removes the updating of the plugins, theme, and even the wordpress core.
 This way you can pick your favourite version of the plugin (theme, or wordpress core) and you won't get update notices.
+
+= <a href="http://wordpress.org/plugins/disable-updates/">Disable Updates</a> Downloaders =
+This plugin is the updated version of that plugin.
 
 
 
@@ -40,7 +43,8 @@ If you use this plugin, make sure your plugins are not harming your website.
 
 
 == Screenshots ==
-Coming Soon
+1. WordPress admin before activating the plugin.
+2. After activating the plugin all update notices are disabled.
 
 == Installation ==
 
