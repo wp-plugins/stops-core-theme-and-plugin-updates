@@ -1,7 +1,7 @@
 === Disable All Updates ===
 
 
-Contributors: Websiteguy, Christopher Collins 
+Contributors: Websiteguy (<a href="https://www.websiteguyplugins.wordpress.com">Websiteguy Plugins</a>), Chris Collins 
 Donate link: https://www.websiteguyplugins.wordpress.com
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
@@ -29,7 +29,7 @@ This way you can pick your favourite version of the plugin (theme, or wordpress 
 It is very important to keep your WordPress plugins up to date. 
 If you use this plugin, make sure your plugins are not harming your website.
 
-== Other Notes ==
+==  ==
 
 = Next Versions =
 <strong>A settings page with fetures like:</strong>
