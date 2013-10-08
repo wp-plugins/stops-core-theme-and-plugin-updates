@@ -1,7 +1,7 @@
 === Disable All Updates ===
 
 
-Contributors: Kidsguide (Websiteguy) , Chris Collins
+Contributors: Kidsguide , Chris Collins
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
@@ -66,7 +66,11 @@ A: Yes, Wordpress will allow updating again.
 
 
 <strong>
- 0.4</strong> = 
+ 0.5</strong> = 
+* readme.txt Updated
+* Bugs Fixed: 2
+
+ 0.4 = 
 * readme.txt Updated
 * Bugs Fixed: 1
 
