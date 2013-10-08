@@ -1,8 +1,7 @@
 === Disable All Updates ===
 
 
-Contributors: Websiteguy , Chris Collins
-Donate link: mpsparrow@cogeco.ca
+Contributors: Kidsguide (Websiteguy) , Chris Collins
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
