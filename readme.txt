@@ -42,9 +42,14 @@ If you use this plugin, make sure your plugins are not harming your website.
 
 
 == Screenshots ==
-http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(1).png
+Disable%20All%20Updates%20(2).png
+<strong> Before </strong>
 http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(2).png
+
 http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(3).png
+
+<strong> After </strong>
+http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(1).png
 == Installation ==
 
 
@@ -71,19 +76,19 @@ A: Yes, Wordpress will allow updating again.
 * Screenshots
 
  0.5 = 
-* readme.txt Updated
+* readme.txt Updated 
 * Bugs Fixed: 2
 
  0.4 = 
-* readme.txt Updated
+* readme.txt Updated <strong>No Download Available</strong>
 * Bugs Fixed: 1
 
  0.3 = 
-* readme.txt Updated
+* readme.txt Updated <strong>No Download Available</strong>
 * Bugs Fixed: 2
 
- 0.2 = * readme.txt Updated
+ 0.2 = * readme.txt Updated <strong>No Download Available</strong>
 
  0.1 =
  * Published on Wordpress.org
- (September 1, 2013)
+ (September 1, 2013) <strong>No Download Available</strong>
