@@ -44,9 +44,13 @@ If you use this plugin, make sure your plugins are not harming your website.
 == Screenshots ==
 <strong> Before </strong>
 
-2.
+/assets/screenshot-1.png
 
-3.
+'/assets/screenshot-1.png'
+
+screenshot-1.png
+
+'screenshot-1.png'
 
 <strong> After </strong>
 
