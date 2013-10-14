@@ -44,13 +44,14 @@ If you use this plugin, make sure your plugins are not harming your website.
 == Screenshots ==
 <strong> Before </strong>
 
-http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(2).png
+2.
 
-http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(3).png
+3.
 
 <strong> After </strong>
 
-http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(1).png
+1.
+
 
 == Installation ==
 
