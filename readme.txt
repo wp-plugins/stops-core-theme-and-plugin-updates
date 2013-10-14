@@ -42,8 +42,7 @@ If you use this plugin, make sure your plugins are not harming your website.
 
 
 == Screenshots ==
-1. WordPress admin before activating the plugin.
-2. After activating the plugin all update notices are disabled.
+http://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/trunk/Disable%20All%20Updates%20(1).png
 
 == Installation ==
 
