@@ -42,19 +42,8 @@ If you use this plugin, make sure your plugins are not harming your website.
 
 
 == Screenshots ==
-<strong> Before </strong>
-
-/assets/screenshot-1.png
-
-'/assets/screenshot-1.png'
-
-screenshot-1.png
-
-'screenshot-1.png'
-
-<strong> After </strong>
-
-1.
+1. WordPress admin before activating the plugin.
+2. After activating the plugin all update notices are disabled.
 
 
 == Installation ==
