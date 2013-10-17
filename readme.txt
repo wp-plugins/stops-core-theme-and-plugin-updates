@@ -56,6 +56,12 @@ http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/as
 
 http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-1.png
 
+2. Before Dashboard
+
+3. Before Plugin Page
+
+1. After
+
 == Installation ==
 
 
