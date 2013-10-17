@@ -28,23 +28,33 @@ This plugin is the updated version of that plugin.
 = Please note!!! =
 
 
-It is very important to keep your WordPress plugins up to date. 
+It is very important to keep your WordPress plugins, core, and themes up to date. 
 If you use this plugin, make sure your plugins are not harming your website.
 
 ==  ==
 
 = Next Versions =
-<strong>A settings page with fetures like:</strong>
-- If you don't won't one of them to be blocked.
-- Automatic Updates of some plugins
+If you have any suggestions for this plugin you can post it in the support form.
+
+= No Downloads For Versions 0.1, 0.2, 0.3, and 0.4 =
+If you were wondering why their are no downloads avalible for versions 0.1, 0.2, 0.3, and 0.4. 
+Its because these versions are full of bugs and we don't won't people to download them.
 
 
 
 
 == Screenshots ==
-1. WordPress admin before activating the plugin.
-2. After activating the plugin all update notices are disabled.
+= Before Dashboard =
 
+http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-2.png
+
+= Before Plugin Page =
+
+http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-3.png
+
+= After =
+
+http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-1.png
 
 == Installation ==
 
@@ -67,9 +77,14 @@ A: Yes, Wordpress will allow updating again.
 
 
 <strong>
- 0.6</strong> = 
-* readme.txt Updated
+ 0.7</strong> = 
+* readme.txt Updated Thanks <strong>itsjustathought</strong>
 * Screenshots Added
+* Screenshot Problem Fixed
+* Bugs Fixed: 2
+
+ 0.6 = 
+* readme.txt Updated
 
  0.5 = 
 * readme.txt Updated 
