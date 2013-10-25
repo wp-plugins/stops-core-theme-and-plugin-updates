@@ -3,7 +3,7 @@
 /**
 
  * @package Disable All Updates
- * @author Websiteguy
+ * @author kidsguide
 
  * @version 0.7
 */
@@ -16,7 +16,7 @@ Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
 Version: 0.7
 Description: A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
 
-Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
+Author: kidsguide
 Author URL: http://profiles.wordpress.org/kidsguide
 Compatible with WordPress 2.3+.
 
