@@ -82,30 +82,29 @@ A: Yes, Wordpress will allow updating again.
 == Changelog ==
 
 
-<strong>
- 0.7</strong> = 
+= 0.7 = 
 * readme.txt Updated Thanks <strong>itsjustathought</strong>
 * Screenshots Added
 * Screenshot Problem Fixed
 * Bugs Fixed: 2
 
- 0.6 = 
+= 0.6 = 
 * readme.txt Updated
 
- 0.5 = 
+= 0.5 = 
 * readme.txt Updated 
 * Bugs Fixed: 2
 
- 0.4 = 
+= 0.4 = 
 * readme.txt Updated
 * Bugs Fixed: 1 <strong>No Download Available</strong>
 
- 0.3 = 
+= 0.3 = 
 * readme.txt Updated
 * Bugs Fixed: 2 <strong>No Download Available</strong>
 
- 0.2 = * readme.txt Updated <strong>No Download Available</strong>
+= 0.2 = * readme.txt Updated <strong>No Download Available</strong>
 
- 0.1 =
+= 0.1 =
  * Published on Wordpress.org
  (September 1, 2013) <strong>No Download Available</strong>
