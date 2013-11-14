@@ -1,11 +1,11 @@
 === Disable All Updates ===
 
 
-Contributors: kidsguide, Chris Collins 
+Contributors: kidsguide, Chris Collins (helper)
 Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
-Tested up to: 3.6.2
+Tested up to: 3.7.1
 Stable tag: trunk
 
 
@@ -20,8 +20,8 @@ A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even
 This plugin simple removes the updating of the plugins, theme, and even the wordpress core.
 This way you can pick your favourite version of the plugin (theme, or wordpress core) and you won't get update notices.
 
-= <a href="http://wordpress.org/plugins/disable-updates/">Disable Updates</a> Downloaders =
-This plugin is the updated version of that plugin.
+This plugin is simple, and easy with no settings.
+
 
 
 
@@ -33,9 +33,6 @@ If you use this plugin, make sure your plugins are not harming your website.
 
 ==  ==
 
-= Next Versions =
-If you have any suggestions for this plugin you can post it in the support form.
-
 = No Downloads For Versions 0.1, 0.2, 0.3, and 0.4 =
 If you were wondering why their are no downloads avalible for versions 0.1, 0.2, 0.3, and 0.4. 
 Its because these versions are full of bugs and we don't won't people to download them.
@@ -44,18 +41,6 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 == Screenshots ==
-= Before Dashboard =
-
-http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-2.png
-
-= Before Plugin Page =
-
-http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-3.png
-
-= After =
-
-http://plugins.trac.wordpress.org/browser/stops-core-theme-and-plugin-updates/assets/screenshot-1.png
-
 1. Before Dashboard
 
 2. Before Plugin Page
@@ -81,6 +66,10 @@ A: Yes, Wordpress will allow updating again.
 
 == Changelog ==
 
+
+= 0.7 = 
+* Readme.txt Updated 
+* Bugs Fixed: 1
 
 = 0.7 = 
 * readme.txt Updated Thanks <strong>itsjustathought</strong>
