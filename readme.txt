@@ -67,7 +67,7 @@ A: Yes, Wordpress will allow updating again.
 == Changelog ==
 
 
-= 0.7 = 
+= 0.8 = 
 * Readme.txt Updated 
 * Bugs Fixed: 1
 
