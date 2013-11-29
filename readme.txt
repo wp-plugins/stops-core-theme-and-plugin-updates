@@ -9,7 +9,6 @@ Tested up to: 3.7.1
 Stable tag: trunk
 
 
-
 A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
 
 
@@ -22,8 +21,12 @@ This way you can pick your favourite version of the plugin (theme, or wordpress 
 
 This plugin is simple, and easy with no settings.
 
-
-
+Features Included
+<ol>
+<li>No setup.</li>
+<li>Simple desciption for downloading.</li>
+<li>5+ other plugins that work with this.</li>
+</ol>
 
 = Please note!!! =
 
@@ -55,45 +58,50 @@ Its because these versions are full of bugs and we don't won't people to downloa
 2. Upload the zip file and install.
 3. Go to the Plugins section in your admin dashboard and activate.
 
-== Frequently Asked Questions ==
-
-
-Q: <strong>Are there any settings?</strong>
-A: No, their may be in later updates.
-
-Q: <strong>If I download this, and then I deside to deavtivate it will Wordpress allow updating again?</strong>
-A: Yes, Wordpress will allow updating again.
-
 == Changelog ==
 
 
-= 0.8 = 
+
+= Available for Downloading =
+
+= 0.9 = <small><a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/developers/">Download</a></small>
+* Readme.txt Updated 
+
+= 0.8 = <small><a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/developers/">Download</a></small>
 * Readme.txt Updated 
 * Bugs Fixed: 1
 
-= 0.7 = 
+= 0.7 = <small><a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/developers/">Download</a></small>
 * readme.txt Updated Thanks <strong>itsjustathought</strong>
 * Screenshots Added
 * Screenshot Problem Fixed
 * Bugs Fixed: 2
 
-= 0.6 = 
+= 0.6 = <small><a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/developers/">Download</a></small>
 * readme.txt Updated
 
-= 0.5 = 
+= 0.5 = <small><a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/developers/">Download</a></small>
 * readme.txt Updated 
 * Bugs Fixed: 2
 
+= Not Available for Downloading = <small>for more information on this, please see the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/other_notes/">other notes</a>  page.</small>
+
 = 0.4 = 
 * readme.txt Updated
-* Bugs Fixed: 1 <strong>No Download Available</strong>
+* Bugs Fixed: 1 
+* <strong>No Download Available</strong>
 
 = 0.3 = 
 * readme.txt Updated
-* Bugs Fixed: 2 <strong>No Download Available</strong>
+* Bugs Fixed: 2 
+* <strong>No Download Available</strong>
 
-= 0.2 = * readme.txt Updated <strong>No Download Available</strong>
+= 0.2 = 
+* readme.txt Updated 
+* <strong>No Download Available</strong>
 
 = 0.1 =
- * Published on Wordpress.org
- (September 1, 2013) <strong>No Download Available</strong>
+ 
+* Published on Wordpress.org
+ (September 1, 2013) 
+* <strong>No Download Available</strong>

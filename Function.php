@@ -1,31 +1,19 @@
 <?php
-
 /**
-
  * @package Disable All Updates
  * @author Websiteguy
-
- * @version 0.8
+ * @version 0.9
 */
-
 /*
-
 Plugin Name: Disable All Updates
-
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 0.8
+Version: 0.9
 Description: A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
-
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide
 Compatible with WordPress 2.3+.
-
-
 */
-
-
 /*
-
 Copyright 2013 Websiteguy (email : mpsparrow@cogeco.ca)
 
 This program is free software; you can redistribute it and/or modify
@@ -42,18 +30,13 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
-
-
 
 # 2.3 to 2.7:
 
 add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
 
 add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
-
-
 
 # 2.8 to 3.0:
 remove_action( 'wp_version_check', 'wp_version_check' );
@@ -62,13 +45,9 @@ remove_action( 'admin_init', '_maybe_update_core' );
 
 add_filter( 'pre_transient_update_core', create_function( '$a', "return null;" ) );
 
-
-
 # 3.0:
 
 add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
-
-
 
 # 2.8 to 3.0:
 
@@ -82,15 +61,11 @@ remove_action( 'wp_update_themes', 'wp_update_themes' );
 
 add_filter( 'pre_transient_update_themes', create_function( '$a', "return null;" ) );
 
-
-
 # 3.0:
 
 remove_action( 'load-update-core.php', 'wp_update_themes' );
 
 add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
-
-
 
 # 2.3 to 2.7:
 
@@ -104,8 +79,6 @@ add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_update_pl
 
 add_filter( 'pre_option_update_plugins', create_function( '$a', "return null;" ) );
 
-
-
 # 2.8 to 3.0:
 
 remove_action( 'load-plugins.php', 'wp_update_plugins' );
@@ -117,8 +90,6 @@ remove_action( 'admin_init', '_maybe_update_plugins' );
 remove_action( 'wp_update_plugins', 'wp_update_plugins' );
 
 add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;" ) );
-
-
 
 # 3.0:
 
