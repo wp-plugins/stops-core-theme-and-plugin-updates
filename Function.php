@@ -2,12 +2,12 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 1.0
+ * @version 1.1
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 1.0
+Version: 1.1
 Description: A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide
@@ -62,9 +62,7 @@ define( 'Automatic_Updater_Disabled', true );
 	function admin_init() {
 		if ( !function_exists("remove_action") ) return;
 
-		/*
-		 * Disable Plugin Updates
-		 */
+		// Disable Plugin Updates
 		remove_action( 'load-plugins.php', 'wp_update_plugins' );
 		remove_action( 'load-update.php', 'wp_update_plugins' );
 		remove_action( 'admin_init', '_maybe_update_plugins' );
@@ -74,9 +72,7 @@ define( 'Automatic_Updater_Disabled', true );
 		remove_action( 'load-update-core.php', 'wp_update_plugins' );
 		wp_clear_scheduled_hook( 'wp_update_plugins' );	
 
-		/*
-		 * Disable Theme Updates
-		 */
+		// Disable Theme Updates
 		remove_action( 'load-themes.php', 'wp_update_themes' );
 		remove_action( 'load-update.php', 'wp_update_themes' );
 		remove_action( 'admin_init', '_maybe_update_themes' );
@@ -85,10 +81,8 @@ define( 'Automatic_Updater_Disabled', true );
 		
 		remove_action( 'load-update-core.php', 'wp_update_themes' );
 		wp_clear_scheduled_hook( 'wp_update_themes' );
-		
-		/*
-		 * Disable Core Updates
-		 */
+
+		// Disable Core Updates
 		remove_action( 'wp_version_check', 'wp_version_check' );
 		remove_action( 'admin_init', '_maybe_update_core' );
 		wp_clear_scheduled_hook( 'wp_version_check' );

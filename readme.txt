@@ -34,7 +34,7 @@ and more...
 It is very important to keep your WordPress plugins, core, and themes up to date. 
 If you use this plugin, make sure your plugins are not harming your website.
 
-== Other Notes ==
+==  ==
 
 = No Downloads For Versions 0.1, 0.2, 0.3, and 0.4 =
 If you were wondering why their are no downloads avalible for versions 0.1, 0.2, 0.3, and 0.4. 
@@ -61,6 +61,9 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 = Available for Downloading =
+= 1.1 =
+* Screenshots Updated
+* Fixed Error
 
 = 1.0 =
 * Fixed Changelog Problem
