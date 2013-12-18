@@ -2,13 +2,13 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 1.1
+ * @version 1.2
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 1.1
-Description: A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
+Version: 1.2
+Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Their is no setup for this plugin.
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide
 Compatible with WordPress 2.3+.
@@ -55,8 +55,18 @@ function hide_admin_notices() {
     remove_action( 'admin_notices', 'update_nag', 3 );
 }
 
-// Turn Off Automatic Updates
+// Turn off Automatic Updates in WordPress
 define( 'Automatic_Updater_Disabled', true );
+
+// Remove Update E-mails (Only works with some plugins)
+// Core E-mails
+apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
+
+// Plugin E-mails
+apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
+
+// Theme E-mails
+apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
 
 // Remove Files From WordPress
 	function admin_init() {

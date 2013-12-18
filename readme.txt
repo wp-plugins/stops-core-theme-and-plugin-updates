@@ -1,14 +1,14 @@
 === Disable All Updates ===
 
 Contributors: kidsguide, Chris Collins (helper)
-Tags: Disable, Plugin, Updates, Wordpress Core, Core, Theme, Themes, Theme Update, Wordpress Core Update
+Tags: Disable, Plugin, Updates, WordPress Core, Core, Theme, Themes, Theme Update, WordPress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
 Tested up to: 3.8
 Stable tag: trunk
 
 
-A Simple Wordpress Plugin That Deletes All Updating of Plugins, Themes, and Even The Wordpress Core.
+A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core.
 
 
 
@@ -21,12 +21,18 @@ This way you can pick your favourite version of the plugin (theme, or WordPress 
 This plugin is simple, and easy with no settings.
 
 = Features Include =
-<ol>
-<li>No setup.</li>
-<li>Simple desciption for downloading.</li>
-<li>Removes Update Menu</li>
-</ol>
-and more...
+
+= No Setup =
+This plugin has no settings or setup.
+
+= Works with WordPress 3.8 =
+This plugin works 100% with 3.8.
+
+= Deletes WordPress Update Files =
+This plugin will delete the WordPress update files in your website.
+This way the plugin will doubly make sure that the updates are disabled.
+
+= and more... =
 
 = Please note!!! =
 
@@ -37,7 +43,7 @@ If you use this plugin, make sure your plugins are not harming your website.
 ==  ==
 
 = No Downloads For Versions 0.1, 0.2, 0.3, and 0.4 =
-If you were wondering why their are no downloads avalible for versions 0.1, 0.2, 0.3, and 0.4. 
+If you were wondering why their are no downloads available for versions 0.1, 0.2, 0.3, and 0.4. 
 Its because these versions are full of bugs and we don't won't people to download them.
 
 
@@ -45,8 +51,7 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 == Screenshots ==
 1. Before Dashboard
-2. Before Plugin Page
-3. After
+2. After Dashboard
 
 == Installation ==
 
@@ -60,7 +65,13 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 
-= Available for Downloading =
+= Versions Available for Downloading =
+
+= 1.2 =
+* Updated Readme.txt
+* Updated HTML Notes
+* Added Disable Update E-mails HTML (Note: This code will only work for some plugins)
+
 = 1.1 =
 * Screenshots Updated
 * Fixed Error
