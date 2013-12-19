@@ -36,9 +36,9 @@ And More...
 
 = Just Won't to Disable One of These? =
 <ol>
-<li><a href="http://wordpress.org/support/plugin/disable-core-updates">Disable Core Updates</a></li>
-<li><a href="http://wordpress.org/support/plugin/disable-theme-updates">Disable Theme Updates</a></li>
-<li><a href="http://wordpress.org/support/plugin/disable-plugin-updates">Disable Plugin Updates</a></li>
+<li><a href="http://wordpress.org/plugin/disable-core-updates">Disable Core Updates</a></li>
+<li><a href="http://wordpress.org/plugin/disable-theme-updates">Disable Theme Updates</a></li>
+<li><a href="http://wordpress.org/plugin/disable-plugin-updates">Disable Plugin Updates</a></li>
 </ol>
 
 = Please note!!! =
