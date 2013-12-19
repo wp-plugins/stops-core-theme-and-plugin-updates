@@ -32,7 +32,14 @@ This plugin works 100% with 3.8.
 This plugin will delete the WordPress update files in your website.
 This way the plugin will doubly make sure that the updates are disabled.
 
-= and more... =
+And More...
+
+= Just Won't to Disable One of These? =
+<ol>
+<li><a href="http://wordpress.org/support/plugin/disable-core-updates">Disable Core Updates</a></li>
+<li><a href="http://wordpress.org/support/plugin/disable-theme-updates">Disable Theme Updates</a></li>
+<li><a href="http://wordpress.org/support/plugin/disable-plugin-updates">Disable Plugin Updates</a></li>
+</ol>
 
 = Please note!!! =
 
@@ -66,6 +73,10 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 = Versions Available for Downloading =
+
+= 1.4 =
+* Updated Reame.txt
+* Updated HTML Notes
 
 = 1.3 =
 * Updated Readme.txt
