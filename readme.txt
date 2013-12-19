@@ -50,8 +50,8 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 == Screenshots ==
-1. Before Dashboard
-2. After Dashboard
+1. Before View in Dashboard
+2. After View in Dashboard
 
 == Installation ==
 
@@ -66,6 +66,10 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 = Versions Available for Downloading =
+
+= 1.3 =
+* Updated Readme.txt
+* Added a Disable Updates Check Feature
 
 = 1.2 =
 * Updated Readme.txt

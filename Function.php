@@ -2,12 +2,12 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 1.2
+ * @version 1.3
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 1.2
+Version: 1.3
 Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Their is no setup for this plugin.
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide
@@ -99,3 +99,39 @@ apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $res
 		
 		wp_clear_scheduled_hook( 'wp_version_check' );
 	}
+
+// Remove Updates Agian (just in case)
+add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
+
+remove_action( 'wp_version_check', 'wp_version_check' );
+remove_action( 'admin_init', '_maybe_update_core' );
+add_filter( 'pre_transient_update_core', create_function( '$a', "return null;" ) );
+
+add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
+
+remove_action( 'load-themes.php', 'wp_update_themes' );
+remove_action( 'load-update.php', 'wp_update_themes' );
+remove_action( 'admin_init', '_maybe_update_themes' );
+remove_action( 'wp_update_themes', 'wp_update_themes' );
+add_filter( 'pre_transient_update_themes', create_function( '$a', "return null;" ) );
+
+remove_action( 'load-update-core.php', 'wp_update_themes' );
+add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
+
+add_action( 'admin_menu', create_function( '$a', "remove_action( 'load-plugins.php', 'wp_update_plugins' );") );
+	
+add_action( 'admin_init', create_function( '$a', "remove_action( 'admin_init', 'wp_update_plugins' );"), 2 );
+add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_update_plugins' );"), 2 );
+add_filter( 'pre_option_update_plugins', create_function( '$a', "return null;" ) );
+
+remove_action( 'load-plugins.php', 'wp_update_plugins' );
+remove_action( 'load-update.php', 'wp_update_plugins' );
+remove_action( 'admin_init', '_maybe_update_plugins' );
+remove_action( 'wp_update_plugins', 'wp_update_plugins' );
+add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+remove_action( 'load-update-core.php', 'wp_update_plugins' );
+add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
