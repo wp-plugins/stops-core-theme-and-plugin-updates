@@ -1,6 +1,6 @@
 === Disable All Updates ===
 
-Contributors: kidsguide, Chris Collins (helper)
+Contributors: kidsguide, Chris Collins
 Tags: Disable, Plugin, Updates, WordPress Core, Core, Theme, Themes, Theme Update, WordPress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
@@ -73,7 +73,9 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 = Versions Available for Downloading =
-
+= 1.5 =
+* Updated Readme.txt
+* Fixed HTML Spacing
 = 1.4 =
 * Updated Reame.txt
 * Updated HTML Notes
