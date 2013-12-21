@@ -37,7 +37,7 @@ And More...
 </ol>
 
 = Video Tutorial =
-[youtube http://youtu.be/ZSJf9nwP7oA]
+[youtube http://www.youtube.com/watch?v=ZSJf9nwP7oA]
 
 = Please note!!! =
 
