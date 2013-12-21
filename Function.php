@@ -2,12 +2,12 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 1.5
+ * @version 1.6
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 1.5
+Version: 1.6
 Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Their is no setup for this plugin.
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide

@@ -16,30 +16,28 @@ A simple WordPress plugin that disables all the updating of plugins, themes, and
 
 
 This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
-This way you can pick your favourite version of the plugin (theme, or WordPress core) and you won't get update notices.
+This way you can pick your favourite version of the plugin (theme, or WordPress core).
 
 This plugin is simple, and easy with no settings.
 
-= Features Include =
-
-= No Setup =
-This plugin has no settings or setup.
-
-= Works with WordPress 3.8 =
-This plugin works 100% with 3.8.
-
-= Deletes WordPress Update Files =
-This plugin will delete the WordPress update files in your website.
-This way the plugin will doubly make sure that the updates are disabled.
+This plugin is better then any other plugin in its class because it
+<ol>
+<li>Turns of WordPress automatic updates</li>
+<li>It disables e-mail noticfactions for updates</li>
+<li>Removes the WordPress update files</li>
+</ol> 
 
 And More...
 
-= Just Won't to Disable One of These? =
+= Just Won't to Disable One or Two? =
 <ol>
 <li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
 <li><a href="http://wordpress.org/plugins/disable-theme-updates">Disable Theme Updates</a></li>
 <li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
 </ol>
+
+= Video Tutorial =
+[youtube http://youtu.be/ZSJf9nwP7oA]
 
 = Please note!!! =
 
@@ -73,9 +71,15 @@ Its because these versions are full of bugs and we don't won't people to downloa
 
 
 = Versions Available for Downloading =
+= 1.6 =
+* Updated Readme.txt
+* Fixed HTML Error
+* Video Tutorial Added
+
 = 1.5 =
 * Updated Readme.txt
 * Fixed HTML Spacing
+
 = 1.4 =
 * Updated Reame.txt
 * Updated HTML Notes
