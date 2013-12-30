@@ -59,11 +59,10 @@ If you were wondering why their are no downloads available for some of our this 
 
 == Screenshots ==
 1. Before View Core (Dashboard)
-4. Before View (Dashboard)
-5. After View (Dashboard)
-2. Before View Plugin (Plugin Page)
-3. After View Plugin (Plugin Page)
-
+4. Before View Plugin (Plugin Page)
+5. After View Plugin (Plugin Page)
+2. Before View (Dashboard)
+3. After View (Dashboard)
 
 == Installation ==
 
