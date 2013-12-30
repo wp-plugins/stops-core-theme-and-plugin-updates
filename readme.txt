@@ -29,6 +29,9 @@ This plugin is better then any other plugin in its class because it
 
 And More...
 
+= Video Tutorial =
+[youtube http://www.youtube.com/watch?v=ZSJf9nwP7oA]
+
 = Just Won't to Disable One or Two? =
 <ol>
 <li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
@@ -36,8 +39,11 @@ And More...
 <li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
 </ol>
 
-= Video Tutorial =
-[youtube http://www.youtube.com/watch?v=ZSJf9nwP7oA]
+= Or Download This! =
+<li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
+Our newest plugin! It removes the updates submenu.
+
+==  ==
 
 = Please note!!! =
 
@@ -45,33 +51,53 @@ And More...
 It is very important to keep your WordPress plugins, core, and themes up to date. 
 If you use this plugin, make sure your plugins are not harming your website.
 
-==  ==
-
-= No Downloads For Versions 0.1, 0.2, 0.3, and 0.4 =
-If you were wondering why their are no downloads available for versions 0.1, 0.2, 0.3, and 0.4. 
-Its because these versions are full of bugs and we don't won't people to download them.
+= No Downloads For Some Versions =
+If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
 
 
 
 
 == Screenshots ==
-1. Before View in Dashboard
-2. After View in Dashboard
+1. Before View (Dashboard)
+2. After View (Dashboard)
 
 == Installation ==
 
 
-1. Go to the Plugins> Add New> Upload in you admin dashboard.
+Their are three way to install Disable All Updates.
 
-2. Upload the zip file and install.
+<strong>1)</strong> The WordPress dashboard way.
+1. Push the button above to download the latest version of Disable All Updates.
+2. Go in your websites admin to the Plugins> Add New> page and push Upload.
+
+3. Upload the zip file and push install.
+4. Go to the Plugins section in your admin dashboard and activate.
+
+<strong>2)</strong> The dashboard way. <u><strong>Recommended</strong></u>
+1. Go in your websites admin to the Plugins> Add New> page and push on the search bar.
+
+2. Search "Disable All Updates" and push install.
 3. Go to the Plugins section in your admin dashboard and activate.
+
+<strong>3)</strong> The cpanel (or whatever you use) way.
+1. Push the button above to download the latest version of Disable All Updates.
+2. Login into your cpanel (or whatever you use).
+3. Go to your www file and find the file titled plugins.
+4. Push on the plugins file and add a new folder titled "disable-all-updates".
+5. Then upload the zip file into that folder.
+6. Go to your plugin page in your dashboard and activate the plugin called "Disable All Updates.
 
 == Changelog ==
 
 
 
 = Versions Available for Downloading =
-= 1.6 =
+= 1.7.0 =
+* New Html Code Added (this code disables WordPress automatic updates)
+* New Version Numbers (now going up by .1.0)
+* Updated Readme.txt (mostly under Installation)
+
+= 1.6.0 =
 * Updated Readme.txt
 * Fixed HTML Error
 * Video Tutorial Added
@@ -97,7 +123,7 @@ Its because these versions are full of bugs and we don't won't people to downloa
 * Screenshots Updated
 * Fixed Error
 
-= 1.0 =
+= 1.0.0 =
 * Fixed Changelog Problem
 * HTML Changed
 * Updated Readme.txt
