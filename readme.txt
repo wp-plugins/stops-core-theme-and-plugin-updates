@@ -58,8 +58,12 @@ If you were wondering why their are no downloads available for some of our this 
 
 
 == Screenshots ==
-1. Before View (Dashboard)
-2. After View (Dashboard)
+1. Before View Core (Dashboard)
+4. Before View (Dashboard)
+5. After View (Dashboard)
+2. Before View Plugin (Plugin Page)
+3. After View Plugin (Plugin Page)
+
 
 == Installation ==
 
@@ -101,6 +105,10 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 1.7.1 =
+* Screenshot Error Fixed
+* Installation Error Fixed
+
 = 1.7.0 =
 * New Html Code Added (this code disables WordPress automatic updates)
 * New Version Numbers (now going up by .1.0)
