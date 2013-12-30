@@ -39,9 +39,28 @@ And More...
 <li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
 </ol>
 
-= Or Download This! =
+= Check Out Our Newest Plugin! =
 <li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
-Our newest plugin! It removes the updates submenu.
+It removes the updates submenu.
+
+== Frequently Asked Questions ==
+= Q: Is their a way to disable only one or two of these?=
+A: Yes, you can download our these plugins.
+<ol>
+<li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
+<li><a href="http://wordpress.org/plugins/disable-theme-updates">Disable Theme Updates</a></li>
+<li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
+</ol>
+
+= Q: How is this plugin diferent from the other disable updates plugins? =
+Their are a couple of differences.
+<ol>
+<li>They do not disable the updates twice.</li> (This way they can work in more WordPress versions)
+<li>They do not disable WordPress automatic updates.</li>
+<li>They do not have video tutorials and screenshots.</li>
+<li>They do not have indovidual plugins (like the ones above) to disable just one or two.</li>
+</ol>
+The list goes on...
 
 ==  ==
 
@@ -104,6 +123,11 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 1.8.0 =
+* FAQ Added
+* HTML Notes Edited
+* Updated Readme.txt
+
 = 1.7.1 =
 * Screenshot Error Fixed
 * Installation Error Fixed

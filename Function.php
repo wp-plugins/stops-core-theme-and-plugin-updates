@@ -2,12 +2,12 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 1.7.1
+ * @version 1.8.0
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 1.7.1
+Version: 1.8.0
 Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Their is no setup for this plugin.
 Author: <a href="http://profiles.wordpress.org/kidsguide">Websiteguy</a>
 Author URL: http://profiles.wordpress.org/kidsguide
@@ -47,7 +47,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		remove_action( 'load-update-core.php', 'wp_update_core' );
 		add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 
-// Remove Update Submenu Under Dashboard
+// Remove Update Submenu Under Dashboard. The same code in our new plugin "Remove the Updates Submenu".
 
 add_action('admin_menu', 'remove_menus', 102);
 function remove_menus() {
