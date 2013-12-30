@@ -67,25 +67,34 @@ If you were wondering why their are no downloads available for some of our this 
 Their are three way to install Disable All Updates.
 
 <strong>1)</strong> The WordPress dashboard way.
-1. Push the button above to download the latest version of Disable All Updates.
-2. Go in your websites admin to the Plugins> Add New> page and push Upload.
 
-3. Upload the zip file and push install.
-4. Go to the Plugins section in your admin dashboard and activate.
+<ol>
+<li>Push the button above to download the latest version of Disable All Updates.</li>
+<li>Go in your websites admin to the Plugins> Add New> page and push Upload.</li>
+
+<li>Upload the zip file and push install.</li>
+<li>Go to the Plugins section in your admin dashboard and activate.</li>
+</ol>
 
 <strong>2)</strong> The dashboard way. <u><strong>Recommended</strong></u>
-1. Go in your websites admin to the Plugins> Add New> page and push on the search bar.
 
-2. Search "Disable All Updates" and push install.
-3. Go to the Plugins section in your admin dashboard and activate.
+<ol>
+<li>Go in your websites admin to the Plugins> Add New> page and push on the search bar.</li>
+
+<li>Search "Disable All Updates" and push install.</li>
+<li>Go to the Plugins section in your admin dashboard and activate.</li>
+</ol>
 
 <strong>3)</strong> The cpanel (or whatever you use) way.
-1. Push the button above to download the latest version of Disable All Updates.
-2. Login into your cpanel (or whatever you use).
-3. Go to your www file and find the file titled plugins.
-4. Push on the plugins file and add a new folder titled "disable-all-updates".
-5. Then upload the zip file into that folder.
-6. Go to your plugin page in your dashboard and activate the plugin called "Disable All Updates.
+
+<ol>
+<li>Push the button above to download the latest version of Disable All Updates.</li>
+<li>Login into your cpanel (or whatever you use).</li>
+<li>Go to your www file and find the file titled plugins.</li>
+<li>Push on the plugins file and add a new folder titled "disable-all-updates".</li>
+<li>Then upload the zip file into that folder.</li>
+<li>Go to your plugin page in your dashboard and activate the plugin called "Disable All Updates.</li>
+</ol>
 
 == Changelog ==
 
