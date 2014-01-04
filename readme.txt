@@ -44,7 +44,7 @@ And More...
 It removes the updates submenu.
 
 == Frequently Asked Questions ==
-= Q: Is their a way to disable only one or two of these?=
+= Q: Is their a way to disable only one or two of these? =
 A: Yes, you can download our these plugins.
 <ol>
 <li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
@@ -53,14 +53,15 @@ A: Yes, you can download our these plugins.
 </ol>
 
 = Q: How is this plugin diferent from the other disable updates plugins? =
-Their are a couple of differences.
+A: Their are a couple of differences.
 <ol>
 <li>They do not disable the updates twice.</li> (This way they can work in more WordPress versions)
 <li>They do not disable WordPress automatic updates.</li>
 <li>They do not have video tutorials and screenshots.</li>
 <li>They do not have indovidual plugins (like the ones above) to disable just one or two.</li>
 </ol>
-The list goes on...
+
+<strong>The list goes on...<strong>
 
 ==  ==
 
@@ -123,6 +124,11 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 1.9.0 =
+* Admin Notice Added
+* FAQ Error Fixed
+* HTML Notes and Some HTML Updated
+
 = 1.8.0 =
 * FAQ Added
 * HTML Notes Edited
