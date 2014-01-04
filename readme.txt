@@ -18,7 +18,9 @@ A simple WordPress plugin that disables all the updating of plugins, themes, and
 This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
 This way you can pick your favourite version of the plugin (theme, or WordPress core).
 
-This plugin is simple, and easy with no settings.
+This plugin is simple and easy.
+
+Their are settings for this plugin under the Dashboard.
 
 This plugin is better then any other plugin in its class because it
 <ol>
@@ -45,23 +47,16 @@ It removes the updates submenu.
 
 == Frequently Asked Questions ==
 = Q: Is their a way to disable only one or two of these? =
-A: Yes, you can download our these plugins.
-<ol>
-<li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
-<li><a href="http://wordpress.org/plugins/disable-theme-updates">Disable Theme Updates</a></li>
-<li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
-</ol>
+A: Yes, in the settings you can disable one, two, or three.
+
 
 = Q: How is this plugin diferent from the other disable updates plugins? =
 A: Their are a couple of differences.
 <ol>
-<li>They do not disable the updates twice.</li> (This way they can work in more WordPress versions)
 <li>They do not disable WordPress automatic updates.</li>
 <li>They do not have video tutorials and screenshots.</li>
-<li>They do not have indovidual plugins (like the ones above) to disable just one or two.</li>
+<li>They do not have settings to disable one, two, or three.</li>
 </ol>
-
-<strong>The list goes on...<strong>
 
 = Q: If I disable this plugin, will I be able to update my plugins, themes, and core again? =
 A: Yes, this plugin just stops (or disables) the update, it does not delete them. 
@@ -88,6 +83,7 @@ If you were wondering why their are no downloads available for some of our this 
 5. After View Plugin (Plugin Page)
 2. Before View (Dashboard)
 3. After View (Dashboard)
+6. Settings Page (Disable All Updates)
 
 == Installation ==
 
@@ -129,6 +125,13 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 2.0.0 =
+* Settings Page Added
+* Disable One, Two, or Three Feature Added
+* Updated Screenshots
+* Updated Readme.txt
+
+
 = 1.9.0 =
 * Admin Notice Added
 * FAQ Error Fixed
