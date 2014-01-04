@@ -63,6 +63,11 @@ A: Their are a couple of differences.
 
 <strong>The list goes on...<strong>
 
+= Q: If I disable this plugin, will I be able to update my plugins, themes, and core again? =
+A: Yes, this plugin just stops (or disables) the update, it does not delete them. 
+
+
+
 ==  ==
 
 = Please note!!! =
@@ -128,6 +133,8 @@ Their are three way to install Disable All Updates.
 * Admin Notice Added
 * FAQ Error Fixed
 * HTML Notes and Some HTML Updated
+* Links Added Under Plugin in Dashboard (Support Forum, FAQ, Tutorial)
+* Updated Readme.txt
 
 = 1.8.0 =
 * FAQ Added
