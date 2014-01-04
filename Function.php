@@ -105,7 +105,7 @@ class Update_Notifications {
 		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
 
 // Remove Files
-		function admin_init() {
+		function admin_init_1() {
 		if ( !function_exists("remove_action") ) return;
 			
 		remove_action( 'load-plugins.php', 'wp_update_plugins' );
@@ -131,7 +131,7 @@ break;
 		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
 
 // Remove Files
-		function admin_init() {
+		function admin_init_2() {
 		if ( !function_exists("remove_action") ) return;
 
 		remove_action( 'load-themes.php', 'wp_update_themes' );
@@ -158,7 +158,7 @@ break;
 		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
 
 // Remove Files
-		function admin_init() {
+		function admin_init_3() {
 		if ( !function_exists("remove_action") ) return;
 
 		remove_action( 'wp_version_check', 'wp_version_check' );
