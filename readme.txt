@@ -1,6 +1,6 @@
 === Disable All Updates ===
 
-Contributors: kidsguide, Chris Collins
+Contributors: kidsguide
 Tags: Disable, Plugin, Updates, WordPress Core, Core, Theme, Themes, Theme Update, WordPress Core Update
 , No Updates, Stop Updates, Disable All Updates, Disable Updates
 Requires at least: 2.4
@@ -15,27 +15,25 @@ A simple WordPress plugin that disables all the updating of plugins, themes, and
 == Description ==
 
 
-This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
+`This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
 This way you can pick your favourite version of the plugin (theme, or WordPress core).
-
-This plugin is simple and easy.
-
-`Their are settings for this plugin under the Dashboard.`
+Their are also settings under the dashboard.`
 
 This plugin is better then any other plugin in its class because it:
-`<ol>
+<ol>
 <li>Turns of WordPress automatic updates</li>
 <li>It disables e-mail noticfactions for updates</li>
 <li>It has settings to disable one or two of them.</li>
-</ol> `
+</ol> 
 
 And More...
 
 = Video Tutorial =
-[youtube http://www.youtube.com/embed/ESOSt_ebiwM]
+<iframe width="640" height="360" src="//www.youtube.com/embed/ESOSt_ebiwM" frameborder="0" allowfullscreen></iframe>
 
-`= Just Won't to Disable One or Two? =
-With the new settings form under dashboard, it easy. Just check the things you won't disabled.`
+= Just Won't to Disable One or Two? =
+`With the new settings form under dashboard, it easy. 
+Just check the things you won't disabled.`
 
 = Check Out Our Newest Plugin! =
 <li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
@@ -119,6 +117,9 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 2.2.1 =
+* Fixed Readme.txt Errors with Boxes
+
 = 2.2.0 =
 * Settings Page Updated (Added Tutorial to Settings Page)
 * Video Tutorial Updated
