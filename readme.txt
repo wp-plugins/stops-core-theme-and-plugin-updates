@@ -126,6 +126,7 @@ Their are three way to install Disable All Updates.
 * Fixed Disable Plugin, Theme, and Core Disabling Problem 
 * Updated Readme.txt
 * Removed Hide Updates Notice Setting
+* Remove Admin Notice (Thanks conservativeread!)
 
 = 2.0.0 =
 * Settings Page Added
