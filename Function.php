@@ -292,41 +292,6 @@ global $Update_Notifications; $Update_Notifications = new Update_Notifications()
 		return $links;
 		}
 
-// Admin Notices
-
-		function thsp_admin_notices() {	
-		global $current_user;	
-		$userid = $current_user->ID;	
-		global $pagenow;
-		if ( !get_user_meta( $userid, 'ignore_sample_error_notice' ) ) {
-
-// Text for Admin Notice
-
-		echo '			
-		<div class="updated">			
-		<p>Thanks for using Disable All Updates version 1.9.0. 			
-		<br /> 			
-		<strong>Status:</strong> 
-		<marquee direction="right" width="270px" style="border:GREY 1px Dotted">Working...</marquee>			
-		<br /> 				
-		<a href="?dismiss_me=yes">Hide Notice</a>
-		</p>			
-		</div>';	
-		}
-		}
-		add_action( 'admin_notices', 'thsp_admin_notices' );
-
-// Action for Hide Notice Text
-
-		function thsp_dismiss_admin_notice() {
-		global $current_user;
-		$userid = $current_user->ID;	
-		if ( isset($_GET['example_nag_ignore']) && '3' == $_GET['example_nag_ignore'] ) { 
-		add_user_meta($user_id, 'example_ignore_notice', 'true', true); 
-		}
-	                  }
-		add_action( 'admin_init', 'thsp_dismiss_admin_notice' );
-
 /**
  * Add action links in Plugins table
  */
