@@ -29,7 +29,7 @@ This plugin is better then any other plugin in its class because it:
 And More...
 
 = Video Tutorial =
-[embed width="560" height="315"] http://youtu.be/ESOSt_ebiwM[/embed]
+[youtube http://www.youtube.com/watch?v=ESOSt_ebiwM]
 
 = Just Won't to Disable One or Two? =
 `With the new settings form under dashboard, it easy. 
