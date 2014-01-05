@@ -2,15 +2,15 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 2.0.0
+ * @version 2.1.0
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.0.0
+Version: 2.1.0
 Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Just fill out the settings.
-Author: kidsguide
-Author URL: http://profiles.wordpress.org/kidsguide/
+Author: Websiteguy
+Author URI: http://profiles.wordpress.org/kidsguide/
 Compatible with WordPress 2.3+.
 */
 /*
@@ -221,11 +221,14 @@ break;
 			    <?php settings_fields('_update_notifications'); ?>
 			    			    
 				<table class="form-table">
+
 					<tr>
-						<th scope="row"><?php _e('Disable Updates and Other Settings:', 'update-notifications-manager') ?></th>
+				<p class="submit">
+					<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+						<th scope="row"><?php _e('Disable Updates:', 'update-notifications-manager') ?></th>
 						<td>
 							<fieldset>
-								<legend class="screen-reader-text"><span><?php _e('Disable Updates and Other Settings:', 'update-notifications-manager') ?></span></legend>
+								<legend class="screen-reader-text"><span><?php _e('Disable Updates:', 'update-notifications-manager') ?></span></legend>
 								<label for="plugins_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['plugin'], true); ?> value="1" id="plugins_notify" name="_update_notifications[plugin]"> <?php _e('Disable Plugin Updates', 'update-notifications-manager') ?>
 								</label>
@@ -237,13 +240,17 @@ break;
 								<label for="core_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['core'], true); ?> value="1" id="core_notify" name="_update_notifications[core]"> <?php _e('Disable WordPress Core Update', 'update-notifications-manager') ?>
 								</label>
+							</fieldset>
+						</td>
+</tr>
+<tr>
+						<th scope="row"><?php _e('Other Settings:', 'update-notifications-manager') ?></th>
+						<td>
+							<fieldset>
+								<legend class="screen-reader-text"><span><?php _e('Other Settings:', 'update-notifications-manager') ?></span></legend>
 								<br>
 								<label for="page_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_update_notifications[page]"> <?php _e('Remove Updates Page (Under Dashboard)', 'update-notifications-manager') ?>
-								</label>
-								<br>
-								<label for="all_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_update_notifications[all]"> <?php _e('Remove Notices (For All)', 'update-notifications-manager') ?>
 								</label>
 							</fieldset>
 						</td>
@@ -255,6 +262,7 @@ break;
 				</p>
 				
 			</form>
+
 		</div>
 			
 	<?php
@@ -318,3 +326,19 @@ global $Update_Notifications; $Update_Notifications = new Update_Notifications()
 		}
 	                  }
 		add_action( 'admin_init', 'thsp_dismiss_admin_notice' );
+
+/**
+ * Add action links in Plugins table
+ */
+ 
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'thsp_plugin_action_links' );
+function thsp_plugin_action_links( $links ) {
+
+	return array_merge(
+		array(
+			'settings' => '<a href="' . admin_url( 'index.php?page=stops-core-theme-and-plugin-updates/Function.php' ) . '">' . __( 'Settings', 'ts-fab' ) . '</a>'
+		),
+		$links
+	);
+
+}

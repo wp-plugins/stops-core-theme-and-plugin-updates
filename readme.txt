@@ -35,11 +35,7 @@ And More...
 [youtube http://www.youtube.com/watch?v=ZSJf9nwP7oA]
 
 = Just Won't to Disable One or Two? =
-<ol>
-<li><a href="http://wordpress.org/plugins/disable-core-updates">Disable Core Updates</a></li>
-<li><a href="http://wordpress.org/plugins/disable-theme-updates">Disable Theme Updates</a></li>
-<li><a href="http://wordpress.org/plugins/disable-plugin-updates">Disable Plugin Updates</a></li>
-</ol>
+With the new settings form under dashboard, it easy. Just check the things you won't disabled.
 
 = Check Out Our Newest Plugin! =
 <li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
@@ -125,6 +121,12 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 2.1.0 =
+* Settings Page Updated (under Dashboard and with more settings)
+* Fixed Disable Plugin, Theme, and Core Disabling Problem 
+* Updated Readme.txt
+* Removed Hide Updates Notice Setting
+
 = 2.0.0 =
 * Settings Page Added
 * Disable One, Two, or Three Feature Added
