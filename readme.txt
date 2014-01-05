@@ -8,16 +8,16 @@ Tested up to: 3.8
 Stable tag: trunk
 
 
-A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. You can also just disable one or two of them using the settings.
+This plugin disables all the updating of plugins, themes, and the WordPress core. You can also enable some using the settings.
 
 
 
 == Description ==
 
 
-`This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
+This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
 This way you can pick your favourite version of the plugin (theme, or WordPress core).
-Their are also settings under the dashboard.`
+Their are also settings under the dashboard.
 
 This plugin is better then any other plugin in its class because it:
 <ol>
@@ -29,7 +29,7 @@ This plugin is better then any other plugin in its class because it:
 And More...
 
 = Video Tutorial =
-<iframe width="640" height="360" src="//www.youtube.com/embed/ESOSt_ebiwM" frameborder="0" allowfullscreen></iframe>
+[youtube http://youtu.be/ESOSt_ebiwM]
 
 = Just Won't to Disable One or Two? =
 `With the new settings form under dashboard, it easy. 
