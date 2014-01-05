@@ -117,6 +117,12 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 2.3.0 =
+* Remove File Setting Added
+* Fixed up Settings Page
+* Updated Readme.txt
+* Removed Tutorial on Settings Page (their is a link to the tutorial in the plugin page)
+
 = 2.2.1 =
 * Fixed Readme.txt Errors with Boxes
 
