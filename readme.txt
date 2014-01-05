@@ -8,7 +8,7 @@ Tested up to: 3.8
 Stable tag: trunk
 
 
-A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core.
+A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. You can also just disable one or two of them using the settings.
 
 
 
@@ -20,31 +20,31 @@ This way you can pick your favourite version of the plugin (theme, or WordPress 
 
 This plugin is simple and easy.
 
-Their are settings for this plugin under the Dashboard.
+`Their are settings for this plugin under the Dashboard.`
 
-This plugin is better then any other plugin in its class because it
-<ol>
+This plugin is better then any other plugin in its class because it:
+`<ol>
 <li>Turns of WordPress automatic updates</li>
 <li>It disables e-mail noticfactions for updates</li>
-<li>Removes the WordPress update files</li>
-</ol> 
+<li>It has settings to disable one or two of them.</li>
+</ol> `
 
 And More...
 
 = Video Tutorial =
-[youtube http://www.youtube.com/watch?v=ZSJf9nwP7oA]
+[youtube http://www.youtube.com/embed/ESOSt_ebiwM]
 
-= Just Won't to Disable One or Two? =
-With the new settings form under dashboard, it easy. Just check the things you won't disabled.
+`= Just Won't to Disable One or Two? =
+With the new settings form under dashboard, it easy. Just check the things you won't disabled.`
 
 = Check Out Our Newest Plugin! =
 <li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
 It removes the updates submenu.
 
 == Frequently Asked Questions ==
+
 = Q: Is their a way to disable only one or two of these? =
 A: Yes, in the settings you can disable one, two, or three.
-
 
 = Q: How is this plugin diferent from the other disable updates plugins? =
 A: Their are a couple of differences.
@@ -57,15 +57,13 @@ A: Their are a couple of differences.
 = Q: If I disable this plugin, will I be able to update my plugins, themes, and core again? =
 A: Yes, this plugin just stops (or disables) the update, it does not delete them. 
 
-
-
 ==  ==
 
-= Please note!!! =
+`= Please note!!! =
 
 
 It is very important to keep your WordPress plugins, core, and themes up to date. 
-If you use this plugin, make sure your plugins are not harming your website.
+If you use this plugin, make sure your plugins are not harming your website.`
 
 = No Downloads For Some Versions =
 If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
@@ -121,12 +119,17 @@ Their are three way to install Disable All Updates.
 
 
 = Versions Available for Downloading =
+= 2.2.0 =
+* Settings Page Updated (Added Tutorial to Settings Page)
+* Video Tutorial Updated
+* New Settings Page Name (Disable Updates)
+
 = 2.1.0 =
 * Settings Page Updated (under Dashboard and with more settings)
 * Fixed Disable Plugin, Theme, and Core Disabling Problem 
 * Updated Readme.txt
 * Removed Hide Updates Notice Setting
-* Remove Admin Notice (Thanks conservativeread!)
+* Remove Admin Notice <strong>(Thanks conservativeread!)</strong>
 
 = 2.0.0 =
 * Settings Page Added

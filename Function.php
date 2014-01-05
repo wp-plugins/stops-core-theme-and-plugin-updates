@@ -2,12 +2,12 @@
 /**
  * @package Disable All Updates
  * @author Websiteguy
- * @version 2.1.0
+ * @version 2.2.0
 */
 /*
 Plugin Name: Disable All Updates
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.1.0
+Version: 2.2.0
 Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Just fill out the settings.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
@@ -80,7 +80,7 @@ class Update_Notifications {
 	{
 		
 		// Add submenu in menu "Settings"
-		add_submenu_page( 'index.php', 'Disable All Updates', __('Disable All Updates','update-notifications-manager'), 'administrator', __FILE__, array(&$this, 'display_page') );
+		add_submenu_page( 'index.php', 'Disable Updates', __('Disable Updates','update-notifications-manager'), 'administrator', __FILE__, array(&$this, 'display_page') );
 	}
 
 	function load_update_notifications()
@@ -213,7 +213,7 @@ break;
 		?>
 		
 		<div class="wrap">
-			<div id="icon-options-general" class="icon32"></div>
+			<?php screen_icon(); ?>
 			<h2><?php _e('Disable All Updates Settings','update-notifications-manager'); ?></h2>
 			
 			<form method="post" action="options.php">
@@ -224,7 +224,7 @@ break;
 
 					<tr>
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+					<input type="submit" class="button-primary" value="<?php _e('Save') ?>" />
 						<th scope="row"><?php _e('Disable Updates:', 'update-notifications-manager') ?></th>
 						<td>
 							<fieldset>
@@ -255,11 +255,29 @@ break;
 							</fieldset>
 						</td>
 					</tr>
-				</table>
-				
+<tr>
+<td>
+<fieldset>
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+					<input type="submit" class="button-primary" value="<?php _e('Save') ?>" />
 				</p>
+</fieldset>
+</td>
+</tr>
+<tr>
+
+						<th scope="row"><?php _e('Video Tutorial:', 'update-notifications-manager') ?></th>
+						<td>
+
+							<fieldset>
+<label>
+<iframe width="560" height="315" src="//www.youtube.com/embed/ESOSt_ebiwM" frameborder="0" allowfullscreen></iframe>
+</label>
+							</fieldset>
+						</td>
+					</tr>				
+
+                                       </table>
 				
 			</form>
 
