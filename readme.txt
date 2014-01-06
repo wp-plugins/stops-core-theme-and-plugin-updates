@@ -1,32 +1,33 @@
-=== Disable All Updates ===
+=== Disable Updates Manager ===
 
 Contributors: kidsguide
-Tags: Disable, Plugin, Updates, WordPress Core, Core, Theme, Themes, Theme Update, WordPress Core Update
-, No Updates, Stop Updates, Disable All Updates, Disable Updates
+Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager
 Requires at least: 2.4
 Tested up to: 3.8
 Stable tag: trunk
 
-
-This plugin disables all the updating of plugins, themes, and the WordPress core. You can also enable some using the settings.
-
-
+Now you can chose which type of update you won't to disable! Just go to the settings page under dashboard. 
 
 == Description ==
+With the newest versions of Disable Updates Manager (formerly called "Disable All Updates') you can chose the type of update you would like to disable.
 
-
-This plugin simple removes the updating of the plugins, theme, and even the WordPress core.
-This way you can pick your favourite version of the plugin (theme, or WordPress core).
-Their are also settings under the dashboard.
-
-This plugin is better then any other plugin in its class because it:
+= Types of Updates to Disable =
 <ol>
-<li>Turns of WordPress automatic updates</li>
-<li>It disables e-mail noticfactions for updates</li>
-<li>It has settings to disable one or two of them.</li>
+<li>WordPress Core Updates</li>
+<li>WordPress Plugin Updates</li>
+<li>WordPress Theme Updates</li>
 </ol> 
 
-And More...
+
+= Features =
+<ol>
+<li>Has a simple settings page to disable all types of updates.</li>
+<li>Has extra settings to remove the "updates" page, and disable the updates files.</li>
+<li>Disables WordPress automatic updates.</li>
+<li>Disables update e-mails</li>
+<li>Has a link to Support, FAQ, and the Tutorial in the plugin page</li>
+<li>Translation</li>
+</ol> 
 
 = Video Tutorial =
 [youtube http://www.youtube.com/watch?v=ESOSt_ebiwM]
@@ -44,7 +45,7 @@ It removes the updates submenu.
 = Q: Is their a way to disable only one or two of these? =
 A: Yes, in the settings you can disable one, two, or three.
 
-= Q: How is this plugin diferent from the other disable updates plugins? =
+= Q: How is this plugin different from the other disable updates plugins? =
 A: Their are a couple of differences.
 <ol>
 <li>They do not disable WordPress automatic updates.</li>
@@ -58,17 +59,11 @@ A: Yes, this plugin just stops (or disables) the update, it does not delete them
 ==  ==
 
 `= Please note!!! =
-
-
 It is very important to keep your WordPress plugins, core, and themes up to date. 
 If you use this plugin, make sure your plugins are not harming your website.`
 
 = No Downloads For Some Versions =
 If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
-
-
-
-
 == Screenshots ==
 1. Before View Core (Dashboard)
 4. Before View Plugin (Plugin Page)
@@ -78,7 +73,6 @@ If you were wondering why their are no downloads available for some of our this 
 6. Settings Page (Disable All Updates)
 
 == Installation ==
-
 
 Their are three way to install Disable All Updates.
 
@@ -114,9 +108,13 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 
-
-
 = Versions Available for Downloading =
+= 2.4.0 =
+* Plugin Name Changed (Disable Updates Manager)
+* Tags Updated (Make it easier to find this plugin)
+* Fixed Some HTML
+* Added Translation (Test) 
+
 = 2.3.0 =
 * Remove File Setting Added
 * Fixed up Settings Page
@@ -232,6 +230,5 @@ Their are three way to install Disable All Updates.
 * Readme.txt Updated 
 
 = 0.1 =
- 
 * Published on Wordpress.org
  (September 1, 2013) 

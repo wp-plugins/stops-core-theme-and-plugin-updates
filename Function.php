@@ -1,14 +1,14 @@
 <?php
 /**
- * @package Disable All Updates
+ * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.3.0
+ * @version 2.4.0
 */
 /*
-Plugin Name: Disable All Updates
+Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.3.0
-Description: A simple WordPress plugin that disables all the updating of plugins, themes, and the WordPress core. Just fill out the settings.
+Version: 2.4.0
+Description: Now you can chose which type of update you won't to disable! Just go to the settings page under dashboard. 
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
 Compatible with WordPress 2.3+.
@@ -41,7 +41,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		
     // Coming Soon: Add translations
 	if (function_exists('load_plugin_textdomain'))
-		load_plugin_textdomain( 'disable-updates-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+		load_plugin_textdomain( 'disable-updates-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 		
 	// Add menu page
 	        add_action('admin_menu', array(&$this, 'add_submenu'));
@@ -200,8 +200,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				<table class="form-table">
 
 					<tr>
-				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e('Save') ?>" />
 					<th scope="row"><?php _e('Disable Updates:', 'disable-updates-manager') ?></th>
 					<td>
 						<fieldset>
@@ -246,14 +244,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 								</p>
 						</fieldset>
 				    </td>
-				    </tr>
-				    
-					<td>
-                        If you like this plugin, please rate it.
-                    <br /> 
-                    <br />
-                        Thanks for download this plugin!
-					</td>				
+				    </tr>				
 
                 </table>
 				
