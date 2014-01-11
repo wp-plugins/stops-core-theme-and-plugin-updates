@@ -2,16 +2,16 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.5.0
+ * @version 2.5.1
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.5.0
-Description: Now you can chose which type of update you won't to disable! Just go to the settings page under dashboard. 
+Version: 2.5.1
+Description: Pick which type of updates you would like to disable. Just use are new settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
-Compatible with WordPress 2.3+.
+Tested up to WordPress 3.8.
 */
 /*
 @Copyright 2014 Websiteguy (email : mpsparrow@cogeco.ca)
@@ -39,7 +39,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	
 	function Disable_Updates() {
 		
-    // Coming Soon: Add translations
+    //  Add translations
 	if (function_exists('load_plugin_textdomain'))
 		load_plugin_textdomain( 'disable-updates-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 		
@@ -272,12 +272,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     // Settings Page (Under Dashboard)
 	    function display_page() { 
 		
-	// Check if user can access to the plugin
+	// Don't Allow Users to View Settings
 		if (!current_user_can('update_core'))
 			wp_die( __('You do not have permissions to access this page.') );
 		
 		?>
 		
+	// Start of Settings Forum 	
 		<div class="wrap">  
 			<h2><?php _e('Disable Updates Manager Settings','disable-updates-manager'); ?></h2>
 			
@@ -344,7 +345,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				    <td>
 						<fieldset>
 								<p class="submit">
-									<input type="submit" class="button-primary" value="<?php _e('Save') ?>" />
+									<input type="submit" class="button-primary" value="<?php _e('Update Settings') ?>" />
 								</p>
 						</fieldset>
 				    </td>
@@ -362,8 +363,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
     // Start this plugin once all other plugins are fully loaded
 		global $Disable_Updates; $Disable_Updates = new Disable_Updates();
-
-    // Plugin Page Links Function
+		
+    // Plugin Page Link Function
 		add_filter( 'plugin_row_meta', 'thsp_plugin_meta_links', 10, 2 );
 
 		function thsp_plugin_meta_links( $links, $file ) {	

@@ -1,12 +1,11 @@
 === Disable Updates Manager ===
-
 Contributors: kidsguide
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager
-Requires at least: 2.4
+Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: trunk
 
-Now you can chose which type of update you won't to disable! Just go to the settings page under dashboard. 
+Pick which type of updates you would like to disable. Just use are new settings forum.
 
 == Description ==
 With the newest versions of Disable Updates Manager (formerly called "Disable All Updates') you can chose the type of update you would like to disable.
@@ -18,14 +17,13 @@ With the newest versions of Disable Updates Manager (formerly called "Disable Al
 <li>WordPress Theme Updates</li>
 </ol> 
 
-
 = Features =
 <ol>
-<li>Has a simple settings page to disable all types of updates.</li>
-<li>Has extra settings to remove the "updates" page, and disable the updates files.</li>
+<li>Has a simple settings page to disable any type of updates.</li>
+<li>Has extra settings to remove the "updates" page, and disable all the updates (like the passed versions of this plugin).</li>
 <li>Disables WordPress automatic updates.</li>
 <li>Disables update e-mails</li>
-<li>Has a link to Support, FAQ, and the Tutorial in the plugin page</li>
+<li>Has a link to Support, FAQ, Settings, and the Tutorial in the plugin page</li>
 <li>Translation</li>
 </ol> 
 
@@ -37,9 +35,8 @@ With the new settings form under dashboard, it easy.
 Just check the things you won't disabled.
 
 == Frequently Asked Questions ==
-
 = Q: Is their a way to disable only one or two of these? =
-A: Yes, in the settings you can disable one, two, or three.
+A: Yes, in the settings you can disable one, two, or all of them.
 
 = Q: How is this plugin different from the other disable updates plugins? =
 A: Their are a couple of differences.
@@ -60,7 +57,7 @@ If you use this plugin, make sure your plugins are not harming your website.`
 
 = No Downloads For Some Versions =
 If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
-
+
 == Screenshots ==
 1. Before View Core (Dashboard)
 4. Before View Plugin (Plugin Page)
@@ -70,9 +67,6 @@ If you were wondering why their are no downloads available for some of our this 
 6. Settings Page (Disable All Updates)
 
 == Installation ==
-
-
-
 Their are three way to install Disable All Updates.
 
 <strong>1)</strong> The WordPress dashboard way.
@@ -106,13 +100,20 @@ Their are three way to install Disable All Updates.
 </ol>
 
 == Changelog ==
-
-
-
 = Versions Available for Downloading =
+= 2.5.1 =
+`= Settings in Dashboard =
+* Changed Button Text
+
+= HTML =
+* HTML Notes Updated
+
+= Readme =
+* Fixed Changelog Errors
+* Updated Description`
+
 
 = 2.5.0 =
-
 = Settings in Dashboard =
 * Added Postboxes
 * Remove Delete Files Setting
@@ -124,19 +125,14 @@ Their are three way to install Disable All Updates.
 * Delete Translation .mo File
 
 = Readme.txt =
-* Readme.txt Updated
+* Readme.txt Error Fixed
 
 = 2.4.0 =
-
 * Plugin Name Changed (Disable Updates Manager)
-
 * Tags Updated (Make it easier to find this plugin)
-
 * Fixed Some HTML
-
 * Added Translation (Test)
  
-
 = 2.3.0 =
 * Remove File Setting Added
 * Fixed up Settings Page
@@ -163,7 +159,6 @@ Their are three way to install Disable All Updates.
 * Disable One, Two, or Three Feature Added
 * Updated Screenshots
 * Updated Readme.txt
-
 
 = 1.9.0 =
 * Admin Notice Added
