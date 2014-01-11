@@ -101,16 +101,28 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 = Versions Available for Downloading =
+
+
 = 2.5.1 =
-`= Settings in Dashboard =
-* Changed Button Text
+= Settings in Dashboard =
+
+* Changed Save Button Text
+
+
 
 = HTML =
+
 * HTML Notes Updated
 
+
+
 = Readme =
+
 * Fixed Changelog Errors
-* Updated Description`
+
+* Updated Description
+
+
 
 
 = 2.5.0 =
