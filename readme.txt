@@ -1,4 +1,5 @@
 === Disable Updates Manager ===
+
 Contributors: kidsguide
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager
 Requires at least: 3.0
