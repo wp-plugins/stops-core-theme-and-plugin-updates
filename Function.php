@@ -2,19 +2,19 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.4.0
+ * @version 2.5.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.4.0
+Version: 2.5.0
 Description: Now you can chose which type of update you won't to disable! Just go to the settings page under dashboard. 
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
 Compatible with WordPress 2.3+.
 */
 /*
-Copyright 2014 Websiteguy (email : mpsparrow@cogeco.ca)
+@Copyright 2014 Websiteguy (email : mpsparrow@cogeco.ca)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 
@@ -75,6 +75,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		add_submenu_page( 'index.php', 'Disable Updates', __('Disable Updates','disable-updates-manager'), 'administrator', __FILE__, array(&$this, 'display_page') );
 		}
 
+		
+	// Functions for Plugin (Change in Settings)	
 	function load_disable_updates() {
 		$this->status = get_option('_disable_updates');
 		
@@ -133,48 +135,134 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 					
 			break;
 
-    // Remove Update Files
-			case 'files' :
+    // Disable All Updates 
+			case 'all' :
 
-	// Remove Plugin Files
-		function admin_init_plugin() {
-			if ( !function_exists("remove_action") ) return;
-			
-			remove_action( 'load-plugins.php', 'wp_update_plugins' );
-			remove_action( 'load-update.php', 'wp_update_plugins' );
-			remove_action( 'admin_init', '_maybe_update_plugins' );
-			remove_action( 'wp_update_plugins', 'wp_update_plugins' );
-			wp_clear_scheduled_hook( 'wp_update_plugins' );
-		
-			remove_action( 'load-update-core.php', 'wp_update_plugins' );
-			wp_clear_scheduled_hook( 'wp_update_plugins' );
-		}			
-		
-	// Remove Theme Files
-		function admin_init_theme() {
-			if ( !function_exists("remove_action") ) return;
+    // Disable All Updates
 
-			remove_action( 'load-themes.php', 'wp_update_themes' );
-			remove_action( 'load-update.php', 'wp_update_themes' );
-			remove_action( 'admin_init', '_maybe_update_themes' );
-			remove_action( 'wp_update_themes', 'wp_update_themes' );
-			wp_clear_scheduled_hook( 'wp_update_themes' );
-		
-			remove_action( 'load-update-core.php', 'wp_update_themes' );
-			wp_clear_scheduled_hook( 'wp_update_themes' );
+    // Disable Plugin Updates
+
+		remove_action( 'load-update-core.php', 'wp_update_plugins' );
+		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+    // Disable Theme Updates
+
+		remove_action( 'load-update-core.php', 'wp_update_themes' );
+		add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
+
+    // Disable Core Updates
+
+		remove_action( 'load-update-core.php', 'wp_update_core' );
+		add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
+
+    // Remove Update Submenu Under Dashboard. The same code in our new plugin "Remove the Updates Submenu".
+
+		add_action('admin_menu', 'remove_menus', 102);
+		function remove_menus() {
+		global $submenu;
+		remove_submenu_page ( 'index.php', 'update-core.php' );
 		}
-		
-    // Remove WordPress Core Files
-		function admin_init_core() {
-			if ( !function_exists("remove_action") ) return;
 
-			remove_action( 'wp_version_check', 'wp_version_check' );
-			remove_action( 'admin_init', '_maybe_update_core' );
-			wp_clear_scheduled_hook( 'wp_version_check' );
-		
-			wp_clear_scheduled_hook( 'wp_version_check' );
+    // Hide Update Notices in Admin Dashboard
+
+		add_action('admin_menu','hide_admin_notices');
+		function hide_admin_notices() {
+		remove_action( 'admin_notices', 'update_nag', 3 );
 		}
+
+    // Turns off Automatic Updates in WordPress
+
+		define( 'Automatic_Updater_Disabled', true );
+                                    define('WP_AUTO_UPDATE_CORE', false);
+
+    // Removes Update E-mails (Only works with some plugins)
+
+    // Core E-mails
+
+		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
+
+    // Plugin E-mails
+
+		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
+
+    // Theme E-mails
+
+		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
+
+    // Remove Files From WordPress
+
+		function admin_init() {
+		if ( !function_exists("remove_action") ) return;
+
+    // Disable Plugin Updates
+
+		remove_action( 'load-plugins.php', 'wp_update_plugins' );
+		remove_action( 'load-update.php', 'wp_update_plugins' );
+		remove_action( 'admin_init', '_maybe_update_plugins' );
+		remove_action( 'wp_update_plugins', 'wp_update_plugins' );
+		wp_clear_scheduled_hook( 'wp_update_plugins' );
 		
+		remove_action( 'load-update-core.php', 'wp_update_plugins' );
+		wp_clear_scheduled_hook( 'wp_update_plugins' );	
+
+    // Disable Theme Updates
+
+		remove_action( 'load-themes.php', 'wp_update_themes' );
+		remove_action( 'load-update.php', 'wp_update_themes' );
+		remove_action( 'admin_init', '_maybe_update_themes' );
+		remove_action( 'wp_update_themes', 'wp_update_themes' );
+		wp_clear_scheduled_hook( 'wp_update_themes' );
+		
+		remove_action( 'load-update-core.php', 'wp_update_themes' );
+		wp_clear_scheduled_hook( 'wp_update_themes' );
+
+    // Disable Core Updates
+
+		remove_action( 'wp_version_check', 'wp_version_check' );
+		remove_action( 'admin_init', '_maybe_update_core' );
+		wp_clear_scheduled_hook( 'wp_version_check' );
+		
+		wp_clear_scheduled_hook( 'wp_version_check' );
+		}
+
+    // Remove Updates Agian (just in case)
+
+		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+		add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+		add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
+
+		remove_action( 'wp_version_check', 'wp_version_check' );
+		remove_action( 'admin_init', '_maybe_update_core' );
+		add_filter( 'pre_transient_update_core', create_function( '$a', "return null;" ) );
+
+		add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
+
+		remove_action( 'load-themes.php', 'wp_update_themes' );
+		remove_action( 'load-update.php', 'wp_update_themes' );
+		remove_action( 'admin_init', '_maybe_update_themes' );
+		remove_action( 'wp_update_themes', 'wp_update_themes' );
+		add_filter( 'pre_transient_update_themes', create_function( '$a', "return null;" ) );
+
+		remove_action( 'load-update-core.php', 'wp_update_themes' );
+		add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
+
+		add_action( 'admin_menu', create_function( '$a', "remove_action( 'load-plugins.php', 'wp_update_plugins' );") );
+	
+		add_action( 'admin_init', create_function( '$a', "remove_action( 'admin_init', 'wp_update_plugins' );"), 2 );
+		add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_update_plugins' );"), 2 );
+		add_filter( 'pre_option_update_plugins', create_function( '$a', "return null;" ) );
+
+		remove_action( 'load-plugins.php', 'wp_update_plugins' );
+		remove_action( 'load-update.php', 'wp_update_plugins' );
+		remove_action( 'admin_init', '_maybe_update_plugins' );
+		remove_action( 'wp_update_plugins', 'wp_update_plugins' );
+		add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+		remove_action( 'load-update-core.php', 'wp_update_plugins' );
+		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
+		
+
 			break;
 
 		}
@@ -186,12 +274,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		
 	// Check if user can access to the plugin
 		if (!current_user_can('update_core'))
-			wp_die( __('You do not have sufficient permissions to access this page.') );
+			wp_die( __('You do not have permissions to access this page.') );
 		
 		?>
 		
-		<div class="wrap">
-			<h2><?php _e('Disable All Updates Settings','disable-updates-manager'); ?></h2>
+		<div class="wrap">  
+			<h2><?php _e('Disable Updates Manager Settings','disable-updates-manager'); ?></h2>
 			
 			<form method="post" action="options.php">
 				
@@ -200,10 +288,26 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				<table class="form-table">
 
 					<tr>
-					<th scope="row"><?php _e('Disable Updates:', 'disable-updates-manager') ?></th>
 					<td>
 						<fieldset>
-								<legend class="screen-reader-text"><span><?php _e('Disable Updates:', 'disable-updates-manager') ?></span></legend>
+		<div class="postbox">
+			<h3>&nbsp;Disable All Updates <small>(Same function as versions less than 1.9.0)</small></h3> 
+		<div class="inside">
+							<label for="all_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates', 'disable-updates-manager') ?>
+							</label>
+		</div>
+		</div>
+						</fieldset>
+					</td>
+				    </tr>
+
+					<tr>
+					<td>
+						<fieldset>
+		<div class="postbox">
+			<h3>&nbsp;Disable Updates</h3>
+		<div class="inside">
 							<label for="plugins_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['plugin'], true); ?> value="1" id="plugins_notify" name="_disable_updates[plugin]"> <?php _e('Disable Plugin Updates', 'disable-updates-manager') ?>
 							</label>
@@ -215,23 +319,23 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 							<label for="core_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['core'], true); ?> value="1" id="core_notify" name="_disable_updates[core]"> <?php _e('Disable WordPress Core Update', 'disable-updates-manager') ?>
 							</label>
+		</div>
+		</div>
 						</fieldset>
 					</td>
 				    </tr>
 					
 				    <tr>
-					<th scope="row"><?php _e('Other Settings:', 'disable-updates-manager') ?></th>
 					<td>
 						<fieldset>
-								<legend class="screen-reader-text"><span><?php _e('Other Settings:', 'disable-updates-manager') ?></span></legend>
-								<br>
+		<div class="postbox">
+			<h3>&nbsp;Other Settings</h3>
+		<div class="inside">
 							<label for="page_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page (Under Dashboard)', 'disable-updates-manager') ?>
 							</label>
-								<br>
-							<label for="files_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['files'], true); ?> value="1" id="files_notify" name="_disable_updates[files]"> <?php _e('Removes Updates Files (Note: Only use this setting if you are disabling all the updates)', 'disable-updates-manager') ?>
-							</label>
+		</div>
+		</div>
 						</fieldset>
 					</td>
 					</tr>

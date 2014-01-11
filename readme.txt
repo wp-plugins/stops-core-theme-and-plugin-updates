@@ -33,12 +33,8 @@ With the newest versions of Disable Updates Manager (formerly called "Disable Al
 [youtube http://www.youtube.com/watch?v=ESOSt_ebiwM]
 
 = Just Won't to Disable One or Two? =
-`With the new settings form under dashboard, it easy. 
-Just check the things you won't disabled.`
-
-= Check Out Our Newest Plugin! =
-<li><a href="http://wordpress.org/plugins/remove-the-updates-submenu/">Remove the Updates Submenu</a></li>
-It removes the updates submenu.
+With the new settings form under dashboard, it easy. 
+Just check the things you won't disabled.
 
 == Frequently Asked Questions ==
 
@@ -63,7 +59,8 @@ It is very important to keep your WordPress plugins, core, and themes up to date
 If you use this plugin, make sure your plugins are not harming your website.`
 
 = No Downloads For Some Versions =
-If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
+If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
+
 == Screenshots ==
 1. Before View Core (Dashboard)
 4. Before View Plugin (Plugin Page)
@@ -73,6 +70,8 @@ If you were wondering why their are no downloads available for some of our this 
 6. Settings Page (Disable All Updates)
 
 == Installation ==
+
+
 
 Their are three way to install Disable All Updates.
 
@@ -108,12 +107,35 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 
+
+
 = Versions Available for Downloading =
+
+= 2.5.0 =
+
+= Settings in Dashboard =
+* Added Postboxes
+* Remove Delete Files Setting
+* Added Disable All Updates Setting
+* Renamed Name on Settings Page 
+
+= HTML =
+* HTML Notes Updated
+* Delete Translation .mo File
+
+= Readme.txt =
+* Readme.txt Updated
+
 = 2.4.0 =
+
 * Plugin Name Changed (Disable Updates Manager)
+
 * Tags Updated (Make it easier to find this plugin)
+
 * Fixed Some HTML
-* Added Translation (Test) 
+
+* Added Translation (Test)
+ 
 
 = 2.3.0 =
 * Remove File Setting Added
