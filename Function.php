@@ -277,8 +277,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			wp_die( __('You do not have permissions to access this page.') );
 		
 		?>
-		
-	// Start of Settings Forum 	
+	
 		<div class="wrap">  
 			<h2><?php _e('Disable Updates Manager Settings','disable-updates-manager'); ?></h2>
 			
