@@ -2,12 +2,12 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.5.1
+ * @version 2.6.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.5.1
+Version: 2.6.0
 Description: Pick which type of updates you would like to disable. Just use are new settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
@@ -126,11 +126,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			case 'page' :
 			
 	// Remove the Dashboard Updates Menu Code		
-		add_action('admin_menu', 'remove_menus', 102);
-		
-		function remove_menus() {
-			global $submenu;
-		remove_submenu_page ( 'index.php', 'update-core.php' );
+		add_action( 'admin_init', 'wpse_38111' );
+		function wpse_38111() {
+		    remove_submenu_page( 'index.php', 'update-core.php' );
 		}
 					
 			break;
@@ -154,14 +152,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 		remove_action( 'load-update-core.php', 'wp_update_core' );
 		add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
-
-    // Remove Update Submenu Under Dashboard. The same code in our new plugin "Remove the Updates Submenu".
-
-		add_action('admin_menu', 'remove_menus', 102);
-		function remove_menus() {
-		global $submenu;
-		remove_submenu_page ( 'index.php', 'update-core.php' );
-		}
 
     // Hide Update Notices in Admin Dashboard
 
@@ -291,10 +281,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 					<td>
 						<fieldset>
 		<div class="postbox">
-			<h3>&nbsp;Disable All Updates <small>(Same function as versions less than 1.9.0)</small></h3> 
+			<h3>&nbsp;Disable All Updates</h3> 
 		<div class="inside">
 							<label for="all_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates <small>(Not including the settings under "Other Settings")</small>', 'disable-updates-manager') ?>
 							</label>
 		</div>
 		</div>
@@ -306,7 +296,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 					<td>
 						<fieldset>
 		<div class="postbox">
-			<h3>&nbsp;Disable Updates</h3>
+			<h3>&nbsp;Disable Updates <small>(All settings under here included in Disable All Updates setting above.)</small></h3> 
 		<div class="inside">
 							<label for="plugins_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['plugin'], true); ?> value="1" id="plugins_notify" name="_disable_updates[plugin]"> <?php _e('Disable Plugin Updates', 'disable-updates-manager') ?>

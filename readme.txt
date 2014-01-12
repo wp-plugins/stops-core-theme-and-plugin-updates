@@ -1,5 +1,4 @@
 === Disable Updates Manager ===
-
 Contributors: kidsguide
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager
 Requires at least: 3.0
@@ -52,9 +51,9 @@ A: Yes, this plugin just stops (or disables) the update, it does not delete them
 
 ==  ==
 
-`= Please note!!! =
+= Please note!!! =
 It is very important to keep your WordPress plugins, core, and themes up to date. 
-If you use this plugin, make sure your plugins are not harming your website.`
+If you use this plugin, make sure your plugins are not harming your website.
 
 = No Downloads For Some Versions =
 If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
@@ -102,42 +101,25 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 = Versions Available for Downloading =
-
+= 2.6.0 =
+* Added Better Settings Description
+* Fixed Disable All Updates Setting Error <strong>(Thanks conservativeread!)</strong>
+* Remove the Updates Page Setting from Disable All Updates Setting <strong>(Thanks again conservativeread!)</strong>
 
 = 2.5.1 =
-= Settings in Dashboard =
-
 * Changed Save Button Text
-
-
-
-= HTML =
-
 * HTML Notes Updated
-
-
-
-= Readme =
-
 * Fixed Changelog Errors
-
 * Updated Description
 
 
-
-
 = 2.5.0 =
-= Settings in Dashboard =
 * Added Postboxes
 * Remove Delete Files Setting
 * Added Disable All Updates Setting
 * Renamed Name on Settings Page 
-
-= HTML =
 * HTML Notes Updated
 * Delete Translation .mo File
-
-= Readme.txt =
 * Readme.txt Error Fixed
 
 = 2.4.0 =
