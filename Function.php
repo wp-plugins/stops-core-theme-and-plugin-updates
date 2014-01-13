@@ -2,12 +2,12 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.6.0
+ * @version 2.7.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.6.0
+Version: 2.7.0
 Description: Pick which type of updates you would like to disable. Just use are new settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
