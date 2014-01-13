@@ -322,7 +322,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			<h3>&nbsp;Other Settings</h3>
 		<div class="inside">
 							<label for="page_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page (Under Dashboard)', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page <small>(Under Dashboard)</small>', 'disable-updates-manager') ?>
 							</label>
 		</div>
 		</div>

@@ -5,26 +5,18 @@ Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: trunk
 
-Pick which type of updates you would like to disable. Just use are new settings forum.
+A configurable plugin that disables updates. The best in its class. 
 
 == Description ==
-With the newest versions of Disable Updates Manager (formerly called "Disable All Updates') you can chose the type of update you would like to disable.
-
-= Types of Updates to Disable =
-<ol>
-<li>WordPress Core Updates</li>
-<li>WordPress Plugin Updates</li>
-<li>WordPress Theme Updates</li>
-</ol> 
+This plugin is 100% configurable! Check the updates you would like to disable in the settings page.
 
 = Features =
 <ol>
-<li>Has a simple settings page to disable any type of updates.</li>
-<li>Has extra settings to remove the "updates" page, and disable all the updates (like the passed versions of this plugin).</li>
+<li>Has a simple settings page to disable any type of update.</li>
+<li>Has extra settings like remove the "updates" page.</li>
 <li>Disables WordPress automatic updates.</li>
 <li>Disables update e-mails</li>
 <li>Has a link to Support, FAQ, Settings, and the Tutorial in the plugin page</li>
-<li>Translation</li>
 </ol> 
 
 = Video Tutorial =
@@ -35,28 +27,22 @@ With the new settings form under dashboard, it easy.
 Just check the things you won't disabled.
 
 == Frequently Asked Questions ==
-= Q: Is their a way to disable only one or two of these? =
-A: Yes, in the settings you can disable one, two, or all of them.
-
 = Q: How is this plugin different from the other disable updates plugins? =
 A: Their are a couple of differences.
 <ol>
 <li>They do not disable WordPress automatic updates.</li>
 <li>They do not have video tutorials and screenshots.</li>
-<li>They do not have settings to disable one, two, or three.</li>
+<li>They do not have settings to make it configurable.</li>
 </ol>
 
-= Q: If I disable this plugin, will I be able to update my plugins, themes, and core again? =
-A: Yes, this plugin just stops (or disables) the update, it does not delete them. 
+= Q: If I remove this plugin from my website will I be able to update my plugins, themes, and WordPress core again? =
+A: Yes, this plugin just disables the update (not removes). 
 
 ==  ==
 
 = Please note!!! =
-It is very important to keep your WordPress plugins, core, and themes up to date. 
-If you use this plugin, make sure your plugins are not harming your website.
-
-= No Downloads For Some Versions =
-If you were wondering why their are no downloads available for some of our this plugins versions, its because the versions are full of bugs.
+It is very important to keep your plugins, themes, and WordPress core up to date. 
+If you use this plugin, make sure your WordPress core (themes, and plugins also) are not harming your website.
 
 == Screenshots ==
 1. Before View Core (Dashboard)
@@ -101,6 +87,10 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 = Versions Available for Downloading =
+= 2.7.0 =
+* Updated Readme.txt Description 
+* Fixed <small> function in settings.
+
 = 2.6.0 =
 * Added Better Settings Description
 * Fixed Disable All Updates Setting Error <strong>(Thanks conservativeread!)</strong>
@@ -208,39 +198,11 @@ Their are three way to install Disable All Updates.
 * Updated Readme.txt
 * Works with WordPress 3.8
 
-= 0.9 = 
-* Readme.txt Updated 
-
-= 0.8 = 
-* Readme.txt Updated 
-* Bugs Fixed: 1
-
-= 0.7 = 
-* readme.txt Updated Thanks <strong>itsjustathought</strong>
-* Screenshots Added
-* Screenshot Problem Fixed
-* Bugs Fixed: 2
-
-= 0.6 = 
-* readme.txt Updated
-
-= 0.5 = 
-* readme.txt Updated 
-* Bugs Fixed: 2
-
-= Not Available for Downloading = <small>for more information on this, please see the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/other_notes/">other notes</a>  page.</small>
-
-= 0.4 = 
-* readme.txt Updated
-* Bugs Fixed: 1 
-
-= 0.3 = 
-* readme.txt Updated
-* Bugs Fixed: 2 
-
-= 0.2 = 
-* Readme.txt Updated 
+= Not Available for Downloading = 
 
 = 0.1 =
 * Published on Wordpress.org
  (September 1, 2013) 
+ 
+= Note =
+Versions 0.2 to 0.9 are not listed in this changelog.
