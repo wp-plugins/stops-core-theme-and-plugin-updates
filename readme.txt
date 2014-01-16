@@ -83,11 +83,9 @@ Their are three way to install Disable All Updates.
 == Changelog ==
 = Versions Available for Downloading =
 = 3.0.0 =
-<small>Readme.txt</small>
 * Updated Readme.txt Description
 * Removed "Other Notes" in Readme.txt 
 * Added More Readme.txt Tags
-<small>Function.php</small>
 * Added "Disable Debug E-mails" Setting
 * Added "Disable Update E-mails" Setting
 * Added "Disable WordPress Automatic Updates" Setting
@@ -95,7 +93,6 @@ Their are three way to install Disable All Updates.
 * Added "Please Note" Postbox
 * Combined "Disable All Updates" Postbox with "Disable Updates" Postbox
 * Fixed Half Screen Display
-<small>lang/other</small>
 * Removed Language Translate <small>(didn't work)</small>
 
 = 2.7.0 =
