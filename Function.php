@@ -2,18 +2,17 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 2.7.0
+ * @version 3.0.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 2.7.0
-Description: Pick which type of updates you would like to disable. Just use are new settings forum.
+Version: 3.0.0
+Description: Pick which type of updates you would like to disable. Just use are settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
 Tested up to WordPress 3.8.
-*/
-/*
+License:
 @Copyright 2014 Websiteguy (email : mpsparrow@cogeco.ca)
 
 This program is free software; you can redistribute it and/or modify
@@ -30,6 +29,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
+
     class Disable_Updates {
 	    // Set status in array
 	    private $status = array(); 
@@ -38,10 +39,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	    private $checkboxes = array(); 
 	
 	function Disable_Updates() {
-		
-    //  Add translations
-	if (function_exists('load_plugin_textdomain'))
-		load_plugin_textdomain( 'disable-updates-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 		
 	// Add menu page
 	        add_action('admin_menu', array(&$this, 'add_submenu'));
@@ -160,25 +157,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		remove_action( 'admin_notices', 'update_nag', 3 );
 		}
 
-    // Turns off Automatic Updates in WordPress
-
-		define( 'Automatic_Updater_Disabled', true );
-                                    define('WP_AUTO_UPDATE_CORE', false);
-
-    // Removes Update E-mails (Only works with some plugins)
-
-    // Core E-mails
-
-		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
-
-    // Plugin E-mails
-
-		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
-
-    // Theme E-mails
-
-		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
-
     // Remove Files From WordPress
 
 		function admin_init() {
@@ -255,6 +233,51 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 			break;
 
+    // Remove WordPress Version Number
+			case 'wpv' :
+				
+	    add_filter('admin_footer_text', 'replace_footer_admin');
+	    function replace_footer_version() 
+	    {
+		    return ' ';
+	    }
+	    
+	    add_filter( 'update_footer', 'replace_footer_version', '1234');
+
+            break;
+            
+    // Disable Debug E-mails        
+            case 'debug' :
+            
+        add_filter( 'automatic_updates_send_debug_email ', '__return_false', 1 ); 
+        
+            break;
+            
+    // Disable Update E-mails (Only works with some plugins)
+            case 'autoe' :
+
+    // Core E-mails
+
+		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
+
+    // Plugin E-mails
+
+		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
+
+    // Theme E-mails
+
+		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
+            
+            break;
+            
+    // Disable Automatic WordPress Updates
+            case 'autoup' :
+            
+        define( 'Automatic_Updater_Disabled', true );
+        define('WP_AUTO_UPDATE_CORE', false);
+            
+            break;
+            
 		}
 	}
 }
@@ -276,28 +299,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			    <?php settings_fields('_disable_updates'); ?>
 			    			    
 				<table class="form-table">
-
 					<tr>
 					<td>
 						<fieldset>
 		<div class="postbox">
-			<h3>&nbsp;Disable All Updates</h3> 
+			<h3>&nbsp;Disable Updates</h3> 
 		<div class="inside">
 							<label for="all_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates <small>(Not including the settings under "Other Settings")</small>', 'disable-updates-manager') ?>
 							</label>
-		</div>
-		</div>
-						</fieldset>
-					</td>
-				    </tr>
-
-					<tr>
-					<td>
-						<fieldset>
-		<div class="postbox">
-			<h3>&nbsp;Disable Updates <small>(All settings under here included in Disable All Updates setting above.)</small></h3> 
-		<div class="inside">
+							    <br>
+							<span style="padding-left: 20px; display:block">
 							<label for="plugins_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['plugin'], true); ?> value="1" id="plugins_notify" name="_disable_updates[plugin]"> <?php _e('Disable Plugin Updates', 'disable-updates-manager') ?>
 							</label>
@@ -309,12 +321,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 							<label for="core_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['core'], true); ?> value="1" id="core_notify" name="_disable_updates[core]"> <?php _e('Disable WordPress Core Update', 'disable-updates-manager') ?>
 							</label>
+							</span>
 		</div>
 		</div>
 						</fieldset>
 					</td>
 				    </tr>
-					
+
 				    <tr>
 					<td>
 						<fieldset>
@@ -324,28 +337,54 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 							<label for="page_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page <small>(Under Dashboard)</small>', 'disable-updates-manager') ?>
 							</label>
+							<br>
+							<label for="autoup_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['autoup'], true); ?> value="1" id="autoup_notify" name="_disable_updates[autoup]"> <?php _e('Disable WordPress Automatic Updates', 'disable-updates-manager') ?>
+							</label>
+								<br>
+							<label for="debug_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['debug'], true); ?> value="1" id="debug_notify" name="_disable_updates[debug]"> <?php _e('Disable Debug E-mails', 'disable-updates-manager') ?>
+							</label>
+							<br>
+							<label for="autoe_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['autoe'], true); ?> value="1" id="autoe_notify" name="_disable_updates[autoe]"> <?php _e('Disable Update E-mails', 'disable-updates-manager') ?>
+							</label>
+							<br>
+							<label for="wpv_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version <small>(For All Users)</small>', 'disable-updates-manager') ?>
+							</label>
 		</div>
 		</div>
 						</fieldset>
 					</td>
 					</tr>
-				    
+
 					<tr>
 				    <td>
-						<fieldset>
 								<p class="submit">
 									<input type="submit" class="button-primary" value="<?php _e('Update Settings') ?>" />
 								</p>
-						</fieldset>
 				    </td>
 				    </tr>				
 
+				    <tr>
+				    <br>
+		<div class="postbox">
+			<h3>&nbsp;Please Note!</h3>
+		<div class="inside">
+		                    <p align="center">
+							    If either your WordPress core, theme, or plugins get to out of date, you may run into compatibility problems.
+							</p>		
+		</div>
+		</div>
+					</tr>
+
                 </table>
-				
+
 			</form>
 
 		</div>
-			
+	
 <?php
 		}	
 	}
@@ -362,7 +401,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     // Create links
 		if ( $file == $plugin ) {		
 		    return array_merge(			
-		    $links,			
+		    $links,	
 		        array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
 		        array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
 		        array( '<a href="http://www.youtube.com/watch?v=ESOSt_ebiwM">Tutorial</a>' )
@@ -370,7 +409,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		}	
 		return $links;
 	}
-
 
     // Add Settings Link
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'thsp_plugin_action_links' );

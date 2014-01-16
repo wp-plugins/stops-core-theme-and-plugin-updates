@@ -1,6 +1,6 @@
 === Disable Updates Manager ===
 Contributors: kidsguide
-Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager
+Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings
 Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: trunk
@@ -13,9 +13,10 @@ This plugin is 100% configurable! Check the updates you would like to disable in
 = Features =
 <ol>
 <li>Has a simple settings page to disable any type of update.</li>
-<li>Has extra settings like remove the "updates" page.</li>
-<li>Disables WordPress automatic updates.</li>
+<li>Has extra settings like remove the "updates" page, remove WordPress core version, disable update e-mails, and more. </li>
+
 <li>Disables update e-mails</li>
+
 <li>Has a link to Support, FAQ, Settings, and the Tutorial in the plugin page</li>
 </ol> 
 
@@ -37,12 +38,6 @@ A: Their are a couple of differences.
 
 = Q: If I remove this plugin from my website will I be able to update my plugins, themes, and WordPress core again? =
 A: Yes, this plugin just disables the update (not removes). 
-
-==  ==
-
-= Please note!!! =
-It is very important to keep your plugins, themes, and WordPress core up to date. 
-If you use this plugin, make sure your WordPress core (themes, and plugins also) are not harming your website.
 
 == Screenshots ==
 1. Before View Core (Dashboard)
@@ -87,6 +82,22 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 = Versions Available for Downloading =
+= 3.0.0 =
+<small>Readme.txt</small>
+* Updated Readme.txt Description
+* Removed "Other Notes" in Readme.txt 
+* Added More Readme.txt Tags
+<small>Function.php</small>
+* Added "Disable Debug E-mails" Setting
+* Added "Disable Update E-mails" Setting
+* Added "Disable WordPress Automatic Updates" Setting
+* Added "Remove WordPress Core Version" Setting
+* Added "Please Note" Postbox
+* Combined "Disable All Updates" Postbox with "Disable Updates" Postbox
+* Fixed Half Screen Display
+<small>lang/other</small>
+* Removed Language Translate <small>(didn't work)</small>
+
 = 2.7.0 =
 * Updated Readme.txt Description 
 * Fixed <small> function in settings.
@@ -101,7 +112,6 @@ Their are three way to install Disable All Updates.
 * HTML Notes Updated
 * Fixed Changelog Errors
 * Updated Description
-
 
 = 2.5.0 =
 * Added Postboxes
@@ -197,8 +207,6 @@ Their are three way to install Disable All Updates.
 * HTML Changed
 * Updated Readme.txt
 * Works with WordPress 3.8
-
-= Not Available for Downloading = 
 
 = 0.1 =
 * Published on Wordpress.org
