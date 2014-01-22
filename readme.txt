@@ -5,7 +5,7 @@ Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: trunk
 
-A configurable plugin that disables updates. The best in its class. 
+A configurable plugin that disables updates. Easy to customize with 5+ settings.
 
 == Description ==
 This plugin is 100% configurable! Check the updates you would like to disable in the settings page.
@@ -13,15 +13,15 @@ This plugin is 100% configurable! Check the updates you would like to disable in
 = Features =
 <ol>
 <li>Has a simple settings page to disable any type of update.</li>
-<li>Has extra settings like remove the "updates" page, remove WordPress core version, disable update e-mails, and more. </li>
-
-<li>Disables update e-mails</li>
-
+<li>Has extra settings like remove the "updates" page, or remove WordPress core version. </li>
+<li>Disable All Updates setting disables update e-mails, debug e-mails, and more. </li>
 <li>Has a link to Support, FAQ, Settings, and the Tutorial in the plugin page</li>
 </ol> 
 
+To see more features view the screenshots.
+
 = Video Tutorial =
-[youtube http://www.youtube.com/watch?v=ESOSt_ebiwM]
+[youtube http://www.youtube.com/watch?v=jAqd0SjLQ_M]
 
 = Just Won't to Disable One or Two? =
 With the new settings form under dashboard, it easy. 
@@ -45,7 +45,7 @@ A: Yes, this plugin just disables the update (not removes).
 5. After View Plugin (Plugin Page)
 2. Before View (Dashboard)
 3. After View (Dashboard)
-6. Settings Page (Disable All Updates)
+6. Settings Page (Disable Updates Manager)
 
 == Installation ==
 Their are three way to install Disable All Updates.
@@ -82,6 +82,16 @@ Their are three way to install Disable All Updates.
 
 == Changelog ==
 = Versions Available for Downloading =
+= 3.1.0 =
+* Added "Disable Automatic Background Updates" Setting
+* Removed "Please Note!" Postbox
+* Added "Please Note" Notice in Settings
+* Moved Around Other Settings 
+* Screenshots Updated
+* Removed Settings (combined into "Disable All Updates" setting)
+* Fixed "Other Settings" Postbox "<span>" Code for Settings
+* Updated Video Tutorial (using version 3.1.0)
+
 = 3.0.0 =
 * Updated Readme.txt Description
 * Removed "Other Notes" in Readme.txt 
@@ -97,7 +107,7 @@ Their are three way to install Disable All Updates.
 
 = 2.7.0 =
 * Updated Readme.txt Description 
-* Fixed <small> function in settings.
+* Fixed function in settings.
 
 = 2.6.0 =
 * Added Better Settings Description
@@ -207,7 +217,7 @@ Their are three way to install Disable All Updates.
 
 = 0.1 =
 * Published on Wordpress.org
- (September 1, 2013) 
+ (September 1, 2013)
  
 = Note =
 Versions 0.2 to 0.9 are not listed in this changelog.

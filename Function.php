@@ -2,18 +2,21 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 3.0.0
+ * @version 3.1.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 3.0.0
+Version: 3.1.0
 Description: Pick which type of updates you would like to disable. Just use are settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
 Tested up to WordPress 3.8.
+*/
+/*
 License:
-@Copyright 2014 Websiteguy (email : mpsparrow@cogeco.ca)
+
+@Copyright 2013 - 2014 Websiteguy (email : mpsparrow@cogeco.ca)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 
@@ -29,7 +32,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
+define("DISABLEUPDATESMANAGERVERSION", "3.1.0");
 
     class Disable_Updates {
 	    // Set status in array
@@ -135,17 +138,17 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 
     // Disable All Updates
 
-    // Disable Plugin Updates
+    // Disable Plugin Updates Only
 
 		remove_action( 'load-update-core.php', 'wp_update_plugins' );
 		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 
-    // Disable Theme Updates
+    // Disable Theme Updates Only
 
 		remove_action( 'load-update-core.php', 'wp_update_themes' );
 		add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
 
-    // Disable Core Updates
+    // Disable Core Updates Only
 
 		remove_action( 'load-update-core.php', 'wp_update_core' );
 		add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
@@ -162,7 +165,7 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 		function admin_init() {
 		if ( !function_exists("remove_action") ) return;
 
-    // Disable Plugin Updates
+    // Disable Plugin Updates Only
 
 		remove_action( 'load-plugins.php', 'wp_update_plugins' );
 		remove_action( 'load-update.php', 'wp_update_plugins' );
@@ -173,7 +176,7 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 		remove_action( 'load-update-core.php', 'wp_update_plugins' );
 		wp_clear_scheduled_hook( 'wp_update_plugins' );	
 
-    // Disable Theme Updates
+    // Disable Theme Updates Only
 
 		remove_action( 'load-themes.php', 'wp_update_themes' );
 		remove_action( 'load-update.php', 'wp_update_themes' );
@@ -184,7 +187,7 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 		remove_action( 'load-update-core.php', 'wp_update_themes' );
 		wp_clear_scheduled_hook( 'wp_update_themes' );
 
-    // Disable Core Updates
+    // Disable Core Updates Only
 
 		remove_action( 'wp_version_check', 'wp_version_check' );
 		remove_action( 'admin_init', '_maybe_update_core' );
@@ -193,7 +196,7 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 		wp_clear_scheduled_hook( 'wp_version_check' );
 		}
 
-    // Remove Updates Agian (just in case)
+    // Remove Updates Again (different method) 
 
 		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 
@@ -230,6 +233,25 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 		remove_action( 'load-update-core.php', 'wp_update_plugins' );
 		add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 		
+		
+		// Disable Debug E-mails
+		add_filter( 'automatic_updates_send_debug_email ', '__return_false', 1 );
+		
+		// Disable WordPress Automatic Updates
+		define( 'Automatic_Updater_Disabled', true );
+        define('WP_AUTO_UPDATE_CORE', false);
+		
+		// Disable Updates E-mails
+		
+		// Core E-mails Only
+		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
+
+        // Plugin E-mails Only
+		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
+
+        // Theme E-mails Only
+		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
+		
 
 			break;
 
@@ -246,39 +268,10 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 
             break;
             
-    // Disable Debug E-mails        
-            case 'debug' :
-            
-        add_filter( 'automatic_updates_send_debug_email ', '__return_false', 1 ); 
-        
-            break;
-            
-    // Disable Update E-mails (Only works with some plugins)
-            case 'autoe' :
-
-    // Core E-mails
-
-		apply_filters( 'auto_core_update_send_email', false, $type, $core_update, $result );
-
-    // Plugin E-mails
-
-		apply_filters( 'auto_plugin_update_send_email', false, $type, $plugin_update, $result );
-
-    // Theme E-mails
-
-		apply_filters( 'auto_theme_update_send_email', false, $type, $theme_update, $result );
-            
-            break;
-            
-    // Disable Automatic WordPress Updates
-            case 'autoup' :
-            
-        define( 'Automatic_Updater_Disabled', true );
-        define('WP_AUTO_UPDATE_CORE', false);
-            
-            break;
-            
-		}
+case 'abup' :
+wp_clear_scheduled_hook( 'wp_maybe_auto_update' ); 	
+break;
+}
 	}
 }
 
@@ -303,7 +296,7 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 					<td>
 						<fieldset>
 		<div class="postbox">
-			<h3>&nbsp;Disable Updates</h3> 
+			<H3>&nbsp;Disable Updates</H3> 
 		<div class="inside">
 							<label for="all_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates <small>(Not including the settings under "Other Settings")</small>', 'disable-updates-manager') ?>
@@ -332,49 +325,37 @@ define("DISABLEUPDATESMANAGERVERSION", "3.0.0");
 					<td>
 						<fieldset>
 		<div class="postbox">
-			<h3>&nbsp;Other Settings</h3>
+			<H3>&nbsp;Other Settings</H3>
 		<div class="inside">
-							<label for="page_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page <small>(Under Dashboard)</small>', 'disable-updates-manager') ?>
+<span style="padding-left: 0px; display:block">
+							<label for="abup_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['abup'], true); ?> value="1" id="abup_notify" name="_disable_updates[abup]"> <?php _e('Disable Automatic Background Updates', 'disable-updates-manager') ?>
 							</label>
-							<br>
-							<label for="autoup_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['autoup'], true); ?> value="1" id="autoup_notify" name="_disable_updates[autoup]"> <?php _e('Disable WordPress Automatic Updates', 'disable-updates-manager') ?>
-							</label>
-								<br>
-							<label for="debug_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['debug'], true); ?> value="1" id="debug_notify" name="_disable_updates[debug]"> <?php _e('Disable Debug E-mails', 'disable-updates-manager') ?>
-							</label>
-							<br>
-							<label for="autoe_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['autoe'], true); ?> value="1" id="autoe_notify" name="_disable_updates[autoe]"> <?php _e('Disable Update E-mails', 'disable-updates-manager') ?>
-							</label>
-							<br>
+<br>
 							<label for="wpv_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version <small>(For All Users)</small>', 'disable-updates-manager') ?>
 							</label>
+<br>
+							<label for="page_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page <small>(Under Dashboard)</small>', 'disable-updates-manager') ?>
+							</label>
+</span>
 		</div>
 		</div>
-						</fieldset>
-					</td>
-					</tr>
-
-					<tr>
-				    <td>
 								<p class="submit">
 									<input type="submit" class="button-primary" value="<?php _e('Update Settings') ?>" />
 								</p>
-				    </td>
-				    </tr>				
+						</fieldset>
+					</td>
+					</tr>				
 
 				    <tr>
 				    <br>
-		<div class="postbox">
-			<h3>&nbsp;Please Note!</h3>
-		<div class="inside">
+<span style="border-style:solid; border-width:2px; border-color:#dd0606; display:block">
 		                    <p align="center">
-							    If either your WordPress core, theme, or plugins get to out of date, you may run into compatibility problems.
-							</p>		
+<strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get to out of date, you may run into compatibility problems.
+				    </p>		
+</span>
 		</div>
 		</div>
 					</tr>
