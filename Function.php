@@ -385,7 +385,7 @@ break;
 		    $links,	
 		        array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
 		        array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
-		        array( '<a href="http://www.youtube.com/watch?v=ESOSt_ebiwM">Tutorial</a>' )
+		        array( '<a href="http://www.youtube.com/watch?v=jAqd0SjLQ_M">Tutorial</a>' )
 		);	
 		}	
 		return $links;
