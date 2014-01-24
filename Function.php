@@ -2,16 +2,16 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 3.1.0
+ * @version 3.2.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 3.1.0
+Version: 3.2.0
 Description: Pick which type of updates you would like to disable. Just use are settings forum.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
-Tested up to WordPress 3.8.
+Tested up to WordPress 3.8.1
 */
 /*
 License:
@@ -32,7 +32,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define("DISABLEUPDATESMANAGERVERSION", "3.1.0");
+define("DISABLEUPDATESMANAGERVERSION", "3.2.0");
 
     class Disable_Updates {
 	    // Set status in array
@@ -295,7 +295,7 @@ break;
 					<tr>
 					<td>
 						<fieldset>
-		<div class="postbox">
+		<div class="postbox" style="width: 590px;">
 			<H3>&nbsp;Disable Updates</H3> 
 		<div class="inside">
 							<label for="all_notify">
@@ -324,7 +324,7 @@ break;
 				    <tr>
 					<td>
 						<fieldset>
-		<div class="postbox">
+		<div class="postbox" style="width: 590px;">
 			<H3>&nbsp;Other Settings</H3>
 		<div class="inside">
 <span style="padding-left: 0px; display:block">
@@ -351,9 +351,9 @@ break;
 
 				    <tr>
 				    <br>
-<span style="border-style:solid; border-width:2px; border-color:#dd0606; display:block">
+<span style="border-style:solid; border-width:2px; border-color:#dd0606; width: 604px; padding-left: 2px; padding-right: 2px; display:block" >
 		                    <p align="center">
-<strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get to out of date, you may run into compatibility problems.
+<strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out of date, you may run into compatibility problems.
 				    </p>		
 </span>
 		</div>

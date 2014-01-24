@@ -2,7 +2,7 @@
 Contributors: kidsguide
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings
 Requires at least: 3.0
-Tested up to: 3.8
+Tested up to: 3.8.1
 Stable tag: trunk
 
 A configurable plugin that disables updates. Easy to customize with 5+ settings.
@@ -48,40 +48,34 @@ A: Yes, this plugin just disables the update (not removes).
 6. Settings Page (Disable Updates Manager)
 
 == Installation ==
-Their are three way to install Disable All Updates.
+Their are two way to install "Disable Updates Manager".
 
-<strong>1)</strong> The WordPress dashboard way.
-
+<strong>1)</strong>
 <ol>
-<li>Push the button above to download the latest version of Disable All Updates.</li>
+<li>Push the button above to download the latest version of "Disable Updates Manager".</li>
 <li>Go in your websites admin to the Plugins> Add New> page and push Upload.</li>
 
 <li>Upload the zip file and push install.</li>
 <li>Go to the Plugins section in your admin dashboard and activate.</li>
 </ol>
 
-<strong>2)</strong> The dashboard way. <u><strong>Recommended</strong></u>
-
+<strong>2)</strong> <u><strong>Recommended</strong></u>
 <ol>
 <li>Go in your websites admin to the Plugins> Add New> page and push on the search bar.</li>
 
-<li>Search "Disable All Updates" and push install.</li>
+<li>Search  "Disable Updates Manager" and push install.</li>
 <li>Go to the Plugins section in your admin dashboard and activate.</li>
-</ol>
-
-<strong>3)</strong> The cpanel (or whatever you use) way.
-
-<ol>
-<li>Push the button above to download the latest version of Disable All Updates.</li>
-<li>Login into your cpanel (or whatever you use).</li>
-<li>Go to your www file and find the file titled plugins.</li>
-<li>Push on the plugins file and add a new folder titled "disable-all-updates".</li>
-<li>Then upload the zip file into that folder.</li>
-<li>Go to your plugin page in your dashboard and activate the plugin called "Disable All Updates.</li>
 </ol>
 
 == Changelog ==
 = Versions Available for Downloading =
+= 3.2.0 =
+* Fixed Please Note Spelling Mistake
+* Fixed Readme.txt Spelling Mistakes
+* Works with WordPress 3.8.1
+* Changed Video Tutorial Link
+* Added CSS to Postboxes and Please Note Box (changed width, added padding, moved around) 
+
 = 3.1.0 =
 * Added "Disable Automatic Background Updates" Setting
 * Removed "Please Note!" Postbox
