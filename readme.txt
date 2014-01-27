@@ -10,15 +10,17 @@ A configurable plugin that disables updates. Easy to customize with 5+ settings.
 == Description ==
 This plugin is 100% configurable! Check the updates you would like to disable in the settings page.
 
+Their are also other settings to customize.
+
 = Features =
 <ol>
 <li>Has a simple settings page to disable any type of update.</li>
-<li>Has extra settings like remove the "updates" page, or remove WordPress core version. </li>
+<li>Has extra settings like remove the "updates" page, remove WordPress core version, or disable background updates. </li>
 <li>Disable All Updates setting disables update e-mails, debug e-mails, and more. </li>
-<li>Has a link to Support, FAQ, Settings, and the Tutorial in the plugin page</li>
+<li>Has a link to Support, FAQ, Settings, and the Tutorial.</li>
 </ol> 
 
-To see more features view the screenshots.
+To see more features view the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a>.
 
 = Video Tutorial =
 [youtube http://www.youtube.com/watch?v=jAqd0SjLQ_M]
@@ -36,8 +38,42 @@ A: Their are a couple of differences.
 <li>They do not have settings to make it configurable.</li>
 </ol>
 
+
 = Q: If I remove this plugin from my website will I be able to update my plugins, themes, and WordPress core again? =
 A: Yes, this plugin just disables the update (not removes). 
+
+
+= Q: Is it possible to disable one plugin? Are you considering it? =
+A: This plugin does not disable individual plugins or theme. I am considering it but it is hard to do, and I am having trouble with it. 
+
+If you would like to disable just one plugin for now, follow the steps below.
+
+= 1. = Copy the following code into your themes function.php (or child theme).
+
+`function stop_plugin_update( $value ) {
+ unset( $value->response['smooth-slider/smooth-slider.php'] );
+ return $value;
+}
+add_filter( 'site_transient_update_plugins', 'stop_plugin_update' );`
+
+= 2. = Get the name of your plugin, and the name of the main plugins file, and put them in the code. 
+
+`function stop_plugin_update( $value ) {
+ unset( $value->response['(Name:) smooth-slider/(Main File Name:) smooth-slider.php'] );
+ return $value;
+}
+add_filter( 'site_transient_update_plugins', 'stop_plugin_update' );`
+
+= Note = 
+If the plugin that you would like to disable the updates for has changed names, then you must look in the URL to find the proper name.
+
+EX) http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
+
+You take the last part.
+
+stops-core-theme-and-plugin-updates
+
+= 3. = Refresh the function.php (or functions.php) and it should disable it.
 
 == Screenshots ==
 1. Before View Core (Dashboard)
@@ -69,6 +105,13 @@ Their are two way to install "Disable Updates Manager".
 
 == Changelog ==
 = Versions Available for Downloading =
+= 3.3.0 =
+* Fixed Error with Remove WordPress Version from Footer in Admin
+* Added Help Spot in Settings
+* Added border-radius Code to Postboxes and Boxes 
+* Updated Screenshots
+* FAQ Updated
+
 = 3.2.0 =
 * Fixed Please Note Spelling Mistake
 * Fixed Readme.txt Spelling Mistakes
