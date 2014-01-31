@@ -2,15 +2,16 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 3.3.0
+ * @version 3.4.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 3.3.0
-Description: Pick which type of updates you would like to disable. Just use are settings forum.
+Version: 3.4.0
+Description: Pick which type of updates you would like to disable. Just use the settings.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
+License: GPL2
 Tested up to WordPress 3.8.1
 */
 /*
@@ -32,7 +33,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define("DISABLEUPDATESMANAGERVERSION", "3.3.0");
+define("DISABLEUPDATESMANAGERVERSION", "3.4.0");
 
     class Disable_Updates {
 	    // Set status in array
@@ -268,6 +269,135 @@ add_filter( 'update_footer', 'change_footer_version', 9999);
 case 'abup' :
 wp_clear_scheduled_hook( 'wp_maybe_auto_update' ); 	
 break;
+
+case 'pd' :
+
+if(defined('disable_updates_loaded')) {
+        return;
+}
+define('disable_updates_loaded', 1);
+
+add_action('init','disable_updates_get');
+add_action('init','disable_updates_addFilters');
+
+add_filter("plugin_row_meta", 'disable_updates_pluginLinks', 10, 2);
+add_filter('site_transient_update_plugins', 'disable_updates_blockUpdateNotifications');
+//add_filter('site_transient_update_themes', 'disable_updates_blockUpdateNotifications');
+
+
+function disable_updates_addFilters() {
+        if(!current_user_can('update_plugins')) {
+                return;
+        }
+
+        $plugins = get_site_transient('update_plugins');
+        $to_block = get_option('disable_updates_blocked');
+	
+	if(isset($plugins->response)) {
+	        // loop through all of the plugins with updates available and attach the appropriate filter
+		foreach($plugins->response as $filename => $plugin) {
+                	// check that the version is the version we want to block updates to
+                	$s = 'after_plugin_row_' . $filename;
+                	//in_plugin_update_message-
+                	add_action($s, 'disable_updates_blockLink', -1, 1);
+		}
+        }
+	if(isset($plugins->disable_updates)) {
+        	foreach($plugins->disable_updates as $filename => $plugin) {
+                	// check that the version is the version we want to block updates to
+                	$s = 'after_plugin_row_' . $filename;
+                	add_action($s, 'disable_updates_unblockLink', 2, 1);
+		}
+        }
+}
+
+function disable_updates_get() {
+
+        if(!current_user_can('update_plugins')) {
+                return;
+        }
+
+        // see if there are actions to process
+        if(!isset($_GET['disable_updates']) || !isset($_GET['_wpnonce'])) {
+                return;
+        }
+
+        if(!wp_verify_nonce($_GET['_wpnonce'], 'disable_updates')) {
+                return;
+        }
+
+        $blocked = get_option('disable_updates_blocked');
+        $plugins = get_site_transient('update_plugins');
+
+        // block action
+        if(isset($_GET['block']) && isset($plugins->response) && isset($plugins->response[$_GET['block']])) {
+                $p = $plugins->response[$_GET['block']];
+                $blocked[$_GET['block']] = array('slug' => $p->slug, 'new_version' => $p->new_version);
+        }
+
+        if(isset($_GET['unblock'])) {
+                unset($blocked[$_GET['unblock']]);
+
+        }
+
+        update_option('disable_updates_blocked', $blocked);
+
+}
+
+function disable_updates_blockUpdateNotifications($plugins) {
+
+	if(!isset($plugins->response) || count($plugins->response) == 0) {
+		return $plugins;
+	}
+
+        $to_block = (array)get_option('disable_updates_blocked');
+
+        foreach($to_block as $filename => $plugin) {
+
+                if(isset($plugins->response[$filename])
+                        && $plugins->response[$filename]->new_version == $plugin['new_version']) {
+
+                        $plugins->disable_updates[$filename] = $plugins->response[$filename];
+                        unset($plugins->response[$filename]);
+                }
+        }
+        return $plugins;
+}
+
+function disable_updates_unblockLink($filename) {
+        disable_updates_linkStart();
+        echo 'Updates for this plugin are blocked. <a href="plugins.php?_wpnonce=' . wp_create_nonce('disable_updates') . '&disable_updates&unblock=' . $filename . '">Unblock</a>.</div></td></tr>';
+}
+
+function disable_updates_blockLink($filename) {
+        disable_updates_linkStart();
+        echo ' <a href="plugins.php?_wpnonce=' . wp_create_nonce('disable_updates') . '&disable_updates&block=' . $filename . '">Block updates for this plugin</a>.</div></td></tr>';
+}
+
+function disable_updates_linkStart() {
+
+        // wp_plugin_update_row
+        // wp-admin/includes/update.php
+
+        $wp_list_table = _get_list_table('WP_Plugins_List_Table');
+        echo '<tr class="plugin-update-tr"><td colspan="' . $wp_list_table->get_column_count() . '" class="plugin-update colspanchange"><div class="update-message">';
+}
+
+function disable_updates_pluginLinks( $links, $file ) {
+        $plugin = plugin_basename(__FILE__);
+	if($file == $plugin) {
+		$links[] = '<a target="_BLANK" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC5UR6667DLXU"></a>';
+        }
+        return $links;
+}
+
+if(!function_exists('printr')) {
+        function printr($txt) {
+                echo '<pre>'; print_r($txt); echo '</pre>';
+        }
+}
+
+break;
 }
 	}
 }
@@ -295,23 +425,42 @@ break;
 		<div class="postbox" style="width: 590px; border-radius: 4px;">
 			<H3>&nbsp;Disable Updates</H3> 
 		<div class="inside">
+<div class="showonhover">
 							<label for="all_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates <small>(Not including the settings under "Other Settings")</small>', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['all'], true); ?> value="1" id="all_notify" name="_disable_updates[all]"> <?php _e('Disable All Updates', 'disable-updates-manager') ?>
 							</label>
-							    <br>
+ <span>
+ <a href="#" class="viewdescription">?</a>
+ <span class="hovertext">Only includes settings under "Disable Updates", not "Disable Updates Individually".</span>
+ </span>
+ </div>
+</span>
 							<span style="padding-left: 20px; display:block">
 							<label for="plugins_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['plugin'], true); ?> value="1" id="plugins_notify" name="_disable_updates[plugin]"> <?php _e('Disable Plugin Updates', 'disable-updates-manager') ?>
 							</label>
-								<br>
+<br>
 							<label for="themes_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['theme'], true); ?> value="1" id="themes_notify" name="_disable_updates[theme]"> <?php _e('Disable Theme Updates', 'disable-updates-manager') ?>
 							</label>
-								<br>
+<br>
 							<label for="core_notify">
 									<input type="checkbox" <?php checked(1, (int)$this->status['core'], true); ?> value="1" id="core_notify" name="_disable_updates[core]"> <?php _e('Disable WordPress Core Update', 'disable-updates-manager') ?>
 							</label>
-							</span>
+						<fieldset>
+</span>
+			<H4>Disable Updates Individually</H4> 
+<div class="showonhover">
+							<label for="pd_notify">
+									<input type="checkbox" <?php checked(1, (int)$this->status['pd'], true); ?> value="1" id="pd_notify" name="_disable_updates[pd]"> <?php _e('Disable Plugins Individually', 'disable-updates-manager') ?>
+							</label>
+<span>
+ <a href="#" class="viewdescription">?</a>
+ <span class="hovertext">When their is an update for a plugin, go to the plugins list (plugins.php) and look at the plugins update notice(s).
+
+</span>
+ </span>
+ </div>
 		</div>
 		</div>
 						</fieldset>
@@ -329,36 +478,70 @@ break;
 									<input type="checkbox" <?php checked(1, (int)$this->status['abup'], true); ?> value="1" id="abup_notify" name="_disable_updates[abup]"> <?php _e('Disable Automatic Background Updates', 'disable-updates-manager') ?>
 							</label>
 <br>
+<div class="showonhover">
 							<label for="wpv_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version <small>(For All Users)</small>', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version', 'disable-updates-manager') ?>
 							</label>
-<br>
+ <span>
+ <a href="#" class="viewdescription">?</a>
+ <span class="hovertext">Removes it for all users.</span>
+ </span>
+ </div>
+<div class="showonhover">
 							<label for="page_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page <small>(Under Dashboard)</small>', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['page'], true); ?> value="1" id="page_notify" name="_disable_updates[page]"> <?php _e('Remove Updates Page', 'disable-updates-manager') ?>
 							</label>
+ <span>
+ <a href="#" class="viewdescription">?</a>
+ <span class="hovertext">The one under the dashboard.</span>
+ </span>
+ </div>
+
 </span>
 		</div>
 		</div>
 								<p class="submit">
 									<input type="submit" class="button-primary" value="<?php _e('Update Settings') ?>" />
 </p>
-<u><h3>Help</h3></u>
-<div style="width:160px;height:30px;border:1px solid #929292; border-radius: 4px; padding-left: 7px; padding-right: 7px;"><center>
-<p><a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a> | <a href="http://www.youtube.com/watch?v=jAqd0SjLQ_M">Tutorial</a> | <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a></p></center>
+		<div class="postbox" style="width: 160px; height: 35px; border-radius: 4px;">
+		<div class="inside">
+		                    <p align="center">
+<a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a> | <a href="http://www.youtube.com/watch?v=jAqd0SjLQ_M">Tutorial</a> | <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>
+				    </p>	
+</span>
 </div>
+</div>
+<style type="text/css"> 
+.showonhover {position: relative;}
+ .showonhover .hovertext {
+ opacity: 0;
+ top: -99999px;
+ position:absolute;
+ z-index:1000;
+ border:1px solid #ffd971;
+ background-color:#fffdce;
+ padding:11px;
+ width:140px;
+ font-size: 0.95em;
+ -webkit-transition: opacity 0.3s ease;
+ -moz-transition: opacity 0.3s ease;
+ -o-transition: opacity 0.3s ease;
+ transition: opacity 0.3s ease;
+ }
+ .showonhover:hover .hovertext {opacity:1;top:0;}
+ a.viewdescription {color:#999;}
+ a.viewdescription:hover {background-color:#999; color: White;}
+</style> 
 						</fieldset>
 					</td>
-					</tr>				
+					</tr>		
 
 				    <tr>
-				    <br>
 <span style="border-style:solid; border-width:2px; border-color:#dd0606; width: 604px; padding-left: 2px; padding-right: 2px; border-radius: 7px; display:block" >
 		                    <p align="center">
 <strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out of date, you may run into compatibility problems.
-				    </p>		
+				    </p>	
 </span>
-		</div>
-		</div>
 					</tr>
 
                 </table>
