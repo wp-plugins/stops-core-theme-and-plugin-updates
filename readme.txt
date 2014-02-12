@@ -72,7 +72,6 @@ Their are two way to install "Disable Updates Manager".
 <strong>2)</strong> <u><strong>Recommended</strong></u>
 <ol>
 <li>Go in your websites admin to the Plugins> Add New> page and push on the search bar.</li>
-
 <li>Search  "Disable Updates Manager" and push install.</li>
 <li>Go to the Plugins section in your admin dashboard and activate.</li>
 </ol>
@@ -80,16 +79,21 @@ Their are two way to install "Disable Updates Manager".
 == Changelog ==
 = Versions Available for Downloading =
 = 3.5.0 =
-* = Added: = "Disable Plugins Individually" postbox.
-* = Removed: = "Disable Updates Individually" section.
-* = Updated: = screenshots.
-* = Updated: = video tutorial.
-* = Updated: = readme.txt description.
-* = Updated: = code notes.
-* = Changed: = "Disable Plugin Updates Individually" format (working on better format for upcoming versions).
-* = Changed: = postbox format.
-* = Changed: = "Please Note" border box to proper notice.
-* = Moved: = CSS script.
+* Added: "Disable Plugins Individually" postbox.
+* Removed: "Disable Updates Individually" section.
+* Updated: screenshots.
+* Updated: video tutorial.
+* Updated: readme.txt description.
+* Updated: code notes.
+* Changed: "Disable Plugin Updates Individually" format (working on better format for upcoming versions).
+* Changed: postbox format.
+* Changed: "Please Note" border box to proper notice.
+* Moved: CSS script.
+second update
+* Fixed: screenshot error.
+* Fixed: changelog error.
+* Fixed: contributor error.
+(Sorry for all these errors)
 
 = 3.4.0 =
 * Added "Disable Plugins Individually" Setting and Section
