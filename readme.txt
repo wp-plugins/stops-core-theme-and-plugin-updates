@@ -89,10 +89,11 @@ Their are two way to install "Disable Updates Manager".
 * Changed: postbox format.
 * Changed: "Please Note" border box to proper notice.
 * Moved: CSS script.
-second update
+= second update =
 * Fixed: screenshot error.
 * Fixed: changelog error.
 * Fixed: contributor error.
+
 (Sorry for all these errors)
 
 = 3.4.0 =
