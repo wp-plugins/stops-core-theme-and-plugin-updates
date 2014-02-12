@@ -1,5 +1,5 @@
 === Disable Updates Manager ===
-Contributors: kidsguide
+Contributors: kidsguide, dnesscarkey
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings
 Requires at least: 3.0
 Tested up to: 3.8.1
@@ -14,18 +14,21 @@ Their are also other settings to customize.
 
 = Features =
 <ol>
-<li>Disable a plugin individually.</li>
-<li>Has a simple settings page to disable any type of update.</li>
-<li>Has extra settings like remove the "updates" page, remove WordPress core version, or disable background updates.</li>
-<li>Disable all update setting disables update e-mails, debug e-mails, and more.</li>
-<li>Has a link to Support, FAQ, Settings, and the Tutorial.</li>
+<li>Disables plugins individually.</li>
+<li>Disables plugin updates.</li>
+<li>Disables theme updates.</li>
+<li>Disable WordPress core updates.</li>
+<li>Removes admin footer.</li>
+<li>Disables backgroud updates.</li>
+<li>Removes updates menu in admin sidebar.</li>
 </ol> 
+and many more things!
 
 To see more features view the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a>.
 
 = Video Tutorial =
-[youtube http://www.youtube.com/watch?v=jAqd0SjLQ_M]
-<small>Version 3.1.0 tutorial video. new one coming soon.</small>
+[youtube http://www.youtube.com/watch?v=7sMEBGNxhwA]
+<small>Version 3.5.0 tutorial video.</small>
 
 = Just Won't to Disable One or Two? =
 With the settings form under dashboard, it easy. Just check the things you won't disabled. Also if you would like to disable just one plugin, use the Disable Plugins Individually setting.
@@ -37,6 +40,7 @@ A: Their are a couple of differences.
 <li>They do not disable WordPress automatic updates.</li>
 <li>They do not have video tutorials and screenshots.</li>
 <li>They do not have settings to make it configurable.</li>
+<li>They do not disable plugins individually.</li>
 </ol>
 
 
@@ -49,13 +53,9 @@ A: This plugin does not disable themes individual but it can disable plugins ind
 
 
 == Screenshots ==
-1. Before View Core (Dashboard)
-4. Before View Plugin (Plugin Page)
-5. After View Plugin (Plugin Page)
-2. Before View (Dashboard)
-3. After View (Dashboard)
-6. Settings Page (Disable Updates Manager)
-7. Disable Plugins Individually Setting (Plugin Page)
+1. Settings Page
+2. Disable Plugin Updates
+3. Disable Plugins Individually
 
 == Installation ==
 Their are two way to install "Disable Updates Manager".
@@ -79,6 +79,18 @@ Their are two way to install "Disable Updates Manager".
 
 == Changelog ==
 = Versions Available for Downloading =
+= 3.5.0 =
+* = Added: = "Disable Plugins Individually" postbox.
+* = Removed: = "Disable Updates Individually" section.
+* = Updated: = screenshots.
+* = Updated: = video tutorial.
+* = Updated: = readme.txt description.
+* = Updated: = code notes.
+* = Changed: = "Disable Plugin Updates Individually" format (working on better format for upcoming versions).
+* = Changed: = postbox format.
+* = Changed: = "Please Note" border box to proper notice.
+* = Moved: = CSS script.
+
 = 3.4.0 =
 * Added "Disable Plugins Individually" Setting and Section
 * Added Help Postbox to Settings 
