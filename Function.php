@@ -2,12 +2,12 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 3.5.0
+ * @version 3.6.0
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 3.5.0
+Version: 3.6.0
 Description: Pick which type of updates you would like to disable. Just use the settings.
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
@@ -35,7 +35,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 // Define version.
 
-	define("DISABLEUPDATESMANAGERVERSION", "3.5.0");
+	define("DISABLEUPDATESMANAGERVERSION", "3.6.0");
 
     class Disable_Updates {
 	    // Set status in array
@@ -43,8 +43,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		
 		// Set checkboxes in array
 	    private $checkboxes = array(); 
-	
-	function Disable_Updates() {
+	  
+function Disable_Updates() { 
 		
 // Add menu page.
 	        add_action('admin_menu', array(&$this, 'add_submenu'));
@@ -54,9 +54,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		
 		
 // load the values recorded.
-		    $this->load_disable_updates();
-		}
+			$this->load_disable_updates();
+}
+	
 
+	  
 // Register settings.
 	function register_setting()	{
 	    register_setting('_disable_updates', '_disable_updates', array(&$this, 'validate_settings'));		
@@ -75,11 +77,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 	function add_submenu() {
 // Add submenu to "Dashboard" menu.
-		add_submenu_page( 'index.php', 'Disable Updates', __('Disable Updates','disable-updates-manager'), 'administrator', __FILE__, array(&$this, 'display_page') );
+add_submenu_page( 'index.php', 'Disable Updates', __('Disable Updates','disable-updates-manager'), 'administrator', __FILE__, array(&$this, 'display_page') );
 		}
 
-		
-// Functions for plugin (Change in settings)	
+	  // Functions for plugin (Change in settings)	
 	function load_disable_updates() {
 		$this->status = get_option('_disable_updates');
 		
@@ -401,7 +402,7 @@ break;
 	}
 	}
 	}
-
+	  
 	// Settings page (under dashboard).
 	    function display_page() { 
 	
@@ -533,7 +534,7 @@ break;
 <tr>
 <td>
 		                    <p align="center">
-	<a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a> | <a href="http://www.youtube.com/watch?v=jAqd0SjLQ_M">Tutorial</a> | <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>
+	<a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a> | <a href="http://www.youtube.com/watch?v=7sMEBGNxhwA">Tutorial</a> | <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>
 				    </p>	
 </td>
 </tr>
@@ -541,28 +542,6 @@ break;
 </table>
 			</form>
 		</div>
-		
-	<style type="text/css"> 
-	.showonhover {position: relative;}
-	 .showonhover .hovertext {
-	 opacity: 0;
- 	top: -99999px;
- 	position:absolute;
- 	z-index:1000;
- 	border:1px solid #ffd971;
- 	background-color:#fffdce;
- 	padding:7.5px;
- 	width:170px;
- 	font-size: 0.90em;
- 	-webkit-transition: opacity 0.3s ease;
- 	-moz-transition: opacity 0.3s ease;
- 	-o-transition: opacity 0.3s ease;
- 	transition: opacity 0.3s ease;
- 	}
- 	.showonhover:hover .hovertext {opacity:1;top:0;}
- 	a.viewdescription {color:#999;}
-	 a.viewdescription:hover {background-color:#999; color: White;}
-	</style> 
 	
 	<?php
 		}	
@@ -583,7 +562,7 @@ break;
 		    $links,	
 		        array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
 		        array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
-		        array( '<a href="http://www.youtube.com/watch?v=jAqd0SjLQ_M">Tutorial</a>' )
+		        array( '<a href="http://www.youtube.com/watch?v=7sMEBGNxhwA">Tutorial</a>' )
 		);	
 		}	
 		return $links;
@@ -598,3 +577,16 @@ break;
 			array('settings' => '<a href="' . admin_url( 'index.php?page=stops-core-theme-and-plugin-updates/Function.php' ) . '">' . __( 'Configure', 'ts-fab' ) . '</a>'),
 				$links);
 		}
+
+	// Add Files	
+		function css() {
+            wp_register_style('css', plugins_url('style.css',__FILE__ ));
+            wp_enqueue_style('css');
+        }
+		add_action( 'admin_init','css');
+		
+		function php() {
+            wp_register_style('php', plugins_url('uninstall.php',__FILE__ ));
+            wp_enqueue_style('php');
+        }
+		add_action( 'admin_init','php');

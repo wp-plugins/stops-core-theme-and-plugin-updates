@@ -19,7 +19,7 @@ Their are also other settings to customize.
 <li>Disables theme updates.</li>
 <li>Disable WordPress core updates.</li>
 <li>Removes admin footer.</li>
-<li>Disables backgroud updates.</li>
+<li>Disables background updates.</li>
 <li>Removes updates menu in admin sidebar.</li>
 </ol> 
 and many more things!
@@ -51,11 +51,14 @@ A: Yes, this plugin just disables the update (not removes).
 = Q: Is it possible to disable one plugin or theme? Are you considering it? =
 A: This plugin does not disable themes individual but it can disable plugins individually. We are considering a setting to disable themes individually. 
 
-
 == Screenshots ==
 1. Settings Page
 2. Disable Plugin Updates
 3. Disable Plugins Individually
+
+== ==
+
+The next version of WordPress (3.9) should not have any conflicts with this plugin. 
 
 == Installation ==
 Their are two way to install "Disable Updates Manager".
@@ -77,7 +80,21 @@ Their are two way to install "Disable Updates Manager".
 </ol>
 
 == Changelog ==
+= Preview: 3.7.0 + =
+* Translation
+* Better disable plugins individually feature
+* License.txt
+
 = Versions Available for Downloading =
+= 3.6.0 =
+* Updated: tutorial link (forgot last update).
+* Updated: notice CSS to make auto size.
+* Fixed: old name for settings page (in URL).
+* Added: style.css.
+* Added: uninstall.php.
+* Added: "Other Notes" in readme.txt.
+* Removed: CSS from function.php.
+
 = 3.5.0 =
 * Added: "Disable Plugins Individually" postbox.
 * Removed: "Disable Updates Individually" section.
@@ -89,6 +106,7 @@ Their are two way to install "Disable Updates Manager".
 * Changed: postbox format.
 * Changed: "Please Note" border box to proper notice.
 * Moved: CSS script.
+
 = second update =
 * Fixed: screenshot error.
 * Fixed: changelog error.
