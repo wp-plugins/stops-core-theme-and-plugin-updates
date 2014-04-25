@@ -10,7 +10,7 @@ A configurable plugin that disables updates for you. Easy, clean and helpful.
 == Description ==
 The best plugin to disable updates is here!
 
-This plugin is configurable! Check the updates you would like to disable in the settings page along with other helpful settings. Check the features below or the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a> for more information.
+This plugin is configurable! Check the updates you would like to disable in the settings page along with other helpful settings. The settings page is located under the settings section in your dashboard (changed in version 4.0). Check the features below or the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a> for more information.
 
 = Features =
 <ol>
@@ -85,7 +85,7 @@ Their are two way to install Disable Updates Manager.
 * Fixed: tooltips CSS; fixed overlapping errors.
 * Updated: readme.txt.
 * Updated: video tutorial (added music). Note: new video tutorial coming soon!
-* Updated: GitHub version to 3.7.0 (Note: We did not put the lang file in GitHub). - Thanks szepe.viktor!
+* Updated: GitHub version to 4.0 (Note: We did not put the lang file in GitHub). - Thanks szepe.viktor!
 * Updated: link box CSS in settings. 
 * Updated: settings notice CSS.
 * Updated: tooltips text.
