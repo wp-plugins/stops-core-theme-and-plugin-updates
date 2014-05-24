@@ -2,7 +2,7 @@
 Contributors: kidsguide
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: trunk
 
 A configurable plugin that disables updates for you. Easy, clean and helpful. 
@@ -26,8 +26,11 @@ and many more things!
 
 To see more features view the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a>.
 
-= Video Tutorial =
-[youtube http://www.youtube.com/watch?v=7sMEBGNxhwA]
+= Video Tutorials =
+[youtube http://www.youtube.com/watch?v=ppCxjREhF9g]
+
+[youtube http://www.youtube.com/watch?v=TbqYfkDlhCg]
+
 <small>Version 3.5.0 tutorial video.</small>
 
 == Frequently Asked Questions ==
@@ -74,11 +77,14 @@ Their are two way to install Disable Updates Manager.
 </ol>
 
 == Changelog ==
-= Preview: 4.1.0 + =
-* Work on WordPress Multisite capability.
-* New video tutorial.
 
 = Versions Available for Downloading =
+= 4.0.1 =
+* Updated: code to make it way easier to understand.
+* Updated/Added: video tutorials.
+* Added: version 4.0.1 to GitHub.
+* Added: capability with WordPress version 3.9.1. - Thanks szepe.viktor, and sLa NGjI's!
+
 = 4.0 =
 * Fixed: output problems.
 * Fixed: remove WordPress version code (removing all footer text now only removes version).
