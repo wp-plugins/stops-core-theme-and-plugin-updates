@@ -78,8 +78,14 @@ Their are two way to install Disable Updates Manager.
 
 == Changelog ==
 
-= Versions Available for Downloading =
-= 4.0.1 =
+= 4.0.2 =
+* Fixed: unchecked error in settings.
+* Added: version 4.0.2 to GitHub.
+* Removed: code format (will add in version 4.0.3 which will be released soon).
+* Added: 4.0 available for download.
+* Added: footnote at bottom of changelog.
+ 
+= 4.0.1 =*
 * Updated: code to make it way easier to understand. - Thanks szepe.viktor, and sLa NGjI's!
 * Updated/Added: video tutorials.
 * Added: version 4.0.1 to GitHub.
@@ -303,9 +309,11 @@ Their are two way to install Disable Updates Manager.
 * Updated Readme.txt
 * Works with WordPress 3.8
 
-= 0.1 =
+= 0.1 =*
 * Published on Wordpress.org
  (September 1, 2013)
  
 = Note =
 Versions 0.2 to 0.9 are not listed in this changelog.
+
+* versions not available for download.
