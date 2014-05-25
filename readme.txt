@@ -80,10 +80,10 @@ Their are two way to install Disable Updates Manager.
 
 = Versions Available for Downloading =
 = 4.0.1 =
-* Updated: code to make it way easier to understand.
+* Updated: code to make it way easier to understand. - Thanks szepe.viktor, and sLa NGjI's!
 * Updated/Added: video tutorials.
 * Added: version 4.0.1 to GitHub.
-* Added: capability with WordPress version 3.9.1. - Thanks szepe.viktor, and sLa NGjI's!
+* Added: capability with WordPress version 3.9.1.
 
 = 4.0 =
 * Fixed: output problems.
