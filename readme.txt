@@ -85,7 +85,7 @@ Their are two way to install Disable Updates Manager.
 * Added: 4.0 available for download.
 * Added: footnote at bottom of changelog.
  
-= 4.0.1 =*
+= 4.0.1* =
 * Updated: code to make it way easier to understand. - Thanks szepe.viktor, and sLa NGjI's!
 * Updated/Added: video tutorials.
 * Added: version 4.0.1 to GitHub.
