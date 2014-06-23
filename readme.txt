@@ -12,6 +12,8 @@ The best plugin to disable updates is here!
 
 This plugin is configurable! Check the updates you would like to disable in the settings page along with other helpful settings. The settings page is located under the settings section in your dashboard (changed in version 4.0). Check the features below or the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a> for more information.
 
+<a href="http://www.devwpp.wordpress.com">Check our blog for beta releases.</a>
+
 = Features =
 <ol>
 <li>Disables plugins and themes individually.</li>
