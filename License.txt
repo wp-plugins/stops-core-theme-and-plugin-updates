@@ -204,4 +204,7 @@
     EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
     SUCH DAMAGES.
 	
-	Matthew Sparrow (Websiteguy) webguywp@gmail.com
+    Name: Matthew 
+    Company: devWPP 
+    E-mail: webguywp@gmail.com
+    @Copyright 2013 - 2014

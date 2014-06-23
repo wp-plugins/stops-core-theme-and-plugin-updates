@@ -68,6 +68,13 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.1.10 =
+* Uploaded version 4.1.10 on GitHub.
+* Fixed error code "Warning: call_user_func_array() expects parameter 1 to be a valid callback, class 'Disable_Updates' does not have a method 'plugin_unblock_link' in D:\wamp\www\myWpSite\wp-includes\plugin.php on line 470".
+* Updated website address to <a href="www.devwpp.wordpress.com">devwpp.wordpress.com</a>
+* Changed official name to devWPP in all files.
+* Changed some notes in the code.
+
 = 4.1.0 =
 * <strong>BIG:</strong> code clean-up (moved code, fixed code, etc.). - Thanks <a href="https://github.com/Websiteguy/disable-updates-manager/pull/4">GitHub Pull Request</a> and other help!!!
 * Added: version 4.1.0 on GitHub (including the lang file).
