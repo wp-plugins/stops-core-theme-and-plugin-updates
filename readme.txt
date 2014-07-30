@@ -30,7 +30,7 @@ To see more features view the <a href="http://wordpress.org/plugins/stops-core-t
 
 = Blog =
 
-<a href="http://www.devwpp.wordpress.com">Check our blog for beta releases, updates, and other information</a>. You can also check out our <a target="_blank" href="https://github.com/Websiteguy/disable-updates-manager">GitHub Repository</a>.
+<a href="http://www.mpswp.wordpress.com">Check our blog for beta releases, updates, and other information</a>. You can also check out our <a target="_blank" href="https://github.com/Websiteguy/disable-updates-manager">GitHub Repository</a>.
 
 = Video Tutorial =
 [youtube https://www.youtube.com/watch?v=9vPVis3NZHI]
@@ -74,6 +74,11 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.2.11 =
+* Fixed screenshots.
+* Fixed broken links.
+* Added the language files again (this should fix the language issue).
+
 = 4.2.10 =
 * Changed blog address to <a target="_blank" href="http://mpswp.wordpress.com/">mpswp.wordpress.com</a>
 * Uploaded version 4.2.10 on <a target="_blank" href="https://github.com/Websiteguy/disable-updates-manager">GitHub</a>.
