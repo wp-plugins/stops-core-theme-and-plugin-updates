@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.11
+ * @version 4.2.12
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.11
+Version: 4.2.12
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.11';
+	const VERSION = '4.2.12';
 
 	private static $page_hook = '';
 
@@ -117,21 +117,31 @@ class Disable_Updates {
 		register_setting( '_disable_updates', '_disable_updates', array( __CLASS__, 'validate_settings' ) );
 	}
 
-	static function validate_settings( $value ) {
+static function validate_settings( $value ) {
+
 
 		if ( isset( $value['plugins'] ) ) {
 
-		// Since the blocked plugins are stored in a different option, we need to update that option. 
-     	$blocked_plugins = $value['plugins']; 
 
-    } else { 
- 
-			$blocked_plugins = array(); 
-		} 
- 
-		// Update the blocked plugins option. 
-		update_option( 'disable_updates_blocked', $blocked_plugins ); 
- 
+			// Since the blocked plugins are stored in a different option, we need to update that option.
+			$blocked_plugins = $value['plugins'];
+
+
+			// Convert the data to match the way the options are stored.
+			$blocked_plugins = array_fill_keys( $blocked_plugins, TRUE );
+
+
+		} else {
+
+
+			$blocked_plugins = array();
+		}
+
+
+		// Update the blocked plugins option.
+		update_option( 'disable_updates_blocked', $blocked_plugins );
+
+
 		return $value;
 	}
 

@@ -1,5 +1,5 @@
 === Disable Updates Manager ===
-Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com
+Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com, szepeviktor
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check, No Browser Nag, MPS Plugins
 Requires at least: 3.0
 Tested up to: 4.0 beta
@@ -74,6 +74,10 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.2.12 =
+* New contributor!
+* Fixed unable to chosen which plugins to disable.
+
 = 4.2.11 =
 * Fixed screenshots.
 * Fixed broken links.
