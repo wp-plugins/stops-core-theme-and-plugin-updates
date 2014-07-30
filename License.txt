@@ -205,6 +205,6 @@
     SUCH DAMAGES.
 	
     Name: Matthew 
-    Company: devWPP 
+    Company: MPS Plugins 
     E-mail: webguywp@gmail.com
-    @Copyright 2013 - 2014
+    @Copyright 2014
