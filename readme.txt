@@ -2,7 +2,7 @@
 Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com, szepeviktor
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check, No Browser Nag, MPS Plugins
 Requires at least: 3.0
-Tested up to: 4.0 beta
+Tested up to: 4.0
 Stable tag: trunk
 
 A configurable plugin that disables updates for you. Easy, clean and helpful + Great Support.  
@@ -74,16 +74,25 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.2.20 =
+* Removed double style.css (removed the one that was not in assets).
+* Changed License.txt.
+* Added new contributor to help tab.
+* Added capability with WordPress 3.9.2, 4.0 beta, and 4.0.
+* Reformatted tooltips.
+* Added some <code><br></code> and <code><div></code> classes to the settings for better spacing.
+* Updated settings security.
+
 = 4.2.12 =
 * New contributor!
 * Fixed unable to chosen which plugins to disable.
 
-= 4.2.11 =
+= 4.2.11* =
 * Fixed screenshots.
 * Fixed broken links.
 * Added the language files again (this should fix the language issue).
 
-= 4.2.10 =
+= 4.2.10* =
 * Changed blog address to <a target="_blank" href="http://mpswp.wordpress.com/">mpswp.wordpress.com</a>
 * Uploaded version 4.2.10 on <a target="_blank" href="https://github.com/Websiteguy/disable-updates-manager">GitHub</a>.
 * Added better documentation in readme.txt. 
