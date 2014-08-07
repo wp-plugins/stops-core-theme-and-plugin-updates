@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.21
+ * @version 4.2.22
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.21
+Version: 4.2.22
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -35,10 +35,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 Go to the license.txt in the trunk for more information.
 */
 
+// Turns WordPress debugging on
+define('WP_DEBUG', true);
+
+// Tells WordPress to log everything to the /wp-content/debug.log file
+define('WP_DEBUG_LOG', true);
+
+// Doesn't force the PHP 'display_errors' variable to be on
+define('WP_DEBUG_DISPLAY', false);
+
+// Hides errors from being displayed on-screen
+@ini_set('display_errors', 0);
+
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.21';
+	const VERSION = '4.2.22';
 
 	private static $page_hook = '';
 
@@ -62,7 +74,7 @@ class Disable_Updates {
 		// load the values recorded.
 		$this->load_disable_updates();
 	}
-	
+		
 	static function load_textdomain() {
 	
 		load_plugin_textdomain( 'disable-updates-manager', FALSE, basename( dirname( __FILE__ ) ) . '/lang' );
@@ -606,7 +618,6 @@ add_action( 'admin_init', 'c2c_no_browser_nag' );
 		return $r;
 	}
 	
-	
 	// Help Tab
 	static function help_tab() {
 		global $test_help_page;
@@ -614,8 +625,20 @@ add_action( 'admin_init', 'c2c_no_browser_nag' );
 		$screen  = get_current_screen();
 		$content1 = <<<CONTENT1
 		
+<div class="updated" id="update">
+			
+	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+
+</div>
+<div class="error" id="error">
+			
+	<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
+	   of date, you may run into compatibility problems. Check the capability tab in the help tab for more information.</p>
+
+</div>
+		
 <p>
-Disable Updates Manager 4.2.20 is the most innovative version yet. With the last few updates, you will notice some new key features mostly in the settings page. The settings page had a major redo with its new metaboxes to make them drag and drop with cool screen options plus in the setting, we used some Chosen integration. Included in all of that is some minor fixes to the grammar and layout. 
+Disable Updates Manager 4.2.22 is the most innovative version yet. With the last few updates, you will notice some new key features mostly in the settings page. The settings page had a major redo with its new metaboxes to make them drag and drop with cool screen options plus in the setting, we used some Chosen integration. Included in all of that is some minor fixes to the grammar and layout. 
 <br>
 <br>
 For the code, it had a fix up. The language files got compressed into on simple file plus the code is now sorted in some more folders making it easier to navigate through.
@@ -931,7 +954,7 @@ CONTENT6;
 		}
 
 	}
-
+	
 	// Settings page (under dashboard).
 	static function display_page() {
 	?>
@@ -949,14 +972,8 @@ CONTENT6;
 		$status = get_option( '_disable_updates' );
  
 		?>
-		
+
 		<div class="dashboard-widgets-wrap">
-	
-			<div class="error" style="width: auto;">
-				<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
-					of date, you may run into compatibility problems.</p>
-			<?php get_settings_errors()?>
-			</div>
            
 			<div id="dashboard-widgets" class="metabox-holder columns-<?php echo 1 == get_current_screen()->get_columns() ? '1' : '2'; ?>">
 
@@ -988,7 +1005,7 @@ CONTENT6;
 			</div><!-- #dashboard-widgets -->
 
 		</div><!-- .dashboard-widgets-wrap -->
-
+		
 	<?php
 	}
 }

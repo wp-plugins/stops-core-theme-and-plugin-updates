@@ -1,4 +1,4 @@
-/* Tooltips CSS */
+/* Tooltips Simple CSS */
 .showonhover {
     position: relative;
 }
@@ -34,6 +34,7 @@ a.viewdescription:hover {
     color: #FFF;
 }
 
+/* Chosen CSS*/
 select.dum-enhanced-select {
     width: 100%;
 }
