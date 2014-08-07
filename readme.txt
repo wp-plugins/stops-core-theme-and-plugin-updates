@@ -74,7 +74,10 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
-= 4.2.22 =
+= 4.2.23 =
+* Fixed debug error
+
+= 4.2.22* =
 * Fixed debug to make true.
 * Moved settings notice into help tab.
 * Added extra content to notice in settings.
@@ -85,7 +88,7 @@ Installing Disable Updates Manager.
 * Added capability section to help tab.
 * Added and removed a few minor things.
 
-= 4.2.20 =
+= 4.2.20* =
 * Removed double style.css (removed the one that was not in assets).
 * Changed License.txt.
 * Added new contributor to help tab.

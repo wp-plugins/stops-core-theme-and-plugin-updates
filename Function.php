@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.22
+ * @version 4.2.23
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.22
+Version: 4.2.23
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -35,22 +35,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 Go to the license.txt in the trunk for more information.
 */
 
-// Turns WordPress debugging on
-define('WP_DEBUG', true);
-
-// Tells WordPress to log everything to the /wp-content/debug.log file
-define('WP_DEBUG_LOG', true);
-
-// Doesn't force the PHP 'display_errors' variable to be on
-define('WP_DEBUG_DISPLAY', false);
-
-// Hides errors from being displayed on-screen
-@ini_set('display_errors', 0);
-
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.22';
+	const VERSION = '4.2.23';
 
 	private static $page_hook = '';
 
