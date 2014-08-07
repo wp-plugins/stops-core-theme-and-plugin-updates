@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.20
+ * @version 4.2.21
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.20
+Version: 4.2.21
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.20';
+	const VERSION = '4.2.21';
 
 	private static $page_hook = '';
 
@@ -685,6 +685,20 @@ CONTENT4;
 
 CONTENT5;
 
+		$content6 = <<<CONTENT6
+		
+<p>
+Works with WordPress 3.9.2 and is tested with WordPress 4.0 (WordPress 4.0 is not released yet, but WordPress 4.0 beta has).
+<br>
+<br>
+This plugin is tested with popular plugins, like Jetpack, to make sure that there are no conflicts between each other.
+<br>
+<br>
+This plugin has also been tested with popular themes to make sure that it doesn't mess up your site.
+</p>
+
+CONTENT6;
+
 		// Add my_help_tab if current screen is My Admin Page
 		$screen->add_help_tab(array(
 				'id'      => 'help_tab_content_1',
@@ -703,6 +717,12 @@ CONTENT5;
                 'title' => __('Tutorials'),
                 'content' => $content2,
             ));	
+			
+	    $screen->add_help_tab(array(
+                'id' => 'help_tab_content_6',
+                'title' => __('Capability'),
+                'content' => $content6,
+            ));
 			
 	    $screen->add_help_tab(array(
                 'id' => 'help_tab_content_3',

@@ -74,6 +74,10 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.2.21 =
+* Added capability section to help tab.
+* Added and removed a few minor things.
+
 = 4.2.20 =
 * Removed double style.css (removed the one that was not in assets).
 * Changed License.txt.
