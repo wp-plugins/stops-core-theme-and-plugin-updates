@@ -32,7 +32,9 @@ To see more features view the <a href="http://wordpress.org/plugins/stops-core-t
 
 <a href="http://www.mpswp.wordpress.com">Check our blog for beta releases, updates, and other information</a>. You can also check out our <a target="_blank" href="https://github.com/Websiteguy/disable-updates-manager">GitHub Repository</a>.
 
-= Video Tutorial =
+= Video Tutorials =
+[youtube https://www.youtube.com/watch?v=gm03k-Oxt38]
+
 [youtube https://www.youtube.com/watch?v=9vPVis3NZHI]
 
 == Frequently Asked Questions ==
@@ -74,7 +76,13 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
-= 4.2.23 =
+= 4.2.24 =
+* New Video Promo!
+* Tested with WordPress 4.0 beta4.
+* Made help tab rate notice display on all tabs.
+* Rearranged the tutorials. 
+
+= 4.2.23* =
 * Fixed debug error
 
 = 4.2.22* =

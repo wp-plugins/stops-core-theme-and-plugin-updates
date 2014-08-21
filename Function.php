@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.23
+ * @version 4.2.24
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.23
+Version: 4.2.24
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.23';
+	const VERSION = '4.2.24';
 
 	private static $page_hook = '';
 
@@ -184,7 +184,6 @@ static function validate_settings( $value ) {
 				$links,
 				array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
 				array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
-				array( '<a href="https://www.youtube.com/watch?v=ppCxjREhF9g">Tutorial</a>' ),
 				array( '<a href="https://github.com/Websiteguy/disable-updates-manager">GitHub</a>' )
 			);
 		}
@@ -638,15 +637,30 @@ If you are having trouble with any of the new features in Disable Updates Manage
 CONTENT1;
 
 		$content2 = <<<CONTENT2
-		
+		<div class="updated" id="update">
+			
+	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+
+</div>
+<div style="width:40%;padding:0 10pt 0 0;float:left;">
+<p>
+<iframe width="280" height="157" src="//www.youtube.com/embed/gm03k-Oxt38?rel=0" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+<div style="width:40%;padding:0 10pt 0 0;float:right;">
 <p>
 <iframe width="280" height="157" src="//www.youtube.com/embed/9vPVis3NZHI?rel=0" frameborder="0" allowfullscreen></iframe>
 </p>
+</div>
 
 CONTENT2;
 
 		$content3 = <<<CONTENT3
-		
+		<div class="updated" id="update">
+			
+	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+
+</div>
 <p>
     <a href="http://mpswp.wordpress.com">Our Website</a>
 	<br>
@@ -660,7 +674,11 @@ CONTENT2;
 CONTENT3;
 
 		$content4 = <<<CONTENT4
-		
+		<div class="updated" id="update">
+			
+	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+
+</div>
 <p>
 You can use the following controls to arrange the settings to suit your workflow. 
 <br>
@@ -697,9 +715,13 @@ CONTENT4;
 CONTENT5;
 
 		$content6 = <<<CONTENT6
-		
+		<div class="updated" id="update">
+			
+	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+
+</div>
 <p>
-Works with WordPress 3.9.2 and is tested with WordPress 4.0 (WordPress 4.0 is not released yet, but WordPress 4.0 beta has).
+Works with WordPress 3.9.2 and is tested with WordPress 4.0 beta4.
 <br>
 <br>
 This plugin is tested with popular plugins, like Jetpack, to make sure that there are no conflicts between each other.
