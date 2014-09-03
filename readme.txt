@@ -76,6 +76,16 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.3.0 =
+* Added custom plugin installer icon.
+* Tested with WordPress 4.0RC1 (4.0 to be released September 4, 2014).
+* Modified some help tab content.
+* Added proper CSS for columns in help tab.
+* Modified settings alignment.
+* Changed metaboxes arrangement in screen options.
+* Changed metaboxes titles.
+* Removed some versions in changelog.
+
 = 4.2.24 =
 * New Video Promo!
 * Tested with WordPress 4.0 beta4.
@@ -344,65 +354,11 @@ Installing Disable Updates Manager.
 * Updated Screenshots
 * Updated Readme.txt
 
-= 1.9.0 =
-* Admin Notice Added
-* FAQ Error Fixed
-* HTML Notes and Some HTML Updated
-* Links Added Under Plugin in Dashboard (Support Forum, FAQ, Tutorial)
-* Updated Readme.txt
-
-= 1.8.0 =
-* FAQ Added
-* HTML Notes Edited
-* Updated Readme.txt
-
-= 1.7.1 =
-* Screenshot Error Fixed
-* Installation Error Fixed
-
-= 1.7.0 =
-* New Html Code Added (this code disables WordPress automatic updates)
-* New Version Numbers (now going up by .1.0)
-* Updated Readme.txt (mostly under Installation)
-
-= 1.6.0 =
-* Updated Readme.txt
-* Fixed HTML Error
-* Video Tutorial Added
-
-= 1.5 =
-* Updated Readme.txt
-* Fixed HTML Spacing
-
-= 1.4 =
-* Updated Reame.txt
-* Updated HTML Notes
-
-= 1.3 =
-* Updated Readme.txt
-* Added a Disable Updates Check Feature
-
-= 1.2 =
-* Updated Readme.txt
-* Updated HTML Notes
-* Added Disable Update E-mails HTML (Note: This code will only work for some plugins)
-
-= 1.1 =
-* Screenshots Updated
-* Fixed Error
-
-= 1.0.0 =
-* Fixed Changelog Problem
-* HTML Changed
-* Updated Readme.txt
-* Works with WordPress 3.8
-
 = 0.1* =
-
 * Published on Wordpress.org
  (September 1, 2013)
  
 = Note =
-Versions 0.2 to 0.9 are not listed in this changelog.
+Versions 0.2 to 1.9.0 are not listed in this changelog.
 
 = * versions not available for download. =

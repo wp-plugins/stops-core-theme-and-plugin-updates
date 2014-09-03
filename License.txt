@@ -340,5 +340,5 @@ Public License instead of this License.
 	
     Name: Matthew 
     Company: MPS Plugins 
-    E-mail: webguywp@gmail.com
+    E-mail: mpsplugins@gmail.com
     @Copyright 2014

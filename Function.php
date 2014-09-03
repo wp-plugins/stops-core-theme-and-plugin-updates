@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email webguywp@gmail.com
- * @version 4.2.24
+ * @version 4.3.0
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.2.24
+Version: 4.3.0
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.2.24';
+	const VERSION = '4.3.0';
 
 	private static $page_hook = '';
 
@@ -62,11 +62,11 @@ class Disable_Updates {
 		// load the values recorded.
 		$this->load_disable_updates();
 	}
-		
+			
 	static function load_textdomain() {
 	
 		load_plugin_textdomain( 'disable-updates-manager', FALSE, basename( dirname( __FILE__ ) ) . '/lang' );
-		
+	
 	}
 
 	static function page_actions() {
@@ -78,10 +78,10 @@ class Disable_Updates {
 		add_screen_option('layout_columns', array('max' => 2, 'default' => 2) );
 
 		add_meta_box( 'dum-global', __( 'Disable Updates Globally', 'disable-updates-manager' ), array( __CLASS__, 'metabox_global' ), self::$page_hook, 'left', 'core' );
-		add_meta_box( 'dum-other', __( 'Other', 'disable-updates-manager' ), array( __CLASS__, 'metabox_other' ), self::$page_hook, 'right', 'core' );
-
-		add_meta_box( 'dum-themes', __( 'Disable Themes', 'disable-updates-manager' ), array( __CLASS__, 'metabox_themes' ), self::$page_hook, 'left', 'core' );
-		add_meta_box( 'dum-plugins', __( 'Disable Plugins', 'disable-updates-manager' ), array( __CLASS__, 'metabox_plugins' ), self::$page_hook, 'right', 'core' );
+        add_meta_box( 'dum-themes', __( 'Disable Theme Updates', 'disable-updates-manager' ), array( __CLASS__, 'metabox_themes' ), self::$page_hook, 'right', 'core' );
+		
+		add_meta_box( 'dum-other', __( 'Other Settings', 'disable-updates-manager' ), array( __CLASS__, 'metabox_other' ), self::$page_hook, 'left', 'core' );
+		add_meta_box( 'dum-plugins', __( 'Disable Plugin Updates', 'disable-updates-manager' ), array( __CLASS__, 'metabox_plugins' ), self::$page_hook, 'right', 'core' );
 	}
 
 	static function enqueue_css() {
@@ -103,7 +103,7 @@ class Disable_Updates {
 
 		wp_enqueue_script( 'dum-chosen-js', plugins_url( "vendor/chosen/chosen.jquery$min.js", __FILE__ ), array( 'dum-admin-js' ), '1.1.0' );
 	}
-
+	
 	static function footer_scripts() {
 
 		?>
@@ -611,56 +611,34 @@ add_action( 'admin_init', 'c2c_no_browser_nag' );
 
 		$screen  = get_current_screen();
 		$content1 = <<<CONTENT1
-		
-<div class="updated" id="update">
-			
-	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
-
-</div>
-<div class="error" id="error">
-			
-	<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
-	   of date, you may run into compatibility problems. Check the capability tab in the help tab for more information.</p>
-
-</div>
-		
-<p>
-Disable Updates Manager 4.2.22 is the most innovative version yet. With the last few updates, you will notice some new key features mostly in the settings page. The settings page had a major redo with its new metaboxes to make them drag and drop with cool screen options plus in the setting, we used some Chosen integration. Included in all of that is some minor fixes to the grammar and layout. 
-<br>
-<br>
-For the code, it had a fix up. The language files got compressed into on simple file plus the code is now sorted in some more folders making it easier to navigate through.
-<br>
-<br>
-If you are having trouble with any of the new features in Disable Updates Manager, check the other tabs in this help tab. Feel free to contact us any time.
+<p>	
+This is the Disable Updates Manager settings help tab. In here you will find helpful information on what Disable Updates Manager does and how to use it.
 </p>
+
+<div class="updated" id="update">	
+	<p>Please take the time to <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+</div>
+
+<div class="error" id="error">			
+	<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
+	   of date, you may run into compatibility problems. Check the capability tab for more information.</p>
+</div>
 
 CONTENT1;
 
 		$content2 = <<<CONTENT2
-		<div class="updated" id="update">
-			
-	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+<div><br></div>
+<div id="column1">
+<iframe width="310" height="174" src="//www.youtube.com/embed/gm03k-Oxt38?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
-</div>
-<div style="width:40%;padding:0 10pt 0 0;float:left;">
-<p>
-<iframe width="280" height="157" src="//www.youtube.com/embed/gm03k-Oxt38?rel=0" frameborder="0" allowfullscreen></iframe>
-</p>
-</div>
-<div style="width:40%;padding:0 10pt 0 0;float:right;">
-<p>
-<iframe width="280" height="157" src="//www.youtube.com/embed/9vPVis3NZHI?rel=0" frameborder="0" allowfullscreen></iframe>
-</p>
+<div id="column2">
+<iframe width="310" height="174" src="//www.youtube.com/embed/9vPVis3NZHI?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 CONTENT2;
 
 		$content3 = <<<CONTENT3
-		<div class="updated" id="update">
-			
-	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
-
-</div>
 <p>
     <a href="http://mpswp.wordpress.com">Our Website</a>
 	<br>
@@ -674,11 +652,6 @@ CONTENT2;
 CONTENT3;
 
 		$content4 = <<<CONTENT4
-		<div class="updated" id="update">
-			
-	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
-
-</div>
 <p>
 You can use the following controls to arrange the settings to suit your workflow. 
 <br>
@@ -705,9 +678,11 @@ CONTENT4;
 <p style="align: center;">
 <h3>Contributors:</h3>
 <ul>
-<li><a href="http://profiles.wordpress.org/mps-plugins/">MPS Plugins</a></li>
+<h4>Head Contributors</h4>
 <li><a href="http://profiles.wordpress.org/kidsguide/">Matthew</a></li>
+<li><a href="http://profiles.wordpress.org/mps-plugins/">MPS Plugins</a></li>
 <li><a href="http://profiles.wordpress.org/shazahm1hotmailcom/">Shazahm1</a></li>
+<h4>Other Contributors</h4>
 <li><a href="http://profiles.wordpress.org/szepeviktor/">szepe.viktor</a></li>
 </ul>
 </p>
@@ -715,19 +690,15 @@ CONTENT4;
 CONTENT5;
 
 		$content6 = <<<CONTENT6
-		<div class="updated" id="update">
-			
-	<p>Please <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
+<p>	
+WordPress encourages you to update your plugins, themes, and core to make sure that there are no bugs. Even though you most likely want to disable all the updates and never update again, you should update every once in a while.
 
-</div>
-<p>
-Works with WordPress 3.9.2 and is tested with WordPress 4.0 beta4.
-<br>
-<br>
-This plugin is tested with popular plugins, like Jetpack, to make sure that there are no conflicts between each other.
-<br>
-<br>
-This plugin has also been tested with popular themes to make sure that it doesn't mess up your site.
+<h3>This plugin is tested so there are no problems.</h3>
+<ul>
+<li>Tested with WordPress 4.0RC1</li>
+<li>Tested with popular plugins for no conflicts</li>
+<li>Tested with popular themes for no conflicts</li>
+</ul>
 </p>
 
 CONTENT6;
@@ -759,7 +730,7 @@ CONTENT6;
 			
 	    $screen->add_help_tab(array(
                 'id' => 'help_tab_content_3',
-                'title' => __('Help'),
+                'title' => __('Troubleshooting'),
                 'content' => $content3,
             ));
 				
@@ -772,7 +743,7 @@ CONTENT6;
 		?>
 		<div>
 			<p>
-		<div class="showonhover">
+		    <div class="showonhover">
 				<label for="all_notify">
 					<input
 						type="checkbox" <?php checked( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ), TRUE ); ?>
@@ -783,13 +754,13 @@ CONTENT6;
 					<a href="#" class="viewdescription">?</a>
 					<span class="hovertext">Disables core, theme, and plugin updates.</span>
 				</span>
+		    </div>
 			</p>
-		</div>
 		</div>
 
 		<div style="padding-left: 12px;">
-			<div>
 			<p>
+			<div>
 				<label for="plugins_notify">
 					<input type="checkbox" <?php checked( 1, ( isset( $status['plugin'] ) && ! isset( $status['all'] ) ? (int) $status['plugin'] : 0 ), TRUE ); ?>
 						   value="1" id="plugins_notify"
@@ -797,7 +768,7 @@ CONTENT6;
 						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable All Plugin Updates', 'disable-updates-manager' ) ?>
 				</label>
 			</div>
-			
+			<br>
 			<div>
 				<label for="themes_notify">
 					<input type="checkbox" <?php checked( 1, ( isset( $status['theme'] ) && ! isset( $status['all'] ) ? (int) $status['theme'] : 0 ), TRUE ); ?>
@@ -806,7 +777,7 @@ CONTENT6;
 						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable All Theme Updates', 'disable-updates-manager' ) ?>
 				</label>
 			</div>
-			<br>
+            <br>
 			<div>
 				<label for="core_notify">
 					<input type="checkbox" <?php checked( 1, ( isset( $status['core'] ) && ! isset( $status['all'] ) ? (int) $status['core'] : 0 ), TRUE ); ?>
@@ -814,8 +785,8 @@ CONTENT6;
 						   name="_disable_updates[core]"
 						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable WordPress Core Update', 'disable-updates-manager' ) ?>
 				</label>
-			</p>
 			</div>
+			</p>
 		</div>
 
 		<?php
