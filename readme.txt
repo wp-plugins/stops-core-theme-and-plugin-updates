@@ -76,6 +76,10 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.3.10 =
+* WordPress 4.0 capability added.
+* Fixed plugin icon not showing.
+
 = 4.3.0 =
 * Added custom plugin installer icon.
 * Tested with WordPress 4.0RC1 (4.0 to be released September 4, 2014).

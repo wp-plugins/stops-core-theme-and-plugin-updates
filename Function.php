@@ -2,22 +2,22 @@
 /**
  * @package Disable Updates Manager
  * @author MPS Plugins
- * @email webguywp@gmail.com
- * @version 4.3.0
+ * @email mpsplugins@gmail.com
+ * @version 4.3.10
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.3.0
+Version: 4.3.10
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
-Author Email: webguywp@gmail.com
+Author Email: mpsplugins@gmail.com
 License: GPL2
 Text Domain: disable-updates-manager
 Domain Path: languages
 
-@Copyright 2013 - 2014 MPS Plugins (email: webguywp@gmail.com)
+@Copyright 2013 - 2014 MPS Plugins (email: mpsplugins@gmail.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.3.0';
+	const VERSION = '4.3.10';
 
 	private static $page_hook = '';
 
@@ -695,7 +695,7 @@ WordPress encourages you to update your plugins, themes, and core to make sure t
 
 <h3>This plugin is tested so there are no problems.</h3>
 <ul>
-<li>Tested with WordPress 4.0RC1</li>
+<li>Tested with WordPress 4.0</li>
 <li>Tested with popular plugins for no conflicts</li>
 <li>Tested with popular themes for no conflicts</li>
 </ul>
