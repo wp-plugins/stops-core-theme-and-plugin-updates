@@ -62,9 +62,12 @@ A: Yes, this plugin just disables the update. We has also recently made an unins
 A: As far as I know, this is just some spam. I have not received any complaints about it and there are lots of 5 star ratings for the most recent versions. You can help by ratings the plugin and saying if it is broken or not.  
 
 == Screenshots ==
-1. Settings Page
-2. Disable Plugin Updates
-3. Disable Plugins Individually
+1. Disable Updates Globally
+2. Other Settings
+3. Disable Plugin Updates
+4. Disable Theme Updates 
+5. Screen Options
+6. Help Tab
 
 == Installation ==
 Installing Disable Updates Manager.
@@ -76,6 +79,9 @@ Installing Disable Updates Manager.
 3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.3.11 =
+* Added some better screenshots.
+
 = 4.3.10 =
 * WordPress 4.0 capability added.
 * Fixed plugin icon not showing.
