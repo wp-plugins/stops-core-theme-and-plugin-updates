@@ -79,6 +79,10 @@ Installing Disable Updates Manager.
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
+= 4.3.12.2 =
+* Fixed screenshot 5 showing incorrect information.
+* Search Exclude 1.1.0 fixes capability with Disable Updates Manager.
+
 = 4.3.12 =
 * Updated readme.txt to make it easier to understand.
 
