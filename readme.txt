@@ -72,14 +72,17 @@ A: As far as I know, this is just some spam. I have not received any complaints 
 == Installation ==
 Installing Disable Updates Manager.
 
-1.Install Disable Updates Manager either via the WordPress.org plugin directory, or by uploading the files to your server.
+1. Install Disable Updates Manager either via the WordPress.org plugin page and uploading the files to your FTP manually, or going to the and new plugins section in your dashboard.
 
-2.After activating Disable Updates Manager by Websiteguy, you will be able to go to the Disable Updates Manager page under the settings.
+2. Activate Disable Updates Manager by MPS Plugins.
 
-3.That's it. You're ready to go!
+3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.3.11 =
+= 4.3.12 =
+* Updated readme.txt to make it easier to understand.
+
+= 4.3.11* =
 * Added some better screenshots.
 
 = 4.3.10 =
