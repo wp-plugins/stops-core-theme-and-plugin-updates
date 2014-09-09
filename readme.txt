@@ -1,5 +1,5 @@
 === Disable Updates Manager ===
-Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com, szepeviktor
+Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com, szepe.viktor
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check, No Browser Nag, MPS Plugins, Manager, Disable, Updates
 Requires at least: 3.0
 Tested up to: 4.0
@@ -20,10 +20,7 @@ This plugin is configurable! Check the updates you would like to disable in the 
 <li>Disables plugin updates.</li>
 <li>Disables theme updates.</li>
 <li>Disable WordPress core updates.</li>
-<li>Removes admin footer version.</li>
-<li>Disables background updates.</li>
-<li>Removes updates menu in admin sidebar.</li>
-<li>No Browser Nag.</li>
+<li>And lots of other settings.</li>
 </ol> 
 
 To see more features view the <a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/screenshots/">screenshots</a> or the video tutorials below.
@@ -79,7 +76,12 @@ Installing Disable Updates Manager.
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.3.12.2 =
+= 4.3.13 =
+* Fixed contributor issue.
+* Updated description in readme.txt.
+* Removed unnecessary versions (0.5 - 1.9.0). 
+
+= 4.3.12.2* =
 * Fixed screenshot 5 showing incorrect information.
 * Search Exclude 1.1.0 fixes capability with Disable Updates Manager.
 
