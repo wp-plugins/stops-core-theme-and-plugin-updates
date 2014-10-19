@@ -11,10 +11,10 @@ A configurable plugin that disables updates for you. Easy, clean and helpful + G
 This plugin is configurable! Check the type of update(s) you would like to disable in the settings page along with other helpful settings. Watch the video tutorial below for more information.
 
 = Video Tutorials =
-[youtube https://www.youtube.com/embed/VYEQg-hZd58]
-[youtube https://www.youtube.com/embed/Kd4s3EOcUtw]
-[youtube https://www.youtube.com/embed/1R-be48AvrE]
-[youtube https://www.youtube.com/embed/mYznDVsbVBk]
+[youtube https://www.youtube.com/VYEQg-hZd58]
+[youtube https://www.youtube.com/Kd4s3EOcUtw]
+[youtube https://www.youtube.com/1R-be48AvrE]
+[youtube https://www.youtube.com/mYznDVsbVBk]
 
 = Features Include =
 <ol>
