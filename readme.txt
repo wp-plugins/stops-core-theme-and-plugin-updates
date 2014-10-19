@@ -10,12 +10,6 @@ A configurable plugin that disables updates for you. Easy, clean and helpful + G
 == Description ==
 This plugin is configurable! Check the type of update(s) you would like to disable in the settings page along with other helpful settings. Watch the video tutorial below for more information.
 
-= Video Tutorials =
-[youtube https://www.youtube.com/watch?v=VYEQg-hZd58]
-[youtube https://www.youtube.com/watch?v=mYznDVsbVBk]
-[youtube https://www.youtube.com/watch?v=1R-be48AvrE]
-[youtube https://www.youtube.com/watch?v=Kd4s3EOcUtw]
-
 = Features Include =
 <ol>
 <li>Disables plugins and themes individually.</li>
@@ -34,6 +28,13 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 <li>Suggest New Features: Have an awesome new feature that you would like to be added? Please share it on <a href="https://github.com/Websiteguy/disable-updates-manager/issues/new">GitHub</a> or the <a href="https://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">WordPress Support Forum</a>!</li>
 <li>Issue Pull Requests: The easiest way to get involved is to help out on issues already reported in <a href="https://github.com/Websiteguy/disable-updates-manager/compare">GitHub</a> or the <a href="https://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">WordPress Support Forum</a>.</li>
 </ol>
+
+= Video Tutorials =
+[youtube https://www.youtube.com/watch?v=VYEQg-hZd58]
+[youtube https://www.youtube.com/watch?v=mYznDVsbVBk]
+[youtube https://www.youtube.com/watch?v=1R-be48AvrE]
+[youtube https://www.youtube.com/watch?v=Kd4s3EOcUtw]
+
 == Screenshots ==
 1. Disable Updates Globally
 2. Other Settings
