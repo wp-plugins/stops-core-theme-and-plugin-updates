@@ -11,7 +11,10 @@ A configurable plugin that disables updates for you. Easy, clean and helpful + G
 This plugin is configurable! Check the type of update(s) you would like to disable in the settings page along with other helpful settings. Watch the video tutorial below for more information.
 
 = Video Tutorials =
-[youtube https://www.youtube.com/watch?v=9vPVis3NZHI]
+[youtube https://www.youtube.com/embed/VYEQg-hZd58]
+[youtube https://www.youtube.com/embed/Kd4s3EOcUtw]
+[youtube https://www.youtube.com/embed/1R-be48AvrE]
+[youtube https://www.youtube.com/embed/mYznDVsbVBk]
 
 = Features Include =
 <ol>
@@ -30,7 +33,7 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 <li>Report Bugs: If you find a bug, error or other problem, please report it on <a href="https://github.com/Websiteguy/disable-updates-manager/issues/new">GitHub</a> or in the <a href="https://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">WordPress Support Forum</a>!</li>
 <li>Suggest New Features: Have an awesome new feature that you would like to be added? Please share it on <a href="https://github.com/Websiteguy/disable-updates-manager/issues/new">GitHub</a> or the <a href="https://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">WordPress Support Forum</a>!</li>
 <li>Issue Pull Requests: The easiest way to get involved is to help out on issues already reported in <a href="https://github.com/Websiteguy/disable-updates-manager/compare">GitHub</a> or the <a href="https://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">WordPress Support Forum</a>.</li>
-
+</ol>
 == Screenshots ==
 1. Disable Updates Globally
 2. Other Settings
@@ -49,7 +52,11 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.4.0 =
+= 4.4.0.1 =
+* Fixed video tutorial typo.
+* Fixed readme.txt typo.
+
+= 4.4.0* =
 * Removed title /* */ from chosen.min.css to make it more compressed.
 * Added disable auto translation updates setting.
 * Added disable auto core update e-mails setting.
