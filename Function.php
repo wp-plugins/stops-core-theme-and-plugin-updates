@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email mpsplugins@gmail.com
- * @version 4.3.13
+ * @version 4.4.0
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.3.13
+Version: 4.4.0
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.3.13';
+	const VERSION = '4.4.0';
 
 	private static $page_hook = '';
 
@@ -281,15 +281,13 @@ static function validate_settings( $value ) {
 
                     if ( ! function_exists( 'c2c_no_browser_nag' ) ) :
 
-	function c2c_no_browser_nag() {
-		// This is cribbed from wp_check_browser_version()
-		$key = md5( $_SERVER['HTTP_USER_AGENT'] );
-		add_filter( 'site_transient_browser_' . $key, '__return_null' );
-	}
-
-endif;
-
-add_action( 'admin_init', 'c2c_no_browser_nag' );
+	                function c2c_no_browser_nag() {
+		            // This is cribbed from wp_check_browser_version()
+		            $key = md5( $_SERVER['HTTP_USER_AGENT'] );
+		            add_filter( 'site_transient_browser_' . $key, '__return_null' );
+	                }
+                    endif;
+                    add_action( 'admin_init', 'c2c_no_browser_nag' );
 					
 					break;
 
@@ -306,7 +304,48 @@ add_action( 'admin_init', 'c2c_no_browser_nag' );
 				case 'abup' :
 
 					wp_clear_scheduled_hook( 'wp_maybe_auto_update' );
+					
 					break;
+					
+				/* 
+				Version Added: 4.4.0
+				Description: Disables minor core updates in the Disable Updates Manager settings.
+				*/
+				case 'minor-core-updates' :
+				
+				    add_filter( 'allow_minor_auto_core_updates', '__return_false' );
+				
+				    break;
+					
+				/* 
+				Version Added: 4.4.0
+				Description: Disables major core updates in the Disable Updates Manager settings.
+				*/
+				case 'major-core-updates' :
+				
+				    add_filter( 'allow_major_auto_core_updates', '__return_true' );
+				
+				    break;
+					
+	            /* 
+				Version Added: 4.4.0
+				Description: Disables auto translation updates in the Disable Updates Manager settings.
+				*/
+				case 'auto-translation-updates' :
+				
+				    add_filter( 'auto_update_translation', '__return_false' );
+				
+				    break;
+					
+			    /* 
+				Version Added: 4.4.0
+				Description: Disables auto core e-mails in the Disable Updates Manager settings.
+				*/
+				case 'auto-core-emails' :
+				
+				    add_filter( 'auto_core_update_send_email', '__return_false' );
+				
+				    break;
 
 			}
 		}
@@ -352,7 +391,7 @@ add_action( 'admin_init', 'c2c_no_browser_nag' );
 
 		if ( ! isset( $plugins->response ) || count( $plugins->response ) == 0 ) {
 
-			return $plugins;
+			return $plugins;
 		}
 
 		$blocked = (array) get_option( 'disable_updates_blocked' );
@@ -629,11 +668,13 @@ CONTENT1;
 		$content2 = <<<CONTENT2
 <div><br></div>
 <div id="column1">
-<iframe width="310" height="174" src="//www.youtube.com/embed/gm03k-Oxt38?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="310" height="174" src="//www.youtube.com/embed/VYEQg-hZd58?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="310" height="174" src="//www.youtube.com/embed/Kd4s3EOcUtw?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div id="column2">
-<iframe width="310" height="174" src="//www.youtube.com/embed/9vPVis3NZHI?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="310" height="174" src="//www.youtube.com/embed/1R-be48AvrE?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="310" height="174" src="//www.youtube.com/embed/mYznDVsbVBk?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 CONTENT2;
@@ -678,11 +719,9 @@ CONTENT4;
 <p style="align: center;">
 <h3>Contributors:</h3>
 <ul>
-<h4>Head Contributors</h4>
 <li><a href="http://profiles.wordpress.org/kidsguide/">Matthew</a></li>
 <li><a href="http://profiles.wordpress.org/mps-plugins/">MPS Plugins</a></li>
 <li><a href="http://profiles.wordpress.org/shazahm1hotmailcom/">Shazahm1</a></li>
-<h4>Other Contributors</h4>
 <li><a href="http://profiles.wordpress.org/szepeviktor/">szepe.viktor</a></li>
 </ul>
 </p>
@@ -783,10 +822,30 @@ CONTENT6;
 					<input type="checkbox" <?php checked( 1, ( isset( $status['core'] ) && ! isset( $status['all'] ) ? (int) $status['core'] : 0 ), TRUE ); ?>
 						   value="1" id="core_notify"
 						   name="_disable_updates[core]"
-						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable WordPress Core Update', 'disable-updates-manager' ) ?>
+						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable All WordPress Core Update', 'disable-updates-manager' ) ?>
+				</label>
+			</div>
+		<div style="padding-left:20px;">	
+			<br>
+			<div>
+				<label for="minor-core-updates_notify">
+					<input type="checkbox" <?php checked( 1, ( isset( $status['minor-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['minor-core-updates'] : 0 ), TRUE ); ?>
+						   value="1" id="minor-core-updates_notify"
+						   name="_disable_updates[minor-core-updates]"
+						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 ) ) ?>> <?php _e( 'Disable Minor', 'disable-updates-manager' ) ?>
+				</label>
+			</div>
+			<br>
+			<div>
+				<label for="major-core-updates_notify">
+					<input type="checkbox" <?php checked( 1, ( isset( $status['major-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['major-core-updates'] : 0 ), TRUE ); ?>
+						   value="1" id="major-core-updates_notify"
+						   name="_disable_updates[major-core-updates]"
+						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 )) ?>> <?php _e( 'Disable Major', 'disable-updates-manager' ) ?>
 				</label>
 			</div>
 			</p>
+		</div>	
 		</div>
 
 		<?php
@@ -802,7 +861,7 @@ CONTENT6;
 					<input
 						type="checkbox" <?php checked( 1, ( isset( $status['page'] ) ? (int) $status['page'] : 0 ), TRUE ); ?>
 						value="1" id="page_notify"
-						name="_disable_updates[page]"> <?php _e( 'Remove Updates Page', 'disable-updates-manager' ) ?>
+						name="_disable_updates[page]"> <?php _e( 'Remove the Updates Page', 'disable-updates-manager' ) ?>
 				</label>
 				<span>
 					<a href="#" class="viewdescription">?</a></a>
@@ -814,7 +873,7 @@ CONTENT6;
 				<label for="bnag_notify">
 					<input type="checkbox" <?php checked( 1, ( isset( $status['bnag'] ) ? (int) $status['bnag'] : 0 ), TRUE ); ?>
 						   value="1" id="bnag_notify"
-						   name="_disable_updates[bnag]"> <?php _e( 'Remove Out of Date Browser Nag', 'disable-updates-manager' ) ?>
+						   name="_disable_updates[bnag]"> <?php _e( 'Disable Out of Date Browser Nag', 'disable-updates-manager' ) ?>
 				</label>
 				<span>
 					<a href="#" class="viewdescription">?</a>
@@ -827,11 +886,36 @@ CONTENT6;
 					<input
 						type="checkbox" <?php checked( 1, ( isset( $status['wpv'] ) ? (int) $status['wpv'] : 0 ), TRUE ); ?>
 						value="1" id="wpv_notify"
-						name="_disable_updates[wpv]"> <?php _e( 'Remove WordPress Core Version from Footer', 'disable-updates-manager' ) ?>
+						name="_disable_updates[wpv]"> <?php _e( 'Disable WordPress Core Version from Footer', 'disable-updates-manager' ) ?>
 				</label>
 				<span>
 					<a href="#" class="viewdescription">?</a>
 					<span class="hovertext">Removes it for all users.</span>
+				</span>
+			</div>
+            <br>
+            <div class="showonhover">
+				<label for="auto-translation-updates_notify">
+					<input type="checkbox" <?php checked( 1, ( isset( $status['auto-translation-updates'] ) ? (int) $status['auto-translation-updates'] : 0 ), TRUE ); ?>
+						   value="1" id="auto-translation-updates_notify"
+						   name="_disable_updates[auto-translation-updates]"> <?php _e( 'Disable Automatic Translation Updates', 'disable-updates-manager' ) ?>
+				</label>
+				<span>
+					<a href="#" class="viewdescription">?</a>
+					<span class="hovertext">Disables the automatic translation updates for you.</span>
+				</span>
+			</div>
+			<br>
+			<div class="showonhover">
+				<label for="auto-core-emails_notify">
+					<input
+						type="checkbox" <?php checked( 1, ( isset( $status['auto-core-emails'] ) ? (int) $status['auto-core-emails'] : 0 ), TRUE ); ?>
+						value="1" id="auto-core-emails_notify"
+						name="_disable_updates[auto-core-emails]"> <?php _e( 'Disable Core Update E-mails', 'disable-updates-manager' ) ?>
+				</label>
+				<span>
+					<a href="#" class="viewdescription">?</a>
+					<span class="hovertext">Disables the core update e-mails so that they will not be sent to you.</span>
 				</span>
 			</div>
             <br>
@@ -874,7 +958,7 @@ CONTENT6;
 
 		if ( ! empty( $themes ) ) {
 
-			echo '<select class="dum-enhanced-select" id="dum-disable-themes-select" name="_disable_updates[themes][]" data-placeholder="' . __( 'Select themes to disable...', 'disable-updates-manager' ) . '" multiple' . ( isset( $status['it'] ) && ! isset( $status['all'] ) ? '' : ' disabled' ) . '>';
+			echo '<select class="dum-enhanced-select" id="dum-disable-themes-select" name="_disable_updates[themes][]" data-placeholder="' . __( 'Select theme(s) to disable...', 'disable-updates-manager' ) . '" multiple' . ( isset( $status['it'] ) && ! isset( $status['all'] ) ? '' : ' disabled' ) . '>';
 
 				echo '<option value=""></option>';
 
@@ -918,7 +1002,7 @@ CONTENT6;
 
 		if ( ! empty( $plugins ) ) {
 
-			echo '<select class="dum-enhanced-select" id="dum-disable-plugins-select" name="_disable_updates[plugins][]" data-placeholder="' . __( 'Select plugins to disable...', 'disable-updates-manager' ) . '" multiple' . ( isset( $status['ip'] ) && ! isset( $status['all'] ) ? '' : ' disabled' ) . '>';
+			echo '<select class="dum-enhanced-select" id="dum-disable-plugins-select" name="_disable_updates[plugins][]" data-placeholder="' . __( 'Select plugin(s) to disable...', 'disable-updates-manager' ) . '" multiple' . ( isset( $status['ip'] ) && ! isset( $status['all'] ) ? '' : ' disabled' ) . '>';
 
 				echo '<option value=""></option>';
 
