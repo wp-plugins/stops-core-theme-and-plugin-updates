@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email mpsplugins@gmail.com
- * @version 4.4.0.1
+ * @version 4.4.1
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.4.0.1
+Version: 4.4.1
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.4.0.1';
+	const VERSION = '4.4.1';
 
 	private static $page_hook = '';
 
@@ -309,6 +309,7 @@ static function validate_settings( $value ) {
 					
 				/* 
 				Version Added: 4.4.0
+				Last Version Edited: 4.4.0
 				Description: Disables minor core updates in the Disable Updates Manager settings.
 				*/
 				case 'minor-core-updates' :
@@ -319,11 +320,12 @@ static function validate_settings( $value ) {
 					
 				/* 
 				Version Added: 4.4.0
+				Last Version Edited: 4.4.1
 				Description: Disables major core updates in the Disable Updates Manager settings.
 				*/
 				case 'major-core-updates' :
 				
-				    add_filter( 'allow_major_auto_core_updates', '__return_true' );
+				    add_filter( 'allow_major_auto_core_updates', '__return_false' );
 				
 				    break;
 					

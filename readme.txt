@@ -53,7 +53,10 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.4.0.1 =
+= 4.4.1 =
+* Fixed disable major and minor settings.
+
+= 4.4.0.1* =
 * Fixed video tutorial typo.
 * Fixed readme.txt typo.
 
