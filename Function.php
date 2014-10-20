@@ -314,7 +314,7 @@ static function validate_settings( $value ) {
 				*/
 				case 'minor-core-updates' :
 				
-				    add_filter( 'allow_minor_auto_core_updates', '__return_false' );
+				    add_filter( 'allow_minor_core_updates', '__return_false' );
 				
 				    break;
 					
@@ -325,7 +325,7 @@ static function validate_settings( $value ) {
 				*/
 				case 'major-core-updates' :
 				
-				    add_filter( 'allow_major_auto_core_updates', '__return_false' );
+				    add_filter( 'allow_major_core_updates', '__return_false' );
 				
 				    break;
 					
