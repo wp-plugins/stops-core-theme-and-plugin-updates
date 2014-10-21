@@ -55,8 +55,7 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 == Changelog ==
 = 4.4.1.1 =
 * Attempt 2 at fixing the major and minor core updates setting.
-* Fixed error when you have the Disable Core Updates setting and the Disable Automatic Core Update E-mails settings checked at the same time.
-* Renamed function.php to disable-updates-manager.php.
+* Renamed function.php to main.php.
 * Removed random image in repository.
 
 = 4.4.1* =
