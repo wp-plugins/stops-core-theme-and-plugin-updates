@@ -53,7 +53,11 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.4.1 =
+= 4.4.1.1 =
+* Attempt 2 at fixing the major and minor core updates setting.
+* Fixed error when you have the Disable Core Updates setting and the Disable Automatic Core Update E-mails settings checked at the same time.
+
+= 4.4.1* =
 * Fixed disable major and minor settings.
 
 = 4.4.0.1* =
