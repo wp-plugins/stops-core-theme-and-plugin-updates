@@ -3,12 +3,12 @@
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email mpsplugins@gmail.com
- * @version 4.4.1.1
+ * @version 4.4.1.2
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.4.1.1
+Version: 4.4.1.2
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.4.1.1';
+	const VERSION = '4.4.1.2';
 
 	private static $page_hook = '';
 
@@ -314,16 +314,7 @@ static function validate_settings( $value ) {
 				*/
 				case 'minor-core-updates' :
 				
-				    add_filter( 'allow_minor_core_updates', '__return_false' );
-					add_filter( 'allow_auto_minor_core_updates', '__return_false' );
-					add_filter( 'auto_minor_core_updates', '__return_false' );
-					add_filter( 'minor_core_updates', '__return_false' );
-				    add_filter( 'allow_all_minor_core_updates', '__return_false' );
-					add_filter( 'allow_all_auto_minor_core_updates', '__return_false' );
-					add_filter( 'all_auto_minor_core_updates', '__return_false' );
-					add_filter( 'all_minor_core_updates', '__return_false' );
-					add_filter( 'disable_all_minor_core_updates', '__return_false' );
-					add_filter( 'disable_minor_core_updates', '__return_false' );
+				    add_filter( 'allow_minor_auto_core_updates', '__return_false' );
 				
 				    break;
 					
@@ -334,16 +325,7 @@ static function validate_settings( $value ) {
 				*/
 				case 'major-core-updates' :
 				
-				    add_filter( 'allow_major_core_updates', '__return_false' );
-					add_filter( 'allow_auto_major_core_updates', '__return_false' );
-					add_filter( 'auto_major_core_updates', '__return_false' );
-					add_filter( 'major_core_updates', '__return_false' );
-				    add_filter( 'allow_all_major_core_updates', '__return_false' );
-					add_filter( 'allow_all_auto_major_core_updates', '__return_false' );
-					add_filter( 'all_auto_major_core_updates', '__return_false' );
-					add_filter( 'all_major_core_updates', '__return_false' );
-					add_filter( 'disable_all_major_core_updates', '__return_false' );
-					add_filter( 'disable_major_core_updates', '__return_false' );
+				    add_filter( 'allow_major_auto_core_updates', '__return_false' );
 				
 				    break;
 					
