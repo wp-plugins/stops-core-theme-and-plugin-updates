@@ -13,9 +13,8 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 = Features Include =
 <ol>
 <li>Disables plugins and themes individually.</li>
-<li>Disables plugin updates.</li>
-<li>Disables theme updates.</li>
-<li>Disable Major and Minor WordPress core updates.</li>
+<li>Disables WordPress core updates.</li>
+<li>Disable automatic background updates.</li>
 <li>And lots of other settings.</li>
 </ol> 
 
@@ -53,7 +52,18 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.4.1.2 =
+= 4.5.0 =
+* Added rate plugin button.
+* Added Feedback survey button.
+* Removed rate plugin notice in help tab.
+* Edited disable plugins individually text display on plugin page when activated.
+* Removed disable major and minor core feature. It wasn't working but we hope to get it back there in a later version of Disable Updates Manager.
+* Edited plugin description a little.
+* Edited help tab information.
+* Updated screenshots.
+* Removed FAQ link on plugin page.
+
+= 4.4.1.2* =
 * Attempt 3 at fixing the major and minor core updates setting. 
 
 = 4.4.1.1* =

@@ -1,14 +1,14 @@
 <?php
-/**
+ /*
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email mpsplugins@gmail.com
- * @version 4.4.1.2
+ * @version 4.5.0
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.4.1.2
+Version: 4.5.0
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.4.1.2';
+	const VERSION = '4.5.0';
 
 	private static $page_hook = '';
 
@@ -183,7 +183,6 @@ static function validate_settings( $value ) {
 			return array_merge(
 				$links,
 				array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
-				array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
 				array( '<a href="https://github.com/Websiteguy/disable-updates-manager">GitHub</a>' )
 			);
 		}
@@ -309,23 +308,23 @@ static function validate_settings( $value ) {
 					
 				/* 
 				Version Added: 4.4.0
-				Last Version Edited: 4.4.0
+				Last Version Edited: 4.5.0
 				Description: Disables minor core updates in the Disable Updates Manager settings.
 				*/
 				case 'minor-core-updates' :
 				
-				    add_filter( 'allow_minor_auto_core_updates', '__return_false' );
+				    //TO BE ADDED
 				
 				    break;
 					
 				/* 
 				Version Added: 4.4.0
-				Last Version Edited: 4.4.1
+				Last Version Edited: 4.5.0
 				Description: Disables major core updates in the Disable Updates Manager settings.
 				*/
 				case 'major-core-updates' :
 				
-				    add_filter( 'allow_major_auto_core_updates', '__return_false' );
+				    //TO BE ADDED
 				
 				    break;
 					
@@ -558,11 +557,11 @@ static function validate_settings( $value ) {
 
 		if ( $blocked !== FALSE && array_key_exists( $plugin_file, $blocked ) ) {
 
-			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&unblock=' . $plugin_file . '">Unblock Updates</a>';
+			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&unblock=' . $plugin_file . '"><small>Updates Blocked</a>';
 
 		} else {
 
-			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&block=' . $plugin_file . '">Block Updates</a>';
+			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&block=' . $plugin_file . '"><small>Updates Allowed</small></a>';
 		}
 
 		return $actions;
@@ -656,10 +655,6 @@ static function validate_settings( $value ) {
 This is the Disable Updates Manager settings help tab. In here you will find helpful information on what Disable Updates Manager does and how to use it.
 </p>
 
-<div class="updated" id="update">	
-	<p>Please take the time to <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
-</div>
-
 <div class="error" id="error">			
 	<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
 	   of date, you may run into compatibility problems. Check the capability tab for more information.</p>
@@ -732,7 +727,7 @@ CONTENT5;
 
 		$content6 = <<<CONTENT6
 <p>	
-WordPress encourages you to update your plugins, themes, and core to make sure that there are no bugs. Even though you most likely want to disable all the updates and never update again, you should update every once in a while.
+WordPress encourages you to update your plugins, themes, and core to make sure that there are no bugs. Even though you most likely want to disable all the updates and never think about updating again, you should still consider updating every once in a while to avoid major bugs and errors on your WordPress website.
 
 <h3>This plugin is tested so there are no problems.</h3>
 <ul>
@@ -827,25 +822,9 @@ CONTENT6;
 						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable All WordPress Core Update', 'disable-updates-manager' ) ?>
 				</label>
 			</div>
-		<div style="padding-left:20px;">	
-			<br>
-			<div>
-				<label for="minor-core-updates_notify">
-					<input type="checkbox" <?php checked( 1, ( isset( $status['minor-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['minor-core-updates'] : 0 ), TRUE ); ?>
-						   value="1" id="minor-core-updates_notify"
-						   name="_disable_updates[minor-core-updates]"
-						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 ) ) ?>> <?php _e( 'Disable Minor', 'disable-updates-manager' ) ?>
-				</label>
-			</div>
-			<br>
-			<div>
-				<label for="major-core-updates_notify">
-					<input type="checkbox" <?php checked( 1, ( isset( $status['major-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['major-core-updates'] : 0 ), TRUE ); ?>
-						   value="1" id="major-core-updates_notify"
-						   name="_disable_updates[major-core-updates]"
-						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 )) ?>> <?php _e( 'Disable Major', 'disable-updates-manager' ) ?>
-				</label>
-			</div>
+		<div style="padding-left:20px;">
+		<br>
+	<small>Disable major and minor core feature coming soon...<small>
 			</p>
 		</div>	
 		</div>
@@ -1064,7 +1043,9 @@ CONTENT6;
 					<?php settings_fields( '_disable_updates' ); ?>
 
 					<p class="submit clear">
-						<input type="submit" class="button-primary" value="<?php _e( 'Update Settings' ) ?>"/>
+						<input type="submit" class="button-primary" value="<?php _e( 'Update Settings' ) ?>"/> 
+						<a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?#postform" style="background-color:#ffff7f" class="button">Rate Plugin</a>	
+						<a href="http://sparrowkids2.polldaddy.com/s/disable-updates-manager-feedbeck" class="button">Feedback Survey</a>				
 					</p>
 
 				</form>
