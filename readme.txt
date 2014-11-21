@@ -2,7 +2,7 @@
 Contributors: MPS Plugins, kidsguide, shazahm1@hotmail.com, szepe.viktor
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check, No Browser Nag, MPS Plugins, Manager, Disable, Updates
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.0.1 and 4.1beta1
 Stable tag: trunk
 
 A configurable plugin that disables updates for you. Easy, clean and helpful + Great Support.  
@@ -52,7 +52,14 @@ This plugin is configurable! Check the type of update(s) you would like to disab
 3. Click on the configure button next to the plugin or go to the plugin settings page under the settings section in your dashboard.
 
 == Changelog ==
-= 4.5.0 =
+= 4.6.0 =
+* Removed unknown character to fix debug error.
+* Updated screenshots.
+* Works with WordPress 4.0.1 and 4.1beta1.
+* Fixed error that didn't remove rate notice in help tab.
+* Updated some help tab content.
+
+= 4.5.0* =
 * Added rate plugin button.
 * Added Feedback survey button.
 * Removed rate plugin notice in help tab.
