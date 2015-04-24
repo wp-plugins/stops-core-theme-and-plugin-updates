@@ -2,7 +2,7 @@
 Contributors: kidsguide, ronalfy
 Tags: updates manager, easy updates manager, disable updates manager, disable updates, update control, plugin updates, theme updates, core updates, automatic updates
 Requires at least: 4.0
-Tested up to: 4.2 beta1
+Tested up to: 4.2
 Stable tag: 5.0.0
 License: GPLv2 or later
 
@@ -65,6 +65,7 @@ Activate the plugin after installation.  If you are on Multisite, the plugin mus
 
 == Changelog ==
 = 5.0.0 =
+Updated 2015-04-23 to ensure WordPress 4.2 compatibility
 Released 2015-03-24
 
 In version 5.0.0 we completely re-wrote the plugin to offer a faster and more secure experience. You will also notice that we added lots more settings to cover almost every aspect of managing updates.
