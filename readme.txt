@@ -1,9 +1,9 @@
 === Easy Updates Manager ===
 Contributors: kidsguide, ronalfy
 Tags: updates manager, easy updates manager, disable updates manager, disable updates, update control, plugin updates, theme updates, core updates, automatic updates
-Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 5.0.0
+Requires at least: 4.3
+Tested up to: 4.3
+Stable tag: 5.1.0
 License: GPLv2 or later
 
 Manage all your WordPress updates, including individual plugin/theme updates, automatic updates, and loads more. Also works with WordPress Multisite.
@@ -11,7 +11,7 @@ Manage all your WordPress updates, including individual plugin/theme updates, au
 == Description ==
 Easy Updates Manager is a light yet powerful plugin which enables you to manage all types of updates on your single site install or in WordPress Multisite. With loads of settings making endless possibilities for configuration, Easy Updates Manager is an obvious choice for anyone wanting to take control of their websites updates.
 
-[youtube https://www.youtube.com/watch?v=MmNrNAkCI0g]
+[youtube https://www.youtube.com/watch?v=MmNrNAkCI0g&list=PL7YF6bIhLLz0HzndENZZAdoh2nJBefTeA]
 
 = Features Include =
 <ul>
@@ -34,7 +34,7 @@ Easy Updates Manager is a light yet powerful plugin which enables you to manage 
 <li>The ability to select which users can still see and perform updates.</li>
 </ul>
 
-For more information on how to use this plugin and where to get support, check out our new <a href="https://github.com/easy-updates-manager/easy-updates-manager/wiki">wiki</a>.
+For more information on how to use Easy Updates Manager, check out our <a href="https://github.com/easy-updates-manager/easy-updates-manager/wiki">wiki</a>.
 
 == Screenshots ==
 1. Easy Updates Manager on Single-Site Plugins Screen with Shortcut Configure Option
@@ -48,12 +48,6 @@ For more information on how to use this plugin and where to get support, check o
 9. Help Screen Provides Helpful Links
 
 == Installation == 
-<strong>Installing Easy Updates Manager through FTP</strong> 
-
-1. Upload the Easy Updates Manager folder to the '/wp-content/plugins/' directory (make sure it is unzipped)
-2. Activate the Easy Updates Manager plugin through the 'Plugins' menu in WordPress
-3. Configure the plugin by going to the 'Update Options' section in your admin area under the Dashboard
-
 <strong>Installing Easy Updates Manager in your WordPress Dashboard</strong> (recommended)
 
 1. You can also upload it by going into your 'Plugins' section and selecting add a new plugin
@@ -61,12 +55,51 @@ For more information on how to use this plugin and where to get support, check o
 3. Install and activate the plugin by pushing the 'Install' button and then the 'activate plugin' link
 4. Configure the plugin by going to the 'Update Options' section in your admin area under the Dashboard
 
+<strong>Installing Easy Updates Manager through FTP</strong> 
+
+1. Upload the Easy Updates Manager folder to the '/wp-content/plugins/' directory (make sure it is unzipped)
+2. Activate the Easy Updates Manager plugin through the 'Plugins' menu in WordPress
+3. Configure the plugin by going to the 'Update Options' section in your admin area under the Dashboard
+
 Activate the plugin after installation.  If you are on Multisite, the plugin must be network-activated.
 
+== Frequently Asked Questions == 
+= Do you support older WordPress versions? =
+
+Version 5.0.x should support WP versions 4.0 - 4.2.x. Version 4.7.0 should support WP versions 2.3 - 4.0.
+
+Since WordPress is constantly changing, this plugin will always strive to support the latest version of WordPress. As there are many security vulnerabilities reported, please always keep WordPress as up-to-date as possible.
+
+Unfortunately, we do not support older versions of WordPress or the non-current release of this plugin.
+
+= How do I change the WordPress update notification e-mail? =
+
+There's some documentation about changing the notification e-mail here: http://www.iwebcontrol.co.uk/2013/10/change-wordpress-auto-update-email-address/
+
+A plugin was also created to change the background updates email address: https://wordpress.org/plugins/background-update-notification-email-address/ 
+
+= Automatic Updates =
+
+Check out our video on how the automatic updating works in WordPress.
+[youtube https://www.youtube.com/watch?v=VBAfoK1PP0o]
+
+= Additional Information and FAQ =
+
+For additional information and FAQs for Easy Updates Manager check out our <a href="https://github.com/easy-updates-manager/easy-updates-manager/wiki">wiki</a>.
+
 == Changelog ==
+
+= 5.1.0 =
+Updated: 2015-08-11
+
+* WordPress 4.3 tested and is now the minimum supported version.
+* Added default option to plugin/theme automatic updates.
+* Updated internal HTML to be WordPress 4.3 compatible. 
+* Updated internal list tables to be WordPress 4.3 compatible.
+* Moved menus in multisite to Dashboard for WordPress 4.3 compatibility.
+
 = 5.0.0 =
-Updated 2015-04-23 to ensure WordPress 4.2 compatibility
-Released 2015-03-24
+Updated 2015-04-23 to ensure WordPress 4.2 compatibility Released 2015-03-24
 
 In version 5.0.0 we completely re-wrote the plugin to offer a faster and more secure experience. You will also notice that we added lots more settings to cover almost every aspect of managing updates.
 
@@ -76,6 +109,8 @@ In version 5.0.0 we completely re-wrote the plugin to offer a faster and more se
 * New contributor: <a href="https://profiles.wordpress.org/ronalfy">ronalfy</a>
 
 == Upgrade Notice ==
+= 5.1.0 =
+Only upgrade if using WordPress 4.3. Many changes to ensure WordPress 4.3 compatibility. 
 
 = 5.0.0 =
-Major plugin rewrite and update.  Updating will port over your old options.  We recommend you perform a backup of your site before updating.  Now you can configure just about any aspect of WordPress updates.
+Major plugin rewrite and update. Updating will port over your old options. We recommend you perform a backup of your site before updating. Now you can configure just about any aspect of WordPress updates.
